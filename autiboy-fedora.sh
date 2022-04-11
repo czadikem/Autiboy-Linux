@@ -42,6 +42,17 @@ echo "Installing Podman and Cockpit-Podman"
 sleep 5
 sudo dnf install podman cockpit-podman -y
 
+
+
+# https://ask.fedoraproject.org/t/what-is-the-recommended-way-to-install-gnome-on-fedora-30-server/431/2
+sudo dnf group install “GNOME Desktop Environment”
+
+sudo systemctl set-default graphical.target
+
+Removed /etc/systemd/system/default.target.
+Created symlink /etc/systemd/system/default.target → /usr/lib/systemd/system/graphical.target.
+
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
