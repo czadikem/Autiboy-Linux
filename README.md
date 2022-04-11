@@ -17,7 +17,7 @@ sudo ubuntu-drivers install
 ## Autiboy's Ubuntu
 Install Autiboy's packages and choose a desktop environment with autiboy-ubuntu script.
 ```
-wget https://raw.githubusercontent.com/czadikem/autiboy-ubuntu/master/autiboy-ubuntu.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/autiboy-ubuntu.sh
 chmod +x autiboy-ubuntu.sh
 ./autiboy-ubuntu.sh
 ```
