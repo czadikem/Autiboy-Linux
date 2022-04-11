@@ -16,11 +16,19 @@ echo "Running dnf update"
 sleep 5
 sudo dnf update -y
 
-# Install tasksel
-# https://help.ubuntu.com/community/Tasksel
-echo "Installing tasksel"
+# Install RPM Fusion Free Repo
+# https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
+echo "Installing RPM Fusion Free Repo"
 sleep 5
-sudo apt install tasksel -y
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
+  
+# Install RPM Fusion Non-Free Repo
+# https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
+echo "Installing RPM Non-Fusion Free Repo"
+sleep 5
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Install git
 echo "Installing Git and Make"
