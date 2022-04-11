@@ -30,10 +30,10 @@ sleep 5
 sudo dnf install \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
-# Install git
+# Do you need to install wifi drivers?
 echo "Installing Git and Make"
 sleep 5
-sudo apt install git make -y
+sudo dnf install broadcom-wl -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
