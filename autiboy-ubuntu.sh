@@ -194,7 +194,7 @@ echo "Changing Grub Config"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/autiboy-grub
 sudo rm -r /etc/default/grub
-sudo mv auiboy-grub /etc/default/grub
+sudo mv autiboy-grub /etc/default/grub
 echo "Updating Grub"
 sleep 5
 sudo update-grub
