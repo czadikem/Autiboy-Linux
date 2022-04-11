@@ -35,6 +35,13 @@ echo "Installing Git and Make"
 sleep 5
 sudo dnf install broadcom-wl -y
 
+# Install Podman and Cockpit-Podman
+# https://fedoramagazine.org/getting-started-with-podman-in-fedora/
+# https://www.tutorialworks.com/podman-monitoring-cockpit-fedora/
+echo "Installing Podman and Cockpit-Podman"
+sleep 5
+sudo dnf install podman cockpit-podman -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
