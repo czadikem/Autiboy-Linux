@@ -1,3 +1,13 @@
+#!/bin/bash
+# Disable Sudo timeout
+# https://gist.github.com/cowboy/3118588
+echo "Enabling Sudo timeout loop"
+sudo -v
+while true; do sleep 60; sudo -n true; kill -0 "$$" || exit; done 2>/dev/null &
+function wait() {
+  echo -n "["; for i in {1..60}; do sleep $1; echo -n =; done; echo "]"
+}
+
 sudo cat >/etc/yum.repos.d/CentOS-Stream-Extras.repo <<'EOF'
 [extras]
 name=CentOS Stream $releasever - Extras
@@ -23,3 +33,7 @@ sudo rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/
 sudo echo "8-stream" > /etc/yum/vars/stream
 
 sudo dnf distro-sync --nobest
+
+# Stop Sudo timeout loop
+echo "Stopping Sudo timeout loop"
+echo "done."
