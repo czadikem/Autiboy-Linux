@@ -10,6 +10,8 @@ function wait() {
 
 # Modified to enable oVirt 4.5 from this
 # https://www.ovirt.org/download/
+# and this
+# https://www.ovirt.org/download/install_on_rhel.html
 
 wget https://github.com/czadikem/autiboys-linux/raw/master/almalinux/oVirt/ovirt-repos-setup.sh
 
