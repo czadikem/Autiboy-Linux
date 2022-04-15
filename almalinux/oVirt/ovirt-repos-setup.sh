@@ -22,4 +22,4 @@ rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/BaseO
 
 echo "8-stream" > /etc/yum/vars/stream
 
-dnf distro-sync --nobest
+dnf distro-sync --nobest -y
