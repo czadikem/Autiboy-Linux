@@ -8,7 +8,9 @@ function wait() {
   echo -n "["; for i in {1..60}; do sleep $1; echo -n =; done; echo "]"
 }
 
-wget 
+wget https://github.com/czadikem/autiboys-linux/raw/master/almalinux/oVirt/ovirt-repos-setup.sh
+
+chmod +x ovirt-repos-setup.sh
 
 sudo ./ovirt-repos-setup.sh
 
