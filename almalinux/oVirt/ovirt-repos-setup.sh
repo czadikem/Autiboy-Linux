@@ -17,3 +17,9 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-Extras
 EOF
+
+rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/BaseOS/$(rpm --eval '%_arch')/os/Packages/centos-stream-release-8.6-1.el8.noarch.rpm"
+
+echo "8-stream" > /etc/yum/vars/stream
+
+dnf distro-sync --nobest
