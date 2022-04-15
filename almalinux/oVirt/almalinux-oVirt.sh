@@ -14,11 +14,11 @@ chmod +x ovirt-repos-setup.sh
 
 sudo ./ovirt-repos-setup.sh
 
-sudo rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/BaseOS/$(rpm --eval '%_arch')/os/Packages/centos-stream-release-8.6-1.el8.noarch.rpm"
+sudo rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/BaseOS/$(rpm --eval '%_arch')/os/Packages/centos-stream-release-8.6-1.el8.noarch.rpm" -y
 
 sudo echo "8-stream" > /etc/yum/vars/stream
 
-sudo dnf distro-sync --nobest
+sudo dnf distro-sync --nobest -y
 
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
