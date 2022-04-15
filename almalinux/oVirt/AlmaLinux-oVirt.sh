@@ -17,12 +17,6 @@ chmod +x ovirt-repos-setup.sh
 
 sudo ./ovirt-repos-setup.sh
 
-sudo rpm -i --justdb --nodeps --force "http://mirror.centos.org/centos/8-stream/BaseOS/$(rpm --eval '%_arch')/os/Packages/centos-stream-release-8.6-1.el8.noarch.rpm"
-
-sudo echo "8-stream" > /etc/yum/vars/stream
-
-sudo dnf distro-sync --nobest -y
-
 sudo dnf install -y centos-release-ovirt45
 sudo dnf install -y python3-dnf-plugins-core
 sudo dnf config-manager --set-enabled centos-ovirt45-testing
