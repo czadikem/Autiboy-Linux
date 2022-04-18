@@ -70,3 +70,12 @@ sudo apt install docker-compose -y
 # Install Virt-Manager Web
 # https://github.com/m-bers/docker-virt-manager
 sudo docker run -v /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock -v /var/lib/libvirt/images:/var/lib/libvirt/images --device /dev/kvm:/dev/kvm -p 8185:80 -e DARK_MODE=false -e HOSTS=['qemu:///system'] -e privileged=true mber5/virt-manager:latest 
+
+# Stop Sudo timeout loop
+echo "Stopping Sudo timeout loop"
+echo "done."
+
+# Rebooting Computer
+echo "Rebooting Computer Now"
+sleep 5
+sudo reboot now
