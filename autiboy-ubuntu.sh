@@ -11,6 +11,10 @@ function wait() {
   echo -n "["; for i in {1..60}; do sleep $1; echo -n =; done; echo "]"
 }
 
+# Plug in Ventoy USB Drive
+echo "Please insert the Ventoy USB Drive you used to install this OS."
+sleep 20
+
 # Install Updates and Upgrade
 echo "Running apt update && apt upgrade -y"
 sleep 5
