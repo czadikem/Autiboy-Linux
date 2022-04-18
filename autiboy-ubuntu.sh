@@ -171,8 +171,8 @@ sudo snap connect brave:raw-usb
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
 sleep 5
-wget numworks
-sudo cp 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/rules.d/
+wget https://github.com/czadikem/autiboys-linux/raw/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules
+sudo mv 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/rules.d/
 
 # Install VSCodium
 # https://vscodium.com
