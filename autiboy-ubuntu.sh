@@ -41,6 +41,16 @@ echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
 cp /media/$USER/Ventoy/Applications.tar.xz /home/$USER/
 
+# Unmount USB Drive
+echo "Unmounting Ventoy USB Drive"
+sleep 5
+sudo umount /dev/sdb1
+
+# Delete mount Point
+echo "Deleting USB Drive mount point"
+sleep 5
+sudo rm -r /media/$USER/Ventoy
+
 # Extract Applications.tar.xz
 echo "Extracting Applications.tar.xz"
 sleep 5
