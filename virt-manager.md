@@ -7,7 +7,7 @@
 virt-manager: https://virt-manager.org/  
 broadway: https://developer.gnome.org/gtk3/stable/gtk-broadway.html
 
-## I Converted the first script below using https://8gwifi.org/dc2.jsp for my autiboy-ubuntu-virtualization
+## I Converted the first script below using https://8gwifi.org/dc2.jsp for my autiboy-ubuntu-virtualization.sh script
 
 
 ## Features:
