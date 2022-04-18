@@ -160,6 +160,20 @@ echo "Installing Godot"
 sleep 5
 sudo flatpak install flathub org.godotengine.Godot -y
 
+# Install Brave Browser
+echo "Installing Brave Browser"
+sleep 5
+sudo snap install brave
+echo "Giving Brave Browser usb access"
+sleep 5
+sudo snap connect brave:raw-usb
+
+# Install NumWorks Calc Driver
+echo "Installing NumWorks Calc Driver"
+sleep 5
+wget numworks
+sudo cp 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/rules.d/
+
 # Install VSCodium
 # https://vscodium.com
 echo "Installing VSCodium and it's python modules"
