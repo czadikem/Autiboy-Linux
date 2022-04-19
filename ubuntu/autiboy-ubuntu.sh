@@ -233,6 +233,12 @@ codium --install-extension GitLab.gitlab-workflow
 echo "Installing Arduino Extension Pack"
 codium --install-extension mpty.pack-arduino
 
+# Setup VSCodium Git
+echo "Setting up VSCodium Git"
+sleep 5
+git config --global user.name "Autiboy"
+git config --global user.email czadikem@readytodream.com
+
 # Install Wireguard GUI
 # https://tuxtrix.com/install-wireguard-with-gui-on-ubuntu-20-x
 echo "Instaing Wireguard GUI utils"
