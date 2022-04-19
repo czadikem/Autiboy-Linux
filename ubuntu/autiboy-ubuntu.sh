@@ -206,6 +206,33 @@ pip3 install setuptools
 pip3 install opencv-python
 pip3 install matplotlib
 
+# Enable Microsoft VS Code Marketplace
+# https://stackoverflow.com/a/21549836
+# https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
+echo "Enabling Microsoft VS Code Marketplace"
+sleep 5
+cat <<EOF > ~/.config/VSCodium/product.json.new
+{
+  "extensionsGallery": {
+    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+    "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+    "itemUrl": "https://marketplace.visualstudio.com/items",
+    "controlUrl": "",
+    "recommendationsUrl": ""
+  }
+}
+EOF
+
+# Install VSCodium Plugins
+echo "Installing VSCodium Plugins"
+sleep 5
+echo "Installing Python Extension"
+codium --install-extension ms-python.python
+echo "Installing Gitlab Workflow Extension"
+codium --install-extension GitLab.gitlab-workflow
+echo "Installing Arduino Extension Pack"
+codium --install-extension mpty.pack-arduino
+
 # Install Wireguard GUI
 # https://tuxtrix.com/install-wireguard-with-gui-on-ubuntu-20-x
 echo "Instaing Wireguard GUI utils"
