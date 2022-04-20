@@ -13,6 +13,10 @@ sudo ubuntu-drivers install
 ```
 #### Change time to 12 hours
 #### Change power button action to suspend
+#### Open VSCodium  and do ctrl+shift+p
+1. ```set gitlab```
+2. ```https://gitlab.autiboystech.com```
+3. ```ozUa-qtLLAtFhtvmvMgw```
 
 ## Autiboy's Ubuntu Virtualization
 Install Autiboy's packages with autiboy-ubuntu-virtualization script.
