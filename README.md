@@ -14,7 +14,7 @@ sudo ubuntu-drivers install
 #### Change time to 12 hours
 #### Change power button action to suspend
 #### Open VSCodium  and do ctrl+shift+p
-1. ```set gitlab```
+1. ```set gitlab token```
 2. ```https://gitlab.autiboystech.com```
 3. ```ozUa-qtLLAtFhtvmvMgw```
 
