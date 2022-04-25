@@ -20,6 +20,11 @@ echo "Running apt update && apt upgrade -y"
 sleep 5
 sudo apt update && sudo apt upgrade -y
 
+# Make sure Universe Repo is Enabled
+echo "Enabling Universe Repo"
+sleep 5
+sudo add-apt-repository universe
+
 # Install tasksel
 # https://help.ubuntu.com/community/Tasksel
 echo "Installing tasksel"
