@@ -1,7 +1,7 @@
 # Autiboy-Linux
 
 ## Autiboy's Ubuntu
-Install Autiboy's packages and choose a desktop environment with autiboy-fedora script.
+Install Autiboy's packages and choose a desktop environment with autiboy-ubuntu script.
 ```
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-ubuntu.sh
 chmod +x autiboy-ubuntu.sh
