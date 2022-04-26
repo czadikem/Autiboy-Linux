@@ -58,7 +58,7 @@ sudo rm -r /media/$USER/Ventoy
 # Extract Applications.tar.xz
 echo "Extracting Applications.tar.xz"
 sleep 5
-tar -xf Applications.tar.xz
+tar -xf Applications-minimal.tar.xz
 
 # Install EasyBashGUI
 # https://github.com/BashGui/easybashgui
