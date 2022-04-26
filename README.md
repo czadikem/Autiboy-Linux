@@ -4,6 +4,10 @@
 Install Autiboy's packages and choose a desktop environment with autiboy-ubuntu script.
 ```
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-ubuntu.sh
+```
+### To be compatible with Ubuntu 22.04 use as it doesn't have blender-launcher and other apps that don't support wayland
+```
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-ubuntu-22.04.sh 
 chmod +x autiboy-ubuntu.sh
 ./autiboy-ubuntu.sh
 ```
