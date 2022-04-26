@@ -20,11 +20,6 @@ echo "Running apt update && apt upgrade -y"
 sleep 5
 sudo apt update && sudo apt upgrade -y
 
-# Make sure Universe Repo is Enabled
-echo "Enabling Universe Repo"
-sleep 5
-sudo add-apt-repository universe
-
 # Install tasksel
 # https://help.ubuntu.com/community/Tasksel
 echo "Installing tasksel"
@@ -234,21 +229,6 @@ echo "Setting up VSCodium Git"
 sleep 5
 git config --global user.name "Autiboy"
 git config --global user.email czadikem@readytodream.com
-
-# Install Wireguard GUI
-# https://tuxtrix.com/install-wireguard-with-gui-on-ubuntu-20-x
-echo "Instaing Wireguard GUI utils"
-sleep 5
-sudo apt install wireguard git dh-autoreconf libglib2.0-dev intltool build-essential libgtk-3-dev libnma-dev libsecret-1-dev network-manager-dev resolvconf -y
-cd network-manager-wireguard
-./autogen.sh --without-libnm-glib
-./configure --without-libnm-glib --prefix=/usr --sysconfdir=/etc --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/NetworkManager --localstatedir=/var
-echo "Building Wireguard GUI"
-sleep 5
-make
-echo "Instaling Wireguard GUI"
-sleep 5
-sudo make install
 
 # Correct Grub
 echo "Changing Grub Config"
