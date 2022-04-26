@@ -174,6 +174,11 @@ echo "Installing Godot"
 sleep 5
 sudo flatpak install flathub org.godotengine.Godot -y
 
+# Install Blender
+echo "Installing Blender"
+sleep 5
+sudo snap install blender --classic
+
 # Install Brave Browser
 echo "Installing Brave Browser"
 sleep 5
