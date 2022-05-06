@@ -173,6 +173,9 @@ sudo flatpak install flathub com.github.donadigo.appeditor -y
 echo "Installing Godot"
 sleep 5
 sudo flatpak install flathub org.godotengine.Godot -y
+echo "Installing Tor Browser"
+sleep 5
+sudo flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 
 # Install Blender
 echo "Installing Blender"
