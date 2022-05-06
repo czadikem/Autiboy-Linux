@@ -193,7 +193,7 @@ sudo snap connect brave:raw-usb
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
 sleep 5
-wget https://github.com/czadikem/autiboys-linux/raw/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules
 sudo mv 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/rules.d/
 
 # Install VSCodium
@@ -210,7 +210,7 @@ pip3 install matplotlib
 # https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
 echo "Enabling Microsoft VS Code Marketplace"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/VSCodium-product.json?token=GHSAT0AAAAAABUJN67775UOHMCIT6RAMMPSYTVSUIA -O product.json
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/VSCodium-product.json -O /home/$USER/.config/VSCodium/product.json
 # Install VSCodium Plugins
 echo "Installing VSCodium Plugins"
 sleep 5
@@ -230,7 +230,7 @@ git config --global user.email czadikem@readytodream.com
 # Correct Grub
 echo "Changing Grub Config"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-grub?token=GHSAT0AAAAAABUJN677C3MHRAHGDY7IN2AQYTVSXOA
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-grub
 sudo rm -r /etc/default/grub
 sudo mv autiboy-grub /etc/default/grub
 echo "Updating Grub"
