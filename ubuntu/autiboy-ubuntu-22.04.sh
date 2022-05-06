@@ -207,18 +207,7 @@ pip3 install matplotlib
 # https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
 echo "Enabling Microsoft VS Code Marketplace"
 sleep 5
-cat <<EOF > ~/.config/VSCodium/product.json.new
-{
-  "extensionsGallery": {
-    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
-    "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
-    "itemUrl": "https://marketplace.visualstudio.com/items",
-    "controlUrl": "",
-    "recommendationsUrl": ""
-  }
-}
-EOF
-
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/VSCodium-product.json?token=GHSAT0AAAAAABUJN67775UOHMCIT6RAMMPSYTVSUIA -O product.json
 # Install VSCodium Plugins
 echo "Installing VSCodium Plugins"
 sleep 5
@@ -238,7 +227,7 @@ git config --global user.email czadikem@readytodream.com
 # Correct Grub
 echo "Changing Grub Config"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/autiboy-grub
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-grub?token=GHSAT0AAAAAABUJN677C3MHRAHGDY7IN2AQYTVSXOA
 sudo rm -r /etc/default/grub
 sudo mv autiboy-grub /etc/default/grub
 echo "Updating Grub"
@@ -249,6 +238,12 @@ sudo update-grub
 echo "Uninstalling Byobu Terminal"
 sleep 5
 sudo apt autoremove byobu -y
+
+# Install WireGuard
+# https://www.wireguard.com/install/#ubuntu-module-tools
+echo "Installing WireGuard"
+sleep 5
+sudo apt install wireguard -y
 
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
