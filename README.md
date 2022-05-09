@@ -19,6 +19,7 @@ sudo ubuntu-drivers install
 sudo systemctl enable wg-quick@wg0.service
 ```
 #### after you have installed https://extensions.gnome.org/extension/3612/wireguard-indicator/
+#### copy your wg0.conf file to /etc/wireguard after sudo apt install wireguard
 #### Change time to 12 hours
 #### Change power button action to suspend
 #### Open VSCodium  and do ctrl+shift+p
