@@ -60,53 +60,60 @@ echo "Extracting Applications.tar.xz"
 sleep 5
 tar -xf Applications-minimal.tar.xz
 
-# Install EasyBashGUI
-# https://github.com/BashGui/easybashgui
-echo "Installing EasyBashGUI"
+# Install Gnome Desktop
+echo "Installing Gnome Desktop"
+sleep 5
 cd ~/Applications
-git clone https://github.com/BashGui/easybashgui.git
-cd easybashgui
-sudo make install
-cd ..
+sudo apt install ubuntu-gnome-desktop -y
 
-# Desktop Environment
-# https://phoenixnap.com/kb/bash-continue
-source easybashgui
-i="1"
-while [ "$i" = "1" ]
-	do
-	menu "KDE Plasma Desktop" "LXQt Desktop" "Budgie Desktop" "Gnome Desktop" "MATE Desktop" "XFCE Desktop"
-	answer=$(0< "${dir_tmp}/${file_tmp}" )
-	#
-	if [ "${answer}" = "KDE Plasma Desktop" ]
-		then
-		sudo tasksel install kubuntu-desktop
-		i=$[$i-1]
-	elif [ "${answer}" = "LXQt Desktop" ]
-		then
-                sudo tasksel install lubuntu-desktop
-                i=$[$i-1]
-        elif [ "${answer}" = "Budgie Desktop" ]
-                then
-                sudo tasksel install ubuntu-budgie-desktop
-                i=$[$i-1]
-        elif [ "${answer}" = "Gnome Desktop" ]
-                then
-                sudo tasksel install ubuntu-desktop-minimal
-                i=$[$i-1]
-        elif [ "${answer}" = "MATE Desktop" ]
-                then
-                sudo tasksel install ubuntu-mate-desktop
-                i=$[$i-1]
-        elif [ "${answer}" = "XFCE Desktop" ]
-                then
-                sudo tasksel install xubuntu-desktop
-                i=$[$i-1]
-	else
-		i=$[$i-1]
-	fi
-	#
-done
+
+# # Install EasyBashGUI
+# # https://github.com/BashGui/easybashgui
+# echo "Installing EasyBashGUI"
+# cd ~/Applications
+# git clone https://github.com/BashGui/easybashgui.git
+# cd easybashgui
+# sudo make install
+# cd ..
+
+# # Desktop Environment
+# # https://phoenixnap.com/kb/bash-continue
+# source easybashgui
+# i="1"
+# while [ "$i" = "1" ]
+# 	do
+# 	menu "KDE Plasma Desktop" "LXQt Desktop" "Budgie Desktop" "Gnome Desktop" "MATE Desktop" "XFCE Desktop"
+# 	answer=$(0< "${dir_tmp}/${file_tmp}" )
+# 	#
+# 	if [ "${answer}" = "KDE Plasma Desktop" ]
+# 		then
+# 		sudo tasksel install kubuntu-desktop
+# 		i=$[$i-1]
+# 	elif [ "${answer}" = "LXQt Desktop" ]
+# 		then
+#                 sudo tasksel install lubuntu-desktop
+#                 i=$[$i-1]
+#         elif [ "${answer}" = "Budgie Desktop" ]
+#                 then
+#                 sudo tasksel install ubuntu-budgie-desktop
+#                 i=$[$i-1]
+#         elif [ "${answer}" = "Gnome Desktop" ]
+#                 then
+#                 sudo tasksel install ubuntu-desktop-minimal
+#                 i=$[$i-1]
+#         elif [ "${answer}" = "MATE Desktop" ]
+#                 then
+#                 sudo tasksel install ubuntu-mate-desktop
+#                 i=$[$i-1]
+#         elif [ "${answer}" = "XFCE Desktop" ]
+#                 then
+#                 sudo tasksel install xubuntu-desktop
+#                 i=$[$i-1]
+# 	else
+# 		i=$[$i-1]
+# 	fi
+# 	#
+# done
 
 # Install Flatpak and Gnome-Software
 # https://flatpak.org/setup/Ubuntu
