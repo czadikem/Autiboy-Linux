@@ -43,7 +43,7 @@ sudo mount /dev/sdb1 /media/$USER/Ventoy
 # Copy the Applications Folder
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
-cp /media/$USER/Ventoy/Applications-minimal.tar.xz /home/$USER/Applications
+cp /media/$USER/Ventoy/Applications.tar.xz /home/$USER/Applications
 
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
@@ -58,7 +58,7 @@ sudo rm -r /media/$USER/Ventoy
 # Extract Applications.tar.xz
 echo "Extracting Applications.tar.xz"
 sleep 5
-tar -xf Applications-minimal.tar.xz
+tar -xf Applications.tar.xz
 
 # Install Gnome Desktop
 echo "Installing Gnome Desktop"
