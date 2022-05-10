@@ -64,7 +64,7 @@ tar -xf Applications.tar.xz
 echo "Installing Gnome Desktop"
 sleep 5
 cd ~/Applications
-sudo apt install ubuntu-gnome-desktop -y
+sudo apt install ubuntu-desktop-minimal -y
 
 
 # # Install EasyBashGUI
