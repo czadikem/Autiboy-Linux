@@ -20,16 +20,16 @@ echo "Running apt update && apt upgrade -y"
 sleep 5
 sudo apt update && sudo apt upgrade -y
 
-# Install tasksel
-# https://help.ubuntu.com/community/Tasksel
-echo "Installing tasksel"
-sleep 5
-sudo apt install tasksel -y
+## Install tasksel
+## https://help.ubuntu.com/community/Tasksel
+# echo "Installing tasksel"
+# sleep 5
+# sudo apt install tasksel -y
 
 # Install git
-echo "Installing Git and Make"
+echo "Installing Git"
 sleep 5
-sudo apt install git make -y
+sudo apt install git -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
