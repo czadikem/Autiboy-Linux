@@ -261,7 +261,7 @@ sudo apt autoremove byobu -y
 # https://www.wireguard.com/install/#ubuntu-module-tools
 echo "Installing WireGuard"
 sleep 5
-sudo apt install wireguard -y
+sudo apt install wireguard resolvconf -y
 
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
