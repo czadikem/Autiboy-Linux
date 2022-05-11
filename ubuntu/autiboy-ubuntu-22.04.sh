@@ -189,6 +189,11 @@ echo "Installing Blender"
 sleep 5
 sudo snap install blender --classic
 
+# Install Firefox Browser
+echo "Installing Firefox Browser"
+sleep 5
+sudo snap install firefox
+
 # Install Brave Browser
 echo "Installing Brave Browser"
 sleep 5
