@@ -167,9 +167,6 @@ sleep 5
 sudo flatpak install flathub org.onlyoffice.desktopeditors -y
 echo "Installing PeaZip"
 sleep 5
-sudo flatpak install flathub io.github.peazip.PeaZip -y
-echo "Installing Transmission"
-sleep 5
 sudo flatpak install flathub com.transmissionbt.Transmission -y
 echo "Installing Thunderbird"
 sleep 5
