@@ -127,10 +127,10 @@ echo "Adding Flathub repo"
 sleep 5
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install Gnome-Tweaks
-echo "Installing Gnome-Tweaks"
+# Install Gnome-Tweaks and Gnome-Shell-Extensions
+echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
-sudo apt install gnome-tweaks -y
+sudo apt install gnome-tweaks gnome-shell-extensions -y
 
 # Install Ubuntu Media Codecs
 # https://itsfoss.com/install-media-codecs-ubuntu
@@ -183,6 +183,9 @@ sudo flatpak install flathub org.godotengine.Godot -y
 echo "Installing Tor Browser"
 sleep 5
 sudo flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+echo "Installing Tor Browser"
+sleep 5
+sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 
 # Install Blender
 echo "Installing Blender"
