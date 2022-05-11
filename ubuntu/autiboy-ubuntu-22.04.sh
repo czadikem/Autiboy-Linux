@@ -43,7 +43,7 @@ sudo mount /dev/sdb1 /media/$USER/Ventoy
 # Copy the Applications Folder
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
-cp /media/$USER/Ventoy/Applications.tar.xz /home/$USER/Applications
+cp /media/$USER/Ventoy/Applications.tar.xz /home/$USER/
 
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
