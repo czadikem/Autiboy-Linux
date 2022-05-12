@@ -59,7 +59,6 @@ echo "Installing Gnome Desktop"
 sleep 5
 cd ~/Applications
 sudo dnf group install “GNOME Desktop Environment” -y
-sudo systemctl set-default graphical.target
 
 # # Install EasyBashGUI
 # # https://github.com/BashGui/easybashgui
@@ -206,6 +205,11 @@ git config --global user.email czadikem@readytodream.com
 echo "Installing WireGuard"
 sleep 5
 sudo dnf install wireguard-tools resolvconf -y
+
+# Enable Gnome
+echo "Enabling Gnome"
+sleep 5
+sudo systemctl set-default graphical.target
 
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
