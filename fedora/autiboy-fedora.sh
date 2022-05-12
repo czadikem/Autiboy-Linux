@@ -123,7 +123,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
-sudo dnf install gnome-tweaks gnome-shell-extensions -y
+sudo dnf install gnome-tweaks gnome-extensions-app -y
 
 # Install Flatpaks
 echo "Installing AppImagePool"
@@ -172,8 +172,8 @@ sudo mv 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/
 
 # Install VSCodium
 # https://vscodium.com
-sudo snap install codium --classic
-sudo dnf install python3-tk -y
+sudo flatpak install flathub com.vscodium.codium -y
+sudo dnf install python3-tkinter -y
 sudo dnf install python3-pip -y
 pip3 install setuptools
 pip3 install opencv-python
