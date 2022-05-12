@@ -16,20 +16,14 @@ echo "Please insert the Ventoy USB Drive you used to install this OS."
 sleep 20
 
 # Install Updates and Upgrade
-echo "Running apt update && apt upgrade -y"
+echo "Running dnf upgrade -y"
 sleep 5
-sudo apt update && sudo apt upgrade -y
-
-## Install tasksel
-## https://help.ubuntu.com/community/Tasksel
-# echo "Installing tasksel"
-# sleep 5
-# sudo apt install tasksel -y
+sudo dnf upgrade -y
 
 # Install git
 echo "Installing Git"
 sleep 5
-sudo apt install git -y
+sudo dnf install git -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
@@ -124,7 +118,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # https://rpmfusion.org
 echo "Adding RPM Fusion Free and Non-Free repos"
 sleep 5
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
