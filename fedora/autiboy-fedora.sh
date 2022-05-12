@@ -120,6 +120,12 @@ echo "Adding Flathub repo"
 sleep 5
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Add RPM Fusion Free and Non-Free repos
+# https://rpmfusion.org
+echo "Adding RPM Fusion Free and Non-Free repos"
+sleep 5
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
