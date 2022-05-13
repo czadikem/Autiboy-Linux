@@ -180,7 +180,7 @@ sudo flatpak install flathub org.godotengine.Godot -y
 echo "Installing Tor Browser"
 sleep 5
 sudo flatpak install flathub com.github.micahflee.torbrowser-launcher -y
-echo "Installing Tor Browser"
+echo "Installing Extension Manager"
 sleep 5
 sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 
