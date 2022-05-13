@@ -25,6 +25,13 @@ echo "Installing Git"
 sleep 5
 sudo dnf install git -y
 
+# Install Snap
+echo "Installing Snap"
+sleep 5
+sudo dnf install snapd -y
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install hello-world
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
