@@ -58,7 +58,7 @@ tar -xf Applications.tar.xz
 echo "Installing Gnome Desktop"
 sleep 5
 cd ~/Applications
-sudo dnf group install “GNOME Desktop Environment” -y
+sudo dnf group install "Fedora Workstation" -y
 
 # # Install EasyBashGUI
 # # https://github.com/BashGui/easybashgui
