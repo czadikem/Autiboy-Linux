@@ -45,3 +45,17 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
 sudo dnf install gnome-tweaks gnome-extensions-app -y
+
+# wget fedora-part2.sh
+echo "wget fedora-part2.sh"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora-part2.sh
+
+# Stop Sudo timeout loop
+echo "Stopping Sudo timeout loop"
+echo "done."
+
+# Rebooting Computer
+echo "Rebooting Computer Now"
+sleep 5
+sudo reboot now
