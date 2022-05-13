@@ -125,9 +125,6 @@ sleep 5
 sudo dnf install gnome-tweaks gnome-extensions-app -y
 
 # Install Flatpaks
-echo "Installing AppImagePool"
-sleep 5
-sudo flatpak install flathub io.github.prateekmedia.appimagepool -y
 echo "Installing VLC"
 sleep 5
 sudo flatpak install flathub org.videolan.VLC -y
@@ -156,12 +153,15 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 # Install Blender
 echo "Installing Blender"
 sleep 5
-sudo flatpak install flathub org.blender.Blender -y
+sudo snap install blender --classic
 
 # Install Brave Browser
 echo "Installing Brave Browser"
 sleep 5
-sudo flatpak install flathub com.brave.Browser -y
+sudo snap install brave
+echo "Giving Brave Browser usb access"
+sleep 5
+sudo snap connect brave:raw-usb
 
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
@@ -171,7 +171,7 @@ sudo mv 50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules /etc/udev/
 
 # Install VSCodium
 # https://vscodium.com
-sudo flatpak install flathub com.vscodium.codium -y
+sudo snap install codium --classic
 sudo dnf install python3-tkinter -y
 sudo dnf install python3-pip -y
 pip3 install setuptools
@@ -193,6 +193,22 @@ echo "Installing Gitlab Workflow Extension"
 codium --install-extension GitLab.gitlab-workflow
 echo "Installing Arduino Extension Pack"
 codium --install-extension mpty.pack-arduino
+
+# Setup VSCodium Git
+echo "Setting up VSCodium Git"
+sleep 5
+git config --global user.name "Autiboy"
+git config --global user.email czadikem@readytodream.com
+
+# Correct Grub
+echo "Changing Grub Config"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/ubuntu/autiboy-grub
+sudo rm -r /etc/default/grub
+sudo mv autiboy-grub /etc/default/grub
+echo "Updating Grub"
+sleep 5
+sudo update-grub
 
 # Setup VSCodium Git
 echo "Setting up VSCodium Git"
