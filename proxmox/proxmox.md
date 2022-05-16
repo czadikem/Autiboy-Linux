@@ -116,3 +116,6 @@ What we want to keep, are these vendor id codes: 10de:1b81 and 10de:10f0.
 ### Reboot Proxmox
 
 ```reboot now```
+
+
+### The Nag should be gone and the GPU ready to pass though
