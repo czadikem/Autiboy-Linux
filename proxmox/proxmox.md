@@ -38,6 +38,11 @@ Now do
 ```apt upgrade -y```
 
 ## Setup Pci/Gpu Passthough
+#### Steps from
+![Proxmox 6.1 and 6.2 PCIe Passthrough - YouTube](https://youtu.be/_fkKIMF3HZw?t=480)
+
+![The Ultimate Beginner's Guide to GPU Passthrough (Proxmox, Windows 10) : homelab - Reddit](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
+
 ### Change Grub
 ```nano /etc/default/grub```
 
