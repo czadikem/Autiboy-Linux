@@ -1,6 +1,6 @@
 # Proxmox
 ### Proxmox Community Edition
-![How to setup a community version of Proxmox VE 5.x-6.x · GitHub](https://gist.github.com/whiskerz007/53c6aa5d624154bacbbc54880e1e3b2a)
+[How to setup a community version of Proxmox VE 5.x-6.x · GitHub](https://gist.github.com/whiskerz007/53c6aa5d624154bacbbc54880e1e3b2a)
 
 Go to https://your-ip:8006 in your browser
 
@@ -39,9 +39,9 @@ Now do
 
 ## Setup Pci/Gpu Passthough
 #### Steps from
-![Proxmox 6.1 and 6.2 PCIe Passthrough - YouTube](https://youtu.be/_fkKIMF3HZw?t=480)
+[Proxmox 6.1 and 6.2 PCIe Passthrough - YouTube](https://youtu.be/_fkKIMF3HZw?t=480)
 
-![The Ultimate Beginner's Guide to GPU Passthrough (Proxmox, Windows 10) : homelab - Reddit](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
+[The Ultimate Beginner's Guide to GPU Passthrough (Proxmox, Windows 10) : homelab - Reddit](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
 
 ### Change Grub
 ```nano /etc/default/grub```
