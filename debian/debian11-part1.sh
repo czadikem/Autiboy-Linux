@@ -20,10 +20,10 @@ echo "Running apt update && apt upgrade -y"
 sleep 5
 sudo apt update && sudo apt upgrade -y
 
-# Install git
-echo "Installing Git"
+# Install git and curl
+echo "Installing Git and Curl"
 sleep 5
-sudo apt install git -y
+sudo apt install git curl -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
@@ -82,6 +82,7 @@ sudo apt install tabby-terminal -y
 # https://github.com/TheAssassin/AppImageLauncher
 echo "Installing AppImageLauncher"
 sleep 5
+sudo apt install software-properties-common
 sudo add-apt-repository ppa:appimagelauncher-team/stable -y
 sudo apt update
 sudo apt install appimagelauncher -y
