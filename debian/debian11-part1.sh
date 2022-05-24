@@ -126,8 +126,8 @@ sudo apt install wireguard resolvconf -y
 # Download script debian11-part2.sh
 echo "Downloading script debian11-part2.sh"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-part2.sh
-chmod +x debian11-part2.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-part2.sh /home/$USER/
+chmod +x /home/$USER/debian11-part2.sh
 
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
