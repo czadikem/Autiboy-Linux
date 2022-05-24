@@ -82,10 +82,8 @@ sudo apt install tabby-terminal -y
 # https://github.com/TheAssassin/AppImageLauncher
 echo "Installing AppImageLauncher"
 sleep 5
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:appimagelauncher-team/stable -y
-sudo apt update
-sudo apt install appimagelauncher -y
+wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -P /home/$USER/
+sudo apt install /home/$USER/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
 
 # Install Gparted
 echo "Installing gparted"
@@ -127,7 +125,7 @@ sudo apt install wireguard resolvconf -y
 # Download script debian11-part2.sh
 echo "Downloading script debian11-part2.sh"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-part2.sh /home/$USER/
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-part2.sh -P /home/$USER/
 chmod +x /home/$USER/debian11-part2.sh
 
 # Stop Sudo timeout loop
