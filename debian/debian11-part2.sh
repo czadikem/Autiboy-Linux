@@ -68,6 +68,18 @@ sleep 5
 git config --global user.name "Autiboy"
 git config --global user.email czadikem@readytodream.com
 
+# Set time to AM/PM for Gnome
+# https://askubuntu.com/a/1183891
+echo "Set time to AM/PM for Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface clock-format '12h'
+
+# Show bettery percentage in Gnome
+# https://askubuntu.com/a/947875
+echo "Enable Battery Percentage in Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
 # Stop Sudo timeout loop
 echo "Stopping Sudo timeout loop"
 echo "done."
