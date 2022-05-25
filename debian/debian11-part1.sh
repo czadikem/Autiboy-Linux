@@ -75,8 +75,8 @@ sudo apt install gnome-tweaks gnome-shell-extensions -y
 # https://github.com/Eugeny/tabby
 echo "Installing Tabby-Terminal"
 sleep 5
-curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
-sudo apt install tabby-terminal -y
+wget https://github.com/Eugeny/tabby/releases/download/v1.0.177/tabby-1.0.177-linux-x64.deb -P /home/$USER/
+sudo apt install /home/$USER/tabby-1.0.177-linux-x64.deb -y
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
