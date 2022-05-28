@@ -194,6 +194,11 @@ echo "Installing WireGuard"
 sleep 5
 apt install wireguard resolvconf -y
 
+# Setup WireGuard
+echo "Setting up WireGuard"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/peer_AutiboyMainLaptop.conf -O /etc/wireguard/wg0.conf
+
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
 sleep 5
