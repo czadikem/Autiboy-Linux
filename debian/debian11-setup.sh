@@ -16,7 +16,7 @@ echo "Please insert the Ventoy USB Drive you used to install this OS."
 sleep 20
 
 # Disable DVD Repo
-echo "Dsiabling DVD Repo"
+echo "Disabling DVD Repo"
 sleep 5
 rm -r /etc/apt/sources.list
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/sources.list -P /etc/apt/
