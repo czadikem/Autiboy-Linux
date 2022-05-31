@@ -14,7 +14,7 @@ Then after the computer reboots run this
 Then after the computer reboots again you need to setup gnome
 1. Install gnome-sync from extension manager
 2. configure it to point to /home/autiboy/Applications/gnome-sync/gnome-sync.json
-3. delete the /home/autiboy/.config/gnomesync.json file
+3. delete the /home/autiboy/.config/gnome-sync.json file
 4. launch VSCodium and do the following
 1. ```set gitlab token```
 2. ```https://gitlab.autiboystech.com```
