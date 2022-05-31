@@ -20,6 +20,11 @@ echo "Installing Git and Curl"
 sleep 5
 apt install git curl -y
 
+# Install Java SDK
+echo "Installing Java SDK"
+sleep 5
+apt install openjdk-17-jdk -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
