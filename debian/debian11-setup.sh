@@ -1,15 +1,4 @@
 #!/bin/bash
-# sleep from
-# https://linuxize.com/post/how-to-use-linux-sleep-command-to-pause-a-bash-script/
-
-# Disable Sudo timeout
-# https://gist.github.com/cowboy/3118588
-# echo "Enabling Sudo timeout loop"
-# sudo -v
-# while true; do sleep 60; sudo -n true; kill -0 "$$" || exit; done 2>/dev/null &
-# function wait() {
-#   echo -n "["; for i in {1..60}; do sleep $1; echo -n =; done; echo "]"
-# }
 
 # Plug in Ventoy USB Drive
 echo "Please insert the Ventoy USB Drive you used to install this OS."
