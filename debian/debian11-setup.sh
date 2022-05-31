@@ -175,6 +175,13 @@ echo "Installing NumWorks Calc Driver"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
+# Download Configure Script
+echo "Downloading Configure Script"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-configure.sh -P /home/autiboy/
+chmod +x /home/autiboy/debian11-configure.sh
+chown autiboy:autiboy /home/autiboy/debian11-configure.sh
+
 # Rebooting Computer
 echo "Rebooting Computer Now"
 sleep 5
