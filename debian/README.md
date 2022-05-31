@@ -1,4 +1,4 @@
-# Autiboy-Linux
+# Autiboy-Linux Debian Distro
 
 ## Autiboy's Debian
 After install of Debian run this script to install all the apps
