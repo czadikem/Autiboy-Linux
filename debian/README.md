@@ -7,7 +7,9 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/deb
 chmod +x debian11-setup.sh
 sudo ./debian11-setup.sh
 ```
-Then after the computer reboots run this 
+Then after the computer reboots login
+1. Launch blender and set it up.  Then close it
+2. Launch VSCodium and set it up.  Then close it.
 ```
 ./debian11-configure.sh
 ```
