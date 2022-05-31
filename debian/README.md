@@ -11,6 +11,9 @@ Then after the computer reboots login
 1. Launch blender and set it up.  Then close it
 2. Launch VSCodium and set it up.  Then close it.
 ```
+
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-configure.sh
+chmod +x debian11-configure.sh
 ./debian11-configure.sh
 ```
 Then after the computer reboots again you need to setup gnome
