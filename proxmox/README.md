@@ -124,3 +124,14 @@ What we want to keep, are these vendor id codes: 10de:1b81 and 10de:10f0.
 
 
 ### The Nag should be gone and the GPU ready to pass though
+
+#### For a Windows VM or Linux VM do the following
+```nano /etc/pve/qemu-server/<vmid>.conf```
+
+and then ass this to the top of the file
+
+```
+machine: q35
+cpu: host,hidden=1,flags=+pcid
+args: -cpu 'host,+kvm_pv_unhalt,+kvm_pv_eoi,hv_vendor_id=NV43FIX,kvm=off'
+```
