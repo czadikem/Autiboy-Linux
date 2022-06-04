@@ -131,9 +131,6 @@ flatpak install flathub org.videolan.VLC -y
 echo "Installing OnlyOffice"
 sleep 5
 flatpak install flathub org.onlyoffice.desktopeditors -y
-echo "Installing Transmission"
-sleep 5
-flatpak install flathub com.transmissionbt.Transmission -y
 echo "Installing Thunderbird"
 sleep 5
 flatpak install flathub org.mozilla.Thunderbird -y
