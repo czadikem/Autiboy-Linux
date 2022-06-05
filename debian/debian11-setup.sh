@@ -73,6 +73,11 @@ echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
 apt install gnome-tweaks gnome-shell-extensions -y
 
+# Uninstall Apps
+echo "Uninstalling totem and transmission"
+sleep 5
+sudo apt autoremove totem transmission -y
+
 # Install Tabby-Terminal
 # https://github.com/Eugeny/tabby
 echo "Installing Tabby-Terminal"
@@ -131,6 +136,9 @@ flatpak install flathub org.videolan.VLC -y
 echo "Installing OnlyOffice"
 sleep 5
 flatpak install flathub org.onlyoffice.desktopeditors -y
+echo "Installing Transmission"
+sleep 5
+flatpak install flathub com.transmissionbt.Transmission -y
 echo "Installing Thunderbird"
 sleep 5
 flatpak install flathub org.mozilla.Thunderbird -y
