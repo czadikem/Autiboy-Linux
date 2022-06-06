@@ -160,6 +160,9 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 echo "Installing Blender"
 sleep 5
 flatpak install flathub org.blender.Blender -y
+echo "Installing PolyMC"
+sleep 5
+flatpak install flathub org.polymc.PolyMC -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
