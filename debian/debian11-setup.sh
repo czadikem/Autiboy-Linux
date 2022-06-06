@@ -74,12 +74,12 @@ sleep 5
 apt install gnome-tweaks gnome-shell-extensions -y
 
 # Uninstall Apps
-echo "Uninstalling totem and transmission"
+echo "Uninstalling Totem, Transmission, and Libreoffice"
 sleep 5
 sudo apt autoremove totem transmission -y
 sudo apt-get remove --purge libreoffice* -y
 sudo apt-get clean
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 
 # Install Tabby-Terminal
 # https://github.com/Eugeny/tabby
