@@ -90,12 +90,20 @@ chown autiboy:autiboy /home/autiboy/tabby-1.0.177-linux-x64.deb
 apt install /home/autiboy/tabby-1.0.177-linux-x64.deb -y
 
 # Install AngryIP Scanner
-# https://github.com/Eugeny/tabby
+# https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
 sleep 5
 wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/ipscan_3.8.2_amd64.deb
 apt install /home/autiboy/ipscan_3.8.2_amd64.deb -y
+
+# Install Raspberry Pi Imager
+# https://github.com/raspberrypi/rpi-imager
+echo "Installing Raspberry Pi Imager"
+sleep 5
+wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb -P /home/autiboy/
+chown autiboy:autiboy /home/autiboy/imager_latest_amd64.deb
+apt install /home/autiboy/imager_latest_amd64.deb -y
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
