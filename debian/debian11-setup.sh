@@ -89,6 +89,14 @@ wget https://github.com/Eugeny/tabby/releases/download/v1.0.177/tabby-1.0.177-li
 chown autiboy:autiboy /home/autiboy/tabby-1.0.177-linux-x64.deb
 apt install /home/autiboy/tabby-1.0.177-linux-x64.deb -y
 
+# Install AngryIP Scanner
+# https://github.com/Eugeny/tabby
+echo "Installing AngryIP Scanner"
+sleep 5
+wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/autiboy/
+chown autiboy:autiboy /home/autiboy/ipscan_3.8.2_amd64.deb
+apt install /home/autiboy/ipscan_3.8.2_amd64.deb -y
+
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
 echo "Installing AppImageLauncher"
