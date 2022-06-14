@@ -85,7 +85,7 @@ sudo apt-get autoremove -y
 # https://github.com/Eugeny/tabby
 echo "Installing Tabby-Terminal"
 sleep 5
-wget https://github.com/Eugeny/tabby/releases/download/v1.0.177/tabby-1.0.177-linux-x64.deb -P /home/autiboy/
+wget https://github.com/Eugeny/tabby/releases/download/v1.0.179/tabby-1.0.179-linux-x64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/tabby-1.0.177-linux-x64.deb
 apt install /home/autiboy/tabby-1.0.177-linux-x64.deb -y
 
