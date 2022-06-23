@@ -28,6 +28,6 @@ Then after the computer reboots again you need to setup gnome
 ## Autiboy's Debian Virtualization
 After install of Debian run this script to install all the apps
 ```
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-virtualization-setup.sh
-chmod +x debian11-virtualization-setup.sh
-sudo ./debian11-virtualization-setup.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-virt-setup.sh
+chmod +x debian11-virt-setup.sh
+sudo ./debian11-virt-setup.sh
