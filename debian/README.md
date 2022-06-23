@@ -24,3 +24,10 @@ Then after the computer reboots again you need to setup gnome
 1. ```set gitlab token```
 2. ```https://gitlab.autiboystech.com```
 3. ```ozUa-qtLLAtFhtvmvMgw```
+
+## Autiboy's Debian Virtualization
+After install of Debian run this script to install all the apps
+```
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/debian11-virtualization-setup.sh
+chmod +x debian11-virtualization-setup.sh
+sudo ./debian11-virtualization-setup.sh
