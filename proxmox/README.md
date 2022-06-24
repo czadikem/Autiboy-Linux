@@ -128,7 +128,7 @@ What we want to keep, are these vendor id codes: 10de:1b81 and 10de:10f0.
 #### For a Windows VM or Linux VM do the following
 ```nano /etc/pve/qemu-server/<vmid>.conf```
 
-and then ass this to the top of the file
+and then add this to the top of the file
 
 ```
 machine: q35
