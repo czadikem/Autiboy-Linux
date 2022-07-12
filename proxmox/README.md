@@ -135,3 +135,5 @@ machine: q35
 cpu: host,hidden=1,flags=+pcid
 args: -cpu 'host,+kvm_pv_unhalt,+kvm_pv_eoi,hv_vendor_id=NV43FIX,kvm=off'
 ```
+
+then make sure you set your gpu as primary after the OS installed
