@@ -87,7 +87,7 @@ echo "Installing Tabby-Terminal"
 sleep 5
 wget https://github.com/Eugeny/tabby/releases/download/v1.0.181/tabby-1.0.181-linux-x64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/tabby-1.0.181-linux-x64.deb
-apt install /home/autiboy/tabby-1.0.181-linux-x64.deb-y
+apt install /home/autiboy/tabby-1.0.181-linux-x64.deb -y
 
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
