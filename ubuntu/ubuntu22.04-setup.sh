@@ -49,12 +49,11 @@ sleep 5
 tar -xf Applications.tar.xz
 chown -R autiboy:autiboy /home/autiboy/Applications
 
-# Install Flatpak and Gnome-Software
+# Install Flatpak
 # https://flatpak.org/setup/Ubuntu
-echo "Installing Flatpak and Gnome Software"
+echo "Installing Flatpak"
 sleep 5
 apt install flatpak -y
-apt install gnome-software-plugin-flatpak -y
 
 # Add Flathub repo to Flatpak
 echo "Adding Flathub repo"
@@ -67,10 +66,9 @@ sleep 5
 apt install gnome-tweaks gnome-shell-extensions -y
 
 # Uninstall Apps
-echo "Uninstalling Totem, Snap Store, and Libreoffice"
+echo "Uninstalling Totem, and Libreoffice"
 sleep 5
 apt autoremove totem -y
-snap remove snap-store
 apt-get remove --purge libreoffice* -y
 apt-get clean
 apt-get autoremove -y
