@@ -26,7 +26,7 @@ git config --global user.email czadikem@readytodream.com
 # Setup Blender
 echo "Setting up Blender"
 sleep 5
-mv -r /home/autiboy/Applications/3.2 /home/autiboy/.var/app/org.blender.Blender/config/blender/
+mv /home/autiboy/Applications/3.2 /home/autiboy/.var/app/org.blender.Blender/config/blender/
 
 # Set time to AM/PM for Gnome
 # https://askubuntu.com/a/1183891
