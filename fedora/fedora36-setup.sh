@@ -17,7 +17,7 @@ dnf install git curl -y
 # Install Java SDK
 echo "Installing Java SDK"
 sleep 5
-dnf install java-17-openjdk -y
+dnf install java-17-openjdk-devel -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
