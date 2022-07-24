@@ -49,11 +49,6 @@ sleep 5
 tar -xf Applications.tar.xz
 chown -R autiboy:autiboy /home/autiboy/Applications
 
-# Add Flathub repo to Flatpak
-echo "Adding Flathub repo"
-sleep 5
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # Add RPM Fusion Free and Non-Free repos
 # https://rpmfusion.org
 echo "Adding RPM Fusion Free and Non-Free repos"
@@ -124,38 +119,6 @@ pip3 install matplotlib
 echo "Installing gparted"
 sleep 5
 dnf install gparted -y
-
-# Install Flatpaks
-echo "Installing VLC"
-sleep 5
-flatpak install flathub org.videolan.VLC -y
-echo "Installing OnlyOffice"
-sleep 5
-flatpak install flathub org.onlyoffice.desktopeditors -y
-echo "Installing Transmission"
-sleep 5
-flatpak install flathub com.transmissionbt.Transmission -y
-echo "Installing Thunderbird"
-sleep 5
-flatpak install flathub org.mozilla.Thunderbird -y
-echo "Installing appeditor"
-sleep 5
-flatpak install flathub com.github.donadigo.appeditor -y
-echo "Installing Godot"
-sleep 5
-flatpak install flathub org.godotengine.Godot -y
-echo "Installing Tor Browser"
-sleep 5
-flatpak install flathub com.github.micahflee.torbrowser-launcher -y
-echo "Installing Extension Manager"
-sleep 5
-flatpak install flathub com.mattjakeman.ExtensionManager -y
-echo "Installing Blender"
-sleep 5
-flatpak install flathub org.blender.Blender -y
-echo "Installing PolyMC"
-sleep 5
-flatpak install flathub org.polymc.PolyMC -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
