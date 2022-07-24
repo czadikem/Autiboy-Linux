@@ -65,6 +65,13 @@ echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
 dnf install gnome-tweaks gnome-extensions-app -y
 
+# Uninstall Apps
+echo "Uninstalling Totem, Libreoffice"
+sleep 5
+dnf autoremove totem -y
+dnf autoremove libreoffice* -y
+dnf autoremove -y
+
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
