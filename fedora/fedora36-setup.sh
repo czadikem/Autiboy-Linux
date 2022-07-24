@@ -72,7 +72,8 @@ dnf autoremove totem -y
 dnf autoremove libreoffice* -y
 dnf autoremove -y
 
-# Microsoft fonts
+# Install Microsoft fonts
+# https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-fedora-36-linux/
 echo "Installing Microsoft fonts"
 sleep 5
 dnf install mscore-fonts-all -y
