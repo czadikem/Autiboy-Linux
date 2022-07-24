@@ -72,6 +72,11 @@ dnf autoremove totem -y
 dnf autoremove libreoffice* -y
 dnf autoremove -y
 
+# Microsoft fonts
+echo "Installing Microsoft fonts"
+sleep 5
+dnf install mscore-fonts-all -y
+
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
