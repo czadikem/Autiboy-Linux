@@ -5,7 +5,7 @@ After install of Fedora run this script to install all the apps
 ```
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora36-setup.sh
 chmod +x fedora36-setup.sh
-sudo ./debian36-setup.sh
+sudo ./fedora36-setup.sh
 ```
 Then after the computer reboots login
 1. Launch blender and set it up.  Then close it
