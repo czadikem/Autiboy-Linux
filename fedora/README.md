@@ -8,14 +8,18 @@ chmod +x fedora36-setup.sh
 sudo ./fedora36-setup.sh
 ```
 Then after the computer reboots login
-1. Launch blender and set it up.  Then close it
-2. Launch VSCodium and set it up.  Then close it.
-```
+1. Open firefox set it up
+2. go to 
 
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora36-configure.sh
-chmod +x fedora36-configure.sh
-./fedora36-configure.sh
-```
+``` https://flatpak.org/setup/Fedora```
+
+3. Install the repository repo file
+4. open terminal and run
+
+```./fedora36-configure1.sh```
+
+5. Reboot your computer
+
 Then after the computer reboots again you need to setup gnome
 1. Install gnome-sync from extension manager
 2. configure it to point to /home/autiboy/Applications/gnome-sync/gnome-sync.json
