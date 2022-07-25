@@ -7,18 +7,26 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fed
 chmod +x fedora36-setup.sh
 sudo ./fedora36-setup.sh
 ```
-Then after the computer reboots login
+
+### Then after the computer reboots, login
 1. Open firefox set it up
-2. go to 
+2.Go to 
 
 ``` https://flatpak.org/setup/Fedora```
 
 3. Install the repository repo file
-4. open terminal and run
+4. Open terminal and run
 
 ```./fedora36-configure1.sh```
 
 5. Reboot your computer
+
+### Then after the computer reboots again, login
+1. open terminal and run
+
+```./fedora36-configure2.sh```
+
+2. Reboot your computer
 
 Then after the computer reboots again you need to setup gnome
 1. Install gnome-sync from extension manager
