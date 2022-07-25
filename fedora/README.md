@@ -10,7 +10,7 @@ sudo ./fedora36-setup.sh
 
 ### Then after the computer reboots, login
 1. Open firefox set it up
-2.Go to 
+2. Go to
 
 ``` https://flatpak.org/setup/Fedora```
 
