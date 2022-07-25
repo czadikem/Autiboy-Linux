@@ -30,7 +30,9 @@ sudo ./fedora36-setup.sh
 
 ```./fedora36-configure2.sh```
 
-4. Reboot your computer
+4. Copy all your files over from your backup drive
+5. Open Settings and go to Privacy, Screen lock, then enable screen lock
+6. Reboot your computer
 
 Then after the computer reboots again you need to setup gnome
 1. Install gnome-sync from extension manager
