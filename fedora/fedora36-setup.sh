@@ -67,6 +67,21 @@ dnf autoremove totem -y
 dnf autoremove libreoffice* -y
 dnf autoremove -y
 
+# Install plugins for playing movies and music
+# https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
+echo "Install plugins for playing movies and music"
+sleep 5
+dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+dnf install lame\* --exclude=lame-devel -y
+sudo dnf group upgrade --with-optional Multimedia -y
+
+# Install Openh264
+# https://docs.fedoraproject.org/en-US/quick-docs/openh264/#installation-from-fedora-cisco-openh264-repository
+echo "Installing Openh264"
+sleep 5
+dnf config-manager --set-enabled fedora-cisco-openh264 -y
+dnf install gstreamer1-plugin-openh264 mozilla-openh264 -y
+
 # Install Microsoft fonts
 # https://www.linuxcapable.com/how-to-install-microsoft-fonts-on-fedora-36-linux/
 echo "Installing Microsoft fonts"
