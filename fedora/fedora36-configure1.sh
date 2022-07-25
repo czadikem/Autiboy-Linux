@@ -34,5 +34,11 @@ echo "Installing PolyMC"
 sleep 5
 flatpak install flathub org.polymc.PolyMC -y
 
+# Download Configure2 Script
+echo "Downloading Configure2 Script"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora36-configure2.sh -P /home/autiboy/
+chmod +x /home/autiboy/fedora36-configure2.sh
+
 # Reboot Your Computer
 echo "Please Reboot Your Computer"
