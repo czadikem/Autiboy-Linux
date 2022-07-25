@@ -9,8 +9,10 @@ sudo ./fedora36-setup.sh
 ```
 
 ### Then after the computer reboots, login
-1. Open firefox set it up
-2. Go to
+1. Open Settings and go to Privacy, Screen lock, then disable screen lock
+2. Then go to About in Settings and change the device name to the name of your user (not "autiboy" but like for example "Autiboy Main-Laptop")
+3. Open firefox set it up
+4. Go to
 
 ``` https://flatpak.org/setup/Fedora```
 
