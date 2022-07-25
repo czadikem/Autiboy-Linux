@@ -22,11 +22,13 @@ sudo ./fedora36-setup.sh
 5. Reboot your computer
 
 ### Then after the computer reboots again, login
-1. open terminal and run
+1. Open Vscodium and set it up
+2. Open Blender and set it up
+3. Open terminal and run
 
 ```./fedora36-configure2.sh```
 
-2. Reboot your computer
+4. Reboot your computer
 
 Then after the computer reboots again you need to setup gnome
 1. Install gnome-sync from extension manager
