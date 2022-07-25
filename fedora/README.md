@@ -32,9 +32,10 @@ sudo ./fedora36-setup.sh
 
 4. Copy all your files over from your backup drive
 5. Open Settings and go to Privacy, Screen lock, then enable screen lock
-6. Reboot your computer
+6. Then go to Multitasking in Settings and change "Workspaces on primary display only" to "Workspaces on all displays"
+7. Reboot your computer
 
-Then after the computer reboots again you need to setup gnome
+### Then after the computer reboots again you need to setup gnome(maybe)
 1. Install gnome-sync from extension manager
 2. configure it to point to /home/autiboy/Applications/gnome-sync/gnome-sync.json
 3. delete the /home/autiboy/.config/gnome-sync.json file
