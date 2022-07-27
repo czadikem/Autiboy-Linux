@@ -21,6 +21,12 @@ Click the shell button
 Paste these in line for line
 
 ```
+apt update
+apt upgrade -y
+```
+
+
+```
 # Disable Commercial Repo
 sed -i "s/^deb/\#deb/" /etc/apt/sources.list.d/pve-enterprise.list
 apt-get update
