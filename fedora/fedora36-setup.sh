@@ -131,9 +131,31 @@ pip3 install opencv-python
 pip3 install matplotlib
 
 # Install Gparted
-echo "Installing gparted"
+echo "Installing Gparted"
 sleep 5
 dnf install gparted -y
+
+# Install VLC Media PLayer
+echo "Installing VLC Media PLayer"
+sleep 5
+dnf install vlc -y
+
+# Install Transmission
+echo "Installing Transmission"
+sleep 5
+dnf install transmission -y
+
+# Install Blender
+# https://packages.fedoraproject.org/pkgs/blender/blender
+echo "Installing Blender"
+sleep 5
+dnf install blender -y
+
+
+# Install Godothttps://src.fedoraproject.org/rpms/godot
+echo "Installing Godot"
+sleep 5
+dnf install Godot -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
