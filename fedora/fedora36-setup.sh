@@ -151,11 +151,16 @@ echo "Installing Blender"
 sleep 5
 dnf install blender -y
 
-
-# Install Godothttps://src.fedoraproject.org/rpms/godot
+# Install Godot
+# https://src.fedoraproject.org/rpms/godot
 echo "Installing Godot"
 sleep 5
-dnf install Godot -y
+dnf install godot -y
+
+# Install OBS-Studio
+echo "Installing OBS-Studio"
+sleep 5
+dnf install obs-studio -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
