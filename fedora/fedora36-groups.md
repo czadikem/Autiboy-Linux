@@ -2,7 +2,8 @@
 
 ### Common NetworkManager Submodules
 
-``` Default Packages:
+```
+ Default Packages:
    NetworkManager-bluetooth
    NetworkManager-wifi
    NetworkManager-wwan
@@ -25,7 +26,7 @@ wpa_supplicant
 ### Container Management
 
 ```
-Default Packages:
+ Default Packages:
    podman
  Optional Packages:
    buildah
@@ -43,7 +44,7 @@ flatpak
 ### Core
 
 ```
-Mandatory Packages:
+ Mandatory Packages:
    audit
    basesystem
    bash
@@ -100,7 +101,7 @@ Mandatory Packages:
  Conditional Packages:
    rpmfusion-free-appstream-data
    rpmfusion-nonfree-appstream-data
-   
+
 Need:
 
 audit
@@ -151,4 +152,1438 @@ plymouth
 systemd-oomd-defaults
 systemd-resolved
 zram-generator-defaults
+```
+
+### Fedora Workstation product core
+
+```
+ Mandatory Packages:
+   dnf
+   linux-firmware
+   microcode_ctl
+   sudo
+   systemd-udev
+   tar
+   xorg-x11-drv-libinput
+ Default Packages:
+   NetworkManager-config-connectivity-fedora
+   abrt-cli
+   abrt-desktop
+   abrt-java-connector
+   acl
+   adwaita-qt5
+   attr
+   bash-completion
+   bc
+   bind-utils
+   btrfs-progs
+   bzip2
+   chrony
+   cifs-utils
+   compsize
+   cpio
+   cryptsetup
+   cyrus-sasl-plain
+   default-editor
+   deltarpm
+   desktop-backgrounds-gnome
+   dnf-plugins-core
+   dos2unix
+   dosfstools
+   ethtool
+   exfatprogs
+   fedora-chromium-config
+   fedora-release-workstation
+   fedora-workstation-backgrounds
+   file
+   fpaste
+   fros-gnome
+   gamemode
+   git
+   glibc-all-langpacks
+   gnome-shell-extension-background-logo
+   gnupg2
+   hunspell
+   ibus-anthy
+   ibus-gtk3
+   ibus-gtk4
+   ibus-hangul
+   ibus-libpinyin
+   ibus-libzhuyin
+   ibus-m17n
+   ibus-typing-booster
+   iptstate
+   jwhois
+   logrotate
+   lrzsz
+   lsof
+   mailcap
+   man-pages
+   mcelog
+   mdadm
+   mediawriter
+   mtr
+   net-tools
+   nfs-utils
+   nmap-ncat
+   nss-mdns
+   ntfs-3g
+   ntfsprogs
+   opensc
+   pam_afs_session
+   passwdqc
+   pciutils
+   pinentry-gnome3
+   pinfo
+   plocate
+   plymouth-system-theme
+   policycoreutils-python-utils
+   psacct
+   psmisc
+   python3-dnf-plugin-system-upgrade
+   qgnomeplatform
+   qgnomeplatform-qt5
+   qt5-qtbase
+   qt5-qtbase-gui
+   qt5-qtdeclarative
+   qt5-qtxmlpatterns
+   quota
+   realmd
+   rhythmbox
+   rsync
+   sos
+   sssd
+   symlinks
+   systemd-oomd-defaults
+   tcpdump
+   thermald
+   time
+   traceroute
+   tree
+   unoconv
+   unzip
+   uresourced
+   usbutils
+   wget
+   which
+   words
+   zip
+
+Need:
+
+dnf
+linux-firmware
+microcode_ctl
+sudo
+systemd-udev
+tar
+xorg-x11-drv-libinput
+NetworkManager-config-connectivity-fedora
+abrt-cli
+abrt-desktop
+abrt-java-connector
+acl
+adwaita-qt5
+attr
+bash-completion
+bc
+bind-utils
+btrfs-progs
+bzip2
+chrony
+cifs-utils
+compsize
+cpio
+cryptsetup
+cyrus-sasl-plain
+default-editor
+deltarpm
+desktop-backgrounds-gnome
+dnf-plugins-core
+dos2unix
+dosfstools
+ethtool
+exfatprogs
+fedora-chromium-config
+fedora-release-workstation
+fedora-workstation-backgrounds
+file
+fpaste
+fros-gnome
+gamemode
+git
+glibc-all-langpacks
+gnome-shell-extension-background-logo
+gnupg2
+hunspell
+ibus-anthy
+ibus-gtk3
+ibus-gtk4
+ibus-hangul
+ibus-libpinyin
+ibus-libzhuyin
+ibus-m17n
+ibus-typing-booster
+iptstate
+jwhois
+logrotate
+lrzsz
+lsof
+mailcap
+man-pages
+mcelog
+mdadm
+mediawriter
+mtr
+net-tools
+nfs-utils
+nmap-ncat
+nss-mdns
+ntfs-3g
+ntfsprogs
+opensc
+pam_afs_session
+passwdqc
+pciutils
+pinentry-gnome3
+pinfo
+plocate
+plymouth-system-theme
+policycoreutils-python-utils
+psacct
+psmisc
+python3-dnf-plugin-system-upgrade
+qgnomeplatform
+qgnomeplatform-qt5
+qt5-qtbase
+qt5-qtbase-gui
+qt5-qtdeclarative
+qt5-qtxmlpatterns
+quota
+realmd
+rhythmbox
+rsync
+sos
+sssd
+symlinks
+systemd-oomd-defaults
+tcpdump
+thermald
+time
+traceroute
+tree
+unoconv
+unzip
+uresourced
+usbutils
+wget
+which
+words
+zip
+```
+
+### Firefox Web Browser
+
+```
+Mandatory Packages:
+   fedora-bookmarks
+   firefox
+ Default Packages:
+   libglvnd-gles
+
+Need:
+
+fedora-bookmarks
+firefox
+libglvnd-gles
+```
+
+### Fonts
+
+```
+ Default Packages:
+   abattis-cantarell-vf-fonts
+   google-noto-emoji-color-fonts
+   google-noto-naskh-arabic-vf-fonts
+   google-noto-sans-armenian-vf-fonts
+   google-noto-sans-canadian-aboriginal-vf-fonts
+   google-noto-sans-cherokee-vf-fonts
+   google-noto-sans-cjk-ttc-fonts
+   google-noto-sans-ethiopic-vf-fonts
+   google-noto-sans-georgian-vf-fonts
+   google-noto-sans-gurmukhi-vf-fonts
+   google-noto-sans-hebrew-vf-fonts
+   google-noto-sans-lao-vf-fonts
+   google-noto-sans-math-vf-fonts
+   google-noto-sans-mono-vf-fonts
+   google-noto-sans-sinhala-vf-fonts
+   google-noto-sans-thaana-vf-fonts
+   google-noto-sans-vf-fonts
+   google-noto-serif-vf-fonts
+   jomolhari-fonts
+   khmer-os-system-fonts
+   liberation-mono-fonts
+   liberation-sans-fonts
+   liberation-serif-fonts
+   lohit-assamese-fonts
+   lohit-bengali-fonts
+   lohit-devanagari-fonts
+   lohit-gujarati-fonts
+   lohit-kannada-fonts
+   lohit-marathi-fonts
+   lohit-odia-fonts
+   lohit-tamil-fonts
+   lohit-telugu-fonts
+   paktype-naskh-basic-fonts
+   rit-meera-new-fonts
+   sil-mingzat-fonts
+   sil-nuosu-fonts
+   sil-padauk-fonts
+   stix-fonts
+   thai-scalable-waree-fonts
+ Optional Packages:
+   aajohan-comfortaa-fonts
+   adf-accanthis-2-fonts
+   adf-accanthis-3-fonts
+   adf-accanthis-fonts
+   adf-gillius-2-fonts
+   adf-gillius-fonts
+   adf-tribun-fonts
+   adobe-source-code-pro-fonts
+   adobe-source-han-code-jp-fonts
+   adobe-source-han-sans-cn-fonts
+   adobe-source-han-sans-jp-fonts
+   adobe-source-han-sans-kr-fonts
+   adobe-source-han-sans-tw-fonts
+   adobe-source-han-serif-cn-fonts
+   adobe-source-han-serif-jp-fonts
+   adobe-source-han-serif-kr-fonts
+   adobe-source-han-serif-tw-fonts
+   adobe-source-sans-pro-fonts
+   adobe-source-serif-pro-fonts
+   aftertheflood-sparks-bar-fonts
+   aftertheflood-sparks-dot-fonts
+   aftertheflood-sparks-dot-line-fonts
+   alef-fonts
+   allgeyer-musiqwik-fonts
+   allgeyer-musisync-fonts
+   amiri-fonts
+   amiri-quran-fonts
+   anka-coder-condensed-fonts
+   anka-coder-narrow-fonts
+   anka-coder-norm-fonts
+   apa-new-athena-unicode-fonts
+   apanov-heuristica-fonts
+   astigmatic-grand-hotel-fonts
+   baekmuk-ttf-batang-fonts
+   baekmuk-ttf-dotum-fonts
+   baekmuk-ttf-gulim-fonts
+   baekmuk-ttf-hline-fonts
+   beteckna-fonts
+   beteckna-lower-case-fonts
+   beteckna-small-caps-fonts
+   bitstream-vera-sans-fonts
+   bitstream-vera-sans-mono-fonts
+   bitstream-vera-serif-fonts
+   bpg-algeti-fonts
+   bpg-chveulebrivi-fonts
+   bpg-classic-fonts
+   bpg-courier-fonts
+   bpg-courier-s-fonts
+   bpg-dedaena-block-fonts
+   bpg-dejavu-sans-fonts
+   bpg-elite-fonts
+   bpg-excelsior-caps-fonts
+   bpg-excelsior-condenced-fonts
+   bpg-excelsior-fonts
+   bpg-glaho-fonts
+   bpg-gorda-fonts
+   bpg-ingiri-fonts
+   bpg-irubaqidze-fonts
+   bpg-mikhail-stephan-fonts
+   bpg-mrgvlovani-caps-fonts
+   bpg-mrgvlovani-fonts
+   bpg-nateli-caps-fonts
+   bpg-nateli-condenced-fonts
+   bpg-nateli-fonts
+   bpg-nino-medium-cond-fonts
+   bpg-nino-medium-fonts
+   bpg-sans-fonts
+   bpg-sans-medium-fonts
+   bpg-sans-modern-fonts
+   bpg-sans-regular-fonts
+   bpg-serif-fonts
+   bpg-serif-modern-fonts
+   bpg-ucnobi-fonts
+   campivisivi-titillium-fonts
+   cave9-mutante-fonts
+   cdac-sakal-marathi-fonts
+   cf-bonveno-fonts
+   chisholm-letterslaughing-fonts
+   chisholm-to-be-continued-fonts
+   cjkuni-ukai-fonts
+   cjkuni-uming-fonts
+   comic-neue-fonts
+   conakry-fonts
+   ctan-cm-lgc-roman-fonts
+   ctan-cm-lgc-sans-fonts
+   ctan-cm-lgc-typewriter-fonts
+   ctan-kerkis-calligraphic-fonts
+   ctan-kerkis-sans-fonts
+   ctan-kerkis-serif-fonts
+   culmus-shofar-fonts
+   d-din-condensed-fonts
+   d-din-exp-fonts
+   d-din-fonts
+   darkgarden-fonts
+   dejavu-lgc-sans-fonts
+   dejavu-lgc-sans-mono-fonts
+   dejavu-lgc-serif-fonts
+   dejavu-sans-fonts
+   dejavu-sans-mono-fonts
+   dejavu-serif-fonts
+   denemo-emmentaler-fonts
+   denemo-feta-fonts
+   denemo-music-fonts
+   drehatlas-warender-bibliothek-fonts
+   drehatlas-widelands-fonts
+   drehatlas-xaporho-fonts
+   dustin-domestic-manners-fonts
+   dustin-dustismo-roman-fonts
+   dustin-dustismo-sans-fonts
+   ecolier-court-fonts
+   ektype-mukta-devanagari-fonts
+   ektype-mukta-mahee-fonts
+   ektype-mukta-malar-fonts
+   ektype-mukta-vaani-fonts
+   entypo-fonts
+   eosrei-emojione-fonts
+   fontawesome-fonts
+   fontsquirrel-crete-round-fonts
+   freecol-imperator-fonts
+   freecol-shadowedblack-fonts
+   gargi-fonts
+   gdouros-aegean-fonts
+   gdouros-aegyptus-fonts
+   gdouros-akkadian-fonts
+   gdouros-alexander-fonts
+   gdouros-anaktoria-fonts
+   gdouros-analecta-fonts
+   gdouros-aroania-fonts
+   gdouros-asea-fonts
+   gdouros-avdira-fonts
+   gdouros-musica-fonts
+   gdouros-symbola-fonts
+   gfs-ambrosia-fonts
+   gfs-artemisia-fonts
+   gfs-baskerville-fonts
+   gfs-bodoni-classic-fonts
+   gfs-bodoni-fonts
+   gfs-complutum-fonts
+   gfs-decker-fonts
+   gfs-didot-classic-fonts
+   gfs-didot-fonts
+   gfs-eustace-fonts
+   gfs-fleischman-fonts
+   gfs-garaldus-fonts
+   gfs-gazis-fonts
+   gfs-goschen-fonts
+   gfs-ignacio-fonts
+   gfs-jackson-fonts
+   gfs-neohellenic-fonts
+   gfs-nicefore-fonts
+   gfs-olga-fonts
+   gfs-philostratos-fonts
+   gfs-porson-fonts
+   gfs-pyrsos-fonts
+   gfs-solomos-fonts
+   gfs-theokritos-fonts
+   glyphicons-halflings-fonts
+   gnu-free-mono-fonts
+   gnu-free-sans-fonts
+   gnu-free-serif-fonts
+   google-arimo-fonts
+   google-carlito-fonts
+   google-cousine-fonts
+   google-droid-sans-fonts
+   google-droid-sans-mono-fonts
+   google-droid-serif-fonts
+   google-noto-emoji-fonts
+   google-noto-kufi-arabic-vf-fonts
+   google-noto-music-fonts
+   google-noto-naskh-arabic-ui-vf-fonts
+   google-noto-nastaliq-urdu-fonts
+   google-noto-rashi-hebrew-vf-fonts
+   google-noto-sans-adlam-unjoined-vf-fonts
+   google-noto-sans-adlam-vf-fonts
+   google-noto-sans-anatolian-hieroglyphs-vf-fonts
+   google-noto-sans-arabic-ui-vf-fonts
+   google-noto-sans-arabic-vf-fonts
+   google-noto-sans-avestan-vf-fonts
+   google-noto-sans-balinese-vf-fonts
+   google-noto-sans-bamum-vf-fonts
+   google-noto-sans-bassa-vah-vf-fonts
+   google-noto-sans-batak-fonts
+   google-noto-sans-bengali-ui-vf-fonts
+   google-noto-sans-bengali-vf-fonts
+   google-noto-sans-bhaiksuki-fonts
+   google-noto-sans-brahmi-fonts
+   google-noto-sans-buginese-vf-fonts
+   google-noto-sans-buhid-vf-fonts
+   google-noto-sans-carian-vf-fonts
+   google-noto-sans-caucasian-albanian-fonts
+   google-noto-sans-chakma-fonts
+   google-noto-sans-cham-vf-fonts
+   google-noto-sans-cjk-jp-fonts
+   google-noto-sans-cjk-kr-fonts
+   google-noto-sans-cjk-sc-fonts
+   google-noto-sans-cjk-tc-fonts
+   google-noto-sans-coptic-fonts
+   google-noto-sans-cuneiform-vf-fonts
+   google-noto-sans-cypriot-vf-fonts
+   google-noto-sans-deseret-vf-fonts
+   google-noto-sans-devanagari-ui-vf-fonts
+   google-noto-sans-devanagari-vf-fonts
+   google-noto-sans-display-vf-fonts
+   google-noto-sans-duployan-fonts
+   google-noto-sans-egyptian-hieroglyphs-vf-fonts
+   google-noto-sans-elbasan-fonts
+   google-noto-sans-elymaic-vf-fonts
+   google-noto-sans-glagolitic-fonts
+   google-noto-sans-gothic-vf-fonts
+   google-noto-sans-grantha-fonts
+   google-noto-sans-gujarati-fonts
+   google-noto-sans-gujarati-ui-fonts
+   google-noto-sans-gunjala-gondi-fonts
+   google-noto-sans-gurmukhi-ui-vf-fonts
+   google-noto-sans-hanifi-rohingya-vf-fonts
+   google-noto-sans-hanunoo-fonts
+   google-noto-sans-hatran-vf-fonts
+   google-noto-sans-imperial-aramaic-vf-fonts
+   google-noto-sans-indic-siyaq-numbers-fonts
+   google-noto-sans-inscriptional-pahlavi-fonts
+   google-noto-sans-inscriptional-parthian-fonts
+   google-noto-sans-javanese-fonts
+   google-noto-sans-jp-fonts
+   google-noto-sans-kaithi-fonts
+   google-noto-sans-kannada-ui-vf-fonts
+   google-noto-sans-kannada-vf-fonts
+   google-noto-sans-kayah-li-vf-fonts
+   google-noto-sans-kharoshthi-fonts
+   google-noto-sans-khmer-ui-vf-fonts
+   google-noto-sans-khmer-vf-fonts
+   google-noto-sans-khojki-fonts
+   google-noto-sans-khudawadi-fonts
+   google-noto-sans-kr-fonts
+   google-noto-sans-lao-looped-vf-fonts
+   google-noto-sans-lao-ui-vf-fonts
+   google-noto-sans-lepcha-fonts
+   google-noto-sans-limbu-fonts
+   google-noto-sans-linear-a-vf-fonts
+   google-noto-sans-linear-b-vf-fonts
+   google-noto-sans-lisu-vf-fonts
+   google-noto-sans-lycian-vf-fonts
+   google-noto-sans-lydian-vf-fonts
+   google-noto-sans-mahajani-fonts
+   google-noto-sans-malayalam-ui-vf-fonts
+   google-noto-sans-malayalam-vf-fonts
+   google-noto-sans-mandaic-vf-fonts
+   google-noto-sans-manichaean-fonts
+   google-noto-sans-marchen-vf-fonts
+   google-noto-sans-masaram-gondi-fonts
+   google-noto-sans-mayan-numerals-vf-fonts
+   google-noto-sans-medefaidrin-vf-fonts
+   google-noto-sans-meetei-mayek-fonts
+   google-noto-sans-meeteimayek-vf-fonts
+   google-noto-sans-mende-kikakui-fonts
+   google-noto-sans-meroitic-fonts
+   google-noto-sans-miao-fonts
+   google-noto-sans-modi-fonts
+   google-noto-sans-mongolian-fonts
+   google-noto-sans-mono-cjk-jp-fonts
+   google-noto-sans-mono-cjk-kr-fonts
+   google-noto-sans-mono-cjk-sc-fonts
+   google-noto-sans-mono-cjk-tc-fonts
+   google-noto-sans-mro-vf-fonts
+   google-noto-sans-multani-vf-fonts
+   google-noto-sans-myanmar-ui-vf-fonts
+   google-noto-sans-myanmar-vf-fonts
+   google-noto-sans-nabataean-vf-fonts
+   google-noto-sans-new-tai-lue-vf-fonts
+   google-noto-sans-newa-fonts
+   google-noto-sans-nko-fonts
+   google-noto-sans-nushu-fonts
+   google-noto-sans-ogham-vf-fonts
+   google-noto-sans-ol-chiki-vf-fonts
+   google-noto-sans-old-hungarian-fonts
+   google-noto-sans-old-italic-fonts
+   google-noto-sans-old-north-arabian-fonts
+   google-noto-sans-old-permic-fonts
+   google-noto-sans-old-persian-fonts
+   google-noto-sans-old-sogdian-fonts
+   google-noto-sans-old-south-arabian-fonts
+   google-noto-sans-old-turkic-fonts
+   google-noto-sans-oriya-fonts
+   google-noto-sans-oriya-ui-fonts
+   google-noto-sans-osage-fonts
+   google-noto-sans-osmanya-vf-fonts
+   google-noto-sans-pahawh-hmong-fonts
+   google-noto-sans-palmyrene-fonts
+   google-noto-sans-pau-cin-hau-fonts
+   google-noto-sans-phags-pa-fonts
+   google-noto-sans-phoenician-vf-fonts
+   google-noto-sans-psalter-pahlavi-fonts
+   google-noto-sans-rejang-fonts
+   google-noto-sans-runic-vf-fonts
+   google-noto-sans-samaritan-fonts
+   google-noto-sans-saurashtra-fonts
+   google-noto-sans-sc-fonts
+   google-noto-sans-sharada-fonts
+   google-noto-sans-shavian-vf-fonts
+   google-noto-sans-siddham-fonts
+   google-noto-sans-signwriting-fonts
+   google-noto-sans-sinhala-ui-vf-fonts
+   google-noto-sans-sogdian-fonts
+   google-noto-sans-sora-sompeng-vf-fonts
+   google-noto-sans-soyombo-vf-fonts
+   google-noto-sans-sundanese-vf-fonts
+   google-noto-sans-syloti-nagri-fonts
+   google-noto-sans-symbols-vf-fonts
+   google-noto-sans-symbols2-fonts
+   google-noto-sans-syriac-fonts
+   google-noto-sans-tagalog-fonts
+   google-noto-sans-tagbanwa-vf-fonts
+   google-noto-sans-tai-le-fonts
+   google-noto-sans-tai-tham-vf-fonts
+   google-noto-sans-tai-viet-fonts
+   google-noto-sans-takri-vf-fonts
+   google-noto-sans-tamil-supplement-vf-fonts
+   google-noto-sans-tamil-ui-vf-fonts
+   google-noto-sans-tamil-vf-fonts
+   google-noto-sans-tc-fonts
+   google-noto-sans-telugu-ui-vf-fonts
+   google-noto-sans-telugu-vf-fonts
+   google-noto-sans-thai-looped-vf-fonts
+   google-noto-sans-thai-ui-vf-fonts
+   google-noto-sans-thai-vf-fonts
+   google-noto-sans-tifinagh-adrar-fonts
+   google-noto-sans-tifinagh-agraw-imazighen-fonts
+   google-noto-sans-tifinagh-ahaggar-fonts
+   google-noto-sans-tifinagh-air-fonts
+   google-noto-sans-tifinagh-apt-fonts
+   google-noto-sans-tifinagh-azawagh-fonts
+   google-noto-sans-tifinagh-fonts
+   google-noto-sans-tifinagh-ghat-fonts
+   google-noto-sans-tifinagh-hawad-fonts
+   google-noto-sans-tifinagh-rhissa-ixa-fonts
+   google-noto-sans-tifinagh-sil-fonts
+   google-noto-sans-tifinagh-tawellemmet-fonts
+   google-noto-sans-tirhuta-fonts
+   google-noto-sans-ugaritic-vf-fonts
+   google-noto-sans-vai-vf-fonts
+   google-noto-sans-wancho-vf-fonts
+   google-noto-sans-warang-citi-vf-fonts
+   google-noto-sans-yi-vf-fonts
+   google-noto-sans-zanabazar-square-vf-fonts
+   google-noto-serif-ahom-fonts
+   google-noto-serif-armenian-vf-fonts
+   google-noto-serif-balinese-fonts
+   google-noto-serif-bengali-vf-fonts
+   google-noto-serif-cjk-jp-fonts
+   google-noto-serif-cjk-kr-fonts
+   google-noto-serif-cjk-sc-fonts
+   google-noto-serif-cjk-tc-fonts
+   google-noto-serif-cjk-ttc-fonts
+   google-noto-serif-devanagari-vf-fonts
+   google-noto-serif-display-vf-fonts
+   google-noto-serif-dogra-fonts
+   google-noto-serif-ethiopic-vf-fonts
+   google-noto-serif-georgian-vf-fonts
+   google-noto-serif-grantha-fonts
+   google-noto-serif-gujarati-vf-fonts
+   google-noto-serif-gurmukhi-vf-fonts
+   google-noto-serif-hebrew-vf-fonts
+   google-noto-serif-jp-fonts
+   google-noto-serif-kannada-vf-fonts
+   google-noto-serif-khmer-vf-fonts
+   google-noto-serif-khojki-vf-fonts
+   google-noto-serif-kr-fonts
+   google-noto-serif-lao-vf-fonts
+   google-noto-serif-malayalam-vf-fonts
+   google-noto-serif-myanmar-fonts
+   google-noto-serif-nyiakeng-puachue-hmong-vf-fonts
+   google-noto-serif-sc-fonts
+   google-noto-serif-sinhala-vf-fonts
+   google-noto-serif-tamil-slanted-vf-fonts
+   google-noto-serif-tamil-vf-fonts
+   google-noto-serif-tangut-vf-fonts
+   google-noto-serif-tc-fonts
+   google-noto-serif-telugu-vf-fonts
+   google-noto-serif-thai-vf-fonts
+   google-noto-serif-tibetan-vf-fonts
+   google-noto-serif-yezidi-vf-fonts
+   google-noto-traditional-nushu-fonts
+   google-roboto-condensed-fonts
+   google-roboto-fonts
+   google-roboto-mono-fonts
+   google-roboto-slab-fonts
+   google-tinos-fonts
+   grimmer-proggy-squaresz-fonts
+   grimmer-proggy-tinysz-fonts
+   gubbi-fonts
+   gust-antykwa-torunska-fonts
+   hanazono-fonts
+   hiran-perizia-fonts
+   horai-ume-gothic-fonts
+   horai-ume-hgothic-fonts
+   horai-ume-mincho-fonts
+   horai-ume-pgothic-fonts
+   horai-ume-pmincho-fonts
+   horai-ume-uigothic-fonts
+   ht-alegreya-fonts
+   ht-caladea-fonts
+   impallari-raleway-fonts
+   ipa-ex-gothic-fonts
+   ipa-ex-mincho-fonts
+   ipa-gothic-fonts
+   ipa-mincho-fonts
+   ipa-pgothic-fonts
+   ipa-pmincho-fonts
+   jsmath-fonts
+   julietaula-montserrat-fonts
+   kacst-art-fonts
+   kacst-book-fonts
+   kacst-decorative-fonts
+   kacst-digital-fonts
+   kacst-farsi-fonts
+   kacst-letter-fonts
+   kacst-naskh-fonts
+   kacst-office-fonts
+   kacst-one-fonts
+   kacst-pen-fonts
+   kacst-poster-fonts
+   kacst-qurn-fonts
+   kacst-screen-fonts
+   kacst-title-fonts
+   kacst-titlel-fonts
+   kalapi-fonts
+   kanjistrokeorders-fonts
+   kanotf-fonts
+   khmer-os-battambang-fonts
+   khmer-os-bokor-fonts
+   khmer-os-content-fonts
+   khmer-os-fasthand-fonts
+   khmer-os-freehand-fonts
+   khmer-os-handwritten-fonts
+   khmer-os-metal-chrieng-fonts
+   khmer-os-muol-fonts-all
+   khmer-os-siemreap-fonts
+   kurdit-unikurd-web-fonts
+   labiryntowy-fonts
+   larabie-decorative-fonts
+   larabie-straight-fonts
+   larabie-uncommon-fonts
+   lato-fonts
+   layla-arcyarc-fonts
+   layla-basic-arabic-fonts
+   layla-boxer-fonts
+   layla-digital-fonts
+   layla-diwani-fonts
+   layla-koufi-fonts
+   layla-ruqaa-fonts
+   layla-thuluth-fonts
+   levien-inconsolata-fonts
+   levien-museum-fonts
+   liberation-narrow-fonts
+   libreoffice-opensymbol-fonts
+   lilypond-emmentaler-fonts
+   linux-libertine-biolinum-fonts
+   linux-libertine-fonts
+   lklug-fonts
+   lohit-gurmukhi-fonts
+   lohit-malayalam-fonts
+   lohit-nepali-fonts
+   lohit-tamil-classical-fonts
+   madan-fonts
+   manchu-fonts
+   mgopen-canonica-fonts
+   mgopen-cosmetica-fonts
+   mgopen-modata-fonts
+   mgopen-moderna-fonts
+   mnmlicons-fonts
+   mona-sazanami-fonts
+   mona-vlgothic-fonts
+   motoya-lcedar-fonts
+   motoya-lmaru-fonts
+   mozilla-fira-mono-fonts
+   mozilla-fira-sans-fonts
+   mplus-1c-fonts
+   mplus-1m-fonts
+   mplus-1mn-fonts
+   mplus-1p-fonts
+   mplus-2c-fonts
+   mplus-2m-fonts
+   mplus-2p-fonts
+   mscore-fonts
+   msimonson-anonymouspro-fonts
+   nafees-naskh-fonts
+   nafees-nastaleeq-fonts
+   nafees-pakistani-naskh-fonts
+   nafees-pakistani-web-naskh-fonts
+   nafees-riqa-fonts
+   nafees-tehreer-naskh-fonts
+   nafees-web-naskh-fonts
+   naver-nanum-barun-gothic-fonts
+   naver-nanum-barun-pen-fonts
+   naver-nanum-brush-fonts
+   naver-nanum-gothic-coding-fonts
+   naver-nanum-gothic-fonts
+   naver-nanum-myeongjo-fonts
+   naver-nanum-pen-fonts
+   navilu-fonts
+   ns-bola-fonts
+   ns-tiza-chalk-fonts
+   oflb-asana-math-fonts
+   oflb-goudy-bookletter-1911-fonts
+   oflb-notcouriersans-fonts
+   oflb-prociono-fonts
+   oflb-smonohand-fonts
+   oldstandard-sfd-fonts
+   open-sans-fonts
+   opendyslexic-fonts
+   overpass-fonts
+   oxygen-mono-fonts
+   oxygen-sans-fonts
+   paktype-ajrak-fonts
+   paktype-naqsh-fonts
+   paktype-tehreer-fonts
+   paratype-pt-mono-fonts
+   paratype-pt-serif-caption-fonts
+   paratype-pt-serif-fonts
+   pcaro-hermit-fonts
+   polarsys-b612-mono-fonts
+   polarsys-b612-sans-fonts
+   pothana2000-fonts
+   pt-sans-fonts
+   rit-ezhuthu-fonts
+   rit-panmana-fonts
+   rit-rachana-fonts
+   rit-sundar-fonts
+   rit-tn-joy-fonts
+   saab-fonts
+   samyak-devanagari-fonts
+   samyak-gujarati-fonts
+   samyak-malayalam-fonts
+   samyak-odia-fonts
+   samyak-tamil-fonts
+   sazanami-gothic-fonts
+   sazanami-mincho-fonts
+   senamirmir-washra-fonts-all
+   serafettin-cartoon-fonts
+   sil-abyssinica-fonts
+   sil-andika-fonts
+   sil-charis-compact-fonts
+   sil-charis-fonts
+   sil-doulos-fonts
+   sil-gentium-alt-fonts
+   sil-gentium-basic-book-fonts
+   sil-gentium-basic-fonts
+   sil-gentium-fonts
+   sil-lateef-fonts
+   sil-scheherazade-fonts
+   silkscreen-expanded-fonts
+   silkscreen-fonts
+   sj-delphine-fonts
+   sj-stevehand-fonts
+   smc-anjalioldlipi-fonts
+   smc-dyuthi-fonts
+   smc-suruma-fonts
+   thai-arundina-sans-fonts
+   thai-arundina-sans-mono-fonts
+   thai-arundina-serif-fonts
+   thai-scalable-garuda-fonts
+   thai-scalable-kinnari-fonts
+   thai-scalable-laksaman-fonts
+   thai-scalable-loma-fonts
+   thai-scalable-norasi-fonts
+   thai-scalable-purisa-fonts
+   thai-scalable-sawasdee-fonts
+   thai-scalable-tlwgmono-fonts
+   thai-scalable-tlwgtypewriter-fonts
+   thai-scalable-tlwgtypist-fonts
+   thai-scalable-tlwgtypo-fonts
+   thai-scalable-umpush-fonts
+   thibault-essays1743-fonts
+   thibault-isabella-fonts
+   thibault-rockets-fonts
+   thibault-staypuft-fonts
+   tibetan-machine-uni-fonts
+   tiresias-info-fonts
+   tiresias-info-z-fonts
+   tiresias-key-v2-fonts
+   tiresias-lp-fonts
+   tiresias-pc-fonts
+   tiresias-pc-z-fonts
+   tiresias-sign-fonts
+   tiresias-sign-z-fonts
+   tlomt-junction-fonts
+   tlomt-league-gothic-fonts
+   tlomt-sniglet-fonts
+   tulrich-tuffy-fonts
+   twitter-twemoji-fonts
+   typetype-molot-fonts
+   ubuntu-title-fonts
+   ukij-tuz-fonts
+   un-core-batang-fonts
+   un-core-dinaru-fonts
+   un-core-dotum-fonts
+   un-core-graphic-fonts
+   un-core-gungseo-fonts
+   un-core-pilgi-fonts
+   un-extra-bom-fonts
+   un-extra-jamobatang-fonts
+   un-extra-jamodotum-fonts
+   un-extra-jamonovel-fonts
+   un-extra-jamosora-fonts
+   un-extra-pen-fonts
+   un-extra-penheulim-fonts
+   un-extra-pilgia-fonts
+   un-extra-shinmun-fonts
+   un-extra-taza-fonts
+   un-extra-vada-fonts
+   un-extra-yetgul-fonts
+   unifrakturmaguntia-fonts
+   urw-base35-bookman-fonts
+   urw-base35-c059-fonts
+   urw-base35-d050000l-fonts
+   urw-base35-fonts
+   urw-base35-gothic-fonts
+   urw-base35-nimbus-mono-ps-fonts
+   urw-base35-nimbus-roman-fonts
+   urw-base35-nimbus-sans-fonts
+   urw-base35-p052-fonts
+   urw-base35-standard-symbols-ps-fonts
+   urw-base35-z003-fonts
+   vdrsymbol-fonts
+   vemana2000-fonts
+   vlgothic-fonts
+   vlgothic-p-fonts
+   vollkorn-fonts
+   wine-marlett-fonts
+   wine-symbol-fonts
+   woodardworks-laconic-fonts
+   woodardworks-laconic-shadow-fonts
+   wqy-microhei-fonts
+   wqy-zenhei-fonts
+   xorg-x11-fonts-ethiopic
+   yanone-kaffeesatz-fonts
+   yanone-tagesschrift-fonts
+
+Need:
+
+abattis-cantarell-vf-fonts
+google-noto-emoji-color-fonts
+google-noto-naskh-arabic-vf-fonts
+google-noto-sans-armenian-vf-fonts
+google-noto-sans-canadian-aboriginal-vf-fonts
+google-noto-sans-cherokee-vf-fonts
+google-noto-sans-cjk-ttc-fonts
+google-noto-sans-ethiopic-vf-fonts
+google-noto-sans-georgian-vf-fonts
+google-noto-sans-gurmukhi-vf-fonts
+google-noto-sans-hebrew-vf-fonts
+google-noto-sans-lao-vf-fonts
+google-noto-sans-math-vf-fonts
+google-noto-sans-mono-vf-fonts
+google-noto-sans-sinhala-vf-fonts
+google-noto-sans-thaana-vf-fonts
+google-noto-sans-vf-fonts
+google-noto-serif-vf-fonts
+jomolhari-fonts
+khmer-os-system-fonts
+liberation-mono-fonts
+liberation-sans-fonts
+liberation-serif-fonts
+lohit-assamese-fonts
+lohit-bengali-fonts
+lohit-devanagari-fonts
+lohit-gujarati-fonts
+lohit-kannada-fonts
+lohit-marathi-fonts
+lohit-odia-fonts
+lohit-tamil-fonts
+lohit-telugu-fonts
+paktype-naskh-basic-fonts
+rit-meera-new-fonts
+sil-mingzat-fonts
+sil-nuosu-fonts
+sil-padauk-fonts
+stix-fonts
+thai-scalable-waree-fonts
+```
+
+### GNOME Desktop Environment
+
+```
+ Mandatory Packages:
+   dconf
+   gdm
+   gnome-boxes
+   gnome-connections
+   gnome-control-center
+   gnome-initial-setup
+   gnome-session-wayland-session
+   gnome-session-xsession
+   gnome-settings-daemon
+   gnome-shell
+   gnome-software
+   gnome-terminal
+   gnome-text-editor
+   nautilus
+   polkit
+   yelp
+ Default Packages:
+   ModemManager
+   NetworkManager-adsl
+   NetworkManager-openconnect-gnome
+   NetworkManager-openvpn-gnome
+   NetworkManager-ppp
+   NetworkManager-pptp-gnome
+   NetworkManager-ssh-gnome
+   NetworkManager-vpnc-gnome
+   NetworkManager-wwan
+   PackageKit-command-not-found
+   PackageKit-gtk3-module
+   adobe-source-code-pro-fonts
+   at-spi2-atk
+   at-spi2-core
+   avahi
+   baobab
+   cheese
+   chrome-gnome-shell
+   eog
+   evince
+   evince-djvu
+   evince-nautilus
+   fprintd-pam
+   glib-networking
+   gnome-backgrounds
+   gnome-bluetooth
+   gnome-calculator
+   gnome-calendar
+   gnome-characters
+   gnome-classic-session
+   gnome-clocks
+   gnome-color-manager
+   gnome-contacts
+   gnome-disk-utility
+   gnome-font-viewer
+   gnome-logs
+   gnome-maps
+   gnome-photos
+   gnome-remote-desktop
+   gnome-system-monitor
+   gnome-terminal-nautilus
+   gnome-themes-extra
+   gnome-user-docs
+   gnome-user-share
+   gnome-weather
+   gvfs-afc
+   gvfs-afp
+   gvfs-archive
+   gvfs-fuse
+   gvfs-goa
+   gvfs-gphoto2
+   gvfs-mtp
+   gvfs-smb
+   libcanberra-gtk3
+   libproxy-webkitgtk4
+   librsvg2
+   libsane-hpaio
+   mesa-dri-drivers
+   mesa-libEGL
+   orca
+   rygel
+   sane-backends-drivers-scanners
+   simple-scan
+   sushi
+   systemd-oomd-defaults
+   totem
+   tracker
+   tracker-miners
+   xdg-desktop-portal
+   xdg-desktop-portal-gnome
+   xdg-desktop-portal-gtk
+   xdg-user-dirs-gtk
+ Optional Packages:
+   vlc
+
+Need:
+
+dconf
+gdm
+gnome-boxes
+gnome-connections
+gnome-control-center
+gnome-initial-setup
+gnome-session-wayland-session
+gnome-session-xsession
+gnome-settings-daemon
+gnome-shell
+gnome-software
+gnome-terminal
+gnome-text-editor
+nautilus
+polkit
+yelp
+ModemManager
+NetworkManager-adsl
+NetworkManager-openconnect-gnome
+NetworkManager-openvpn-gnome
+NetworkManager-ppp
+NetworkManager-pptp-gnome
+NetworkManager-ssh-gnome
+NetworkManager-vpnc-gnome
+NetworkManager-wwan
+PackageKit-command-not-found
+PackageKit-gtk3-module
+adobe-source-code-pro-fonts
+at-spi2-atk
+at-spi2-core
+avahi
+baobab
+cheese
+chrome-gnome-shell
+eog
+evince
+evince-djvu
+evince-nautilus
+fprintd-pam
+glib-networking
+gnome-backgrounds
+gnome-bluetooth
+gnome-calculator
+gnome-calendar
+gnome-characters
+gnome-classic-session
+gnome-clocks
+gnome-color-manager
+gnome-contacts
+gnome-disk-utility
+gnome-font-viewer
+gnome-logs
+gnome-maps
+gnome-photos
+gnome-remote-desktop
+gnome-system-monitor
+gnome-terminal-nautilus
+gnome-themes-extra
+gnome-user-docs
+gnome-user-share
+gnome-weather
+gvfs-afc
+gvfs-afp
+gvfs-archive
+gvfs-fuse
+gvfs-goa
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+libcanberra-gtk3
+libproxy-webkitgtk4
+librsvg2
+libsane-hpaio
+mesa-dri-drivers
+mesa-libEGL
+orca
+rygel
+sane-backends-drivers-scanners
+simple-scan
+sushi
+systemd-oomd-defaults
+totem
+tracker
+tracker-miners
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+xdg-user-dirs-gtk
+vlc
+```
+
+### Guest Desktop Agents
+
+```
+ Mandatory Packages:
+   hyperv-daemons
+   open-vm-tools-desktop
+   qemu-guest-agent
+   spice-vdagent
+   virtualbox-guest-additions
+
+Need:
+
+hyperv-daemons
+open-vm-tools-desktop
+qemu-guest-agent
+spice-vdagent
+virtualbox-guest-additions
+```
+
+### Hardware Support
+
+```
+ Default Packages:
+   alsa-sof-firmware
+   atmel-firmware
+   b43-fwcutter
+   b43-openfwwf
+   iwl100-firmware
+   iwl1000-firmware
+   iwl105-firmware
+   iwl135-firmware
+   iwl2000-firmware
+   iwl2030-firmware
+   iwl3160-firmware
+   iwl3945-firmware
+   iwl4965-firmware
+   iwl5000-firmware
+   iwl5150-firmware
+   iwl6000-firmware
+   iwl6000g2a-firmware
+   iwl6000g2b-firmware
+   iwl6050-firmware
+   iwl7260-firmware
+   iwlax2xx-firmware
+   libertas-usb8388-firmware
+   usb_modeswitch
+   zd1211-firmware
+ Optional Packages:
+   acpi
+   acpitool
+   alsa-firmware
+   bcm283x-firmware
+   broadcom-wl
+   cmospwd
+   gpsd
+   gpsd-clients
+   hddtemp
+   hdparm
+   iscan-firmware
+   libifp
+   liquidio-firmware
+   lsscsi
+   mlxsw_spectrum-firmware
+   mrvlprestera-firmware
+   multican
+   netronome-firmware
+   opensc
+   pcsc-lite
+   pcsc-lite-ccid
+   radeontop
+   wpan-tools
+ Conditional Packages:
+   intel-media-driver
+   libva-intel-driver
+
+Need:
+
+alsa-sof-firmware
+atmel-firmware
+b43-fwcutter
+b43-openfwwf
+iwl100-firmware
+iwl1000-firmware
+iwl105-firmware
+iwl135-firmware
+iwl2000-firmware
+iwl2030-firmware
+iwl3160-firmware
+iwl3945-firmware
+iwl4965-firmware
+iwl5000-firmware
+iwl5150-firmware
+iwl6000-firmware
+iwl6000g2a-firmware
+iwl6000g2b-firmware
+iwl6050-firmware
+iwl7260-firmware
+iwlax2xx-firmware
+libertas-usb8388-firmware
+usb_modeswitch
+zd1211-firmware
+```
+
+### Multimedia
+
+```
+ Mandatory Packages:
+   PackageKit-gstreamer-plugin
+   alsa-ucm
+   alsa-utils
+   ffmpeg
+   gstreamer1-libav
+   gstreamer1-plugin-openh264
+   gstreamer1-plugins-bad-free
+   gstreamer1-plugins-bad-freeworld
+   gstreamer1-plugins-good
+   gstreamer1-plugins-ugly
+   gstreamer1-plugins-ugly-free
+   pipewire-alsa
+   pipewire-gstreamer
+   pipewire-pulseaudio
+   pipewire-utils
+   wireplumber
+ Conditional Packages:
+   compat-ffmpeg4
+   ffmpeg-libs
+   gstreamer-plugins-espeak
+   pipewire-codec-aptx
+   qt5-qtwebengine-freeworld
+
+    Mandatory Packages:
+   PackageKit-gstreamer-plugin
+   alsa-ucm
+   alsa-utils
+   ffmpeg
+   gstreamer1-libav
+   gstreamer1-plugin-openh264
+   gstreamer1-plugins-bad-free
+   gstreamer1-plugins-bad-freeworld
+   gstreamer1-plugins-good
+   gstreamer1-plugins-ugly
+   gstreamer1-plugins-ugly-free
+   pipewire-alsa
+   pipewire-gstreamer
+   pipewire-pulseaudio
+   pipewire-utils
+   wireplumber
+ Conditional Packages:
+   compat-ffmpeg4
+   ffmpeg-libs
+   gstreamer-plugins-espeak
+   pipewire-codec-aptx
+   qt5-qtwebengine-freeworld
+
+Need:
+
+PackageKit-gstreamer-plugin
+alsa-ucm
+alsa-utils
+ffmpeg
+gstreamer1-libav
+gstreamer1-plugin-openh264
+gstreamer1-plugins-bad-free
+gstreamer1-plugins-bad-freeworld
+gstreamer1-plugins-good
+gstreamer1-plugins-ugly
+gstreamer1-plugins-ugly-free
+pipewire-alsa
+pipewire-gstreamer
+pipewire-pulseaudio
+pipewire-utils
+wireplumber
+compat-ffmpeg4
+ffmpeg-libs
+gstreamer-plugins-espeak
+pipewire-codec-aptx
+qt5-qtwebengine-freeworld
+```
+
+### Printing Support
+
+```
+ Mandatory Packages:
+   cups
+   cups-filters
+   ghostscript
+ Default Packages:
+   bluez-cups
+   colord
+   cups-pk-helper
+   gutenprint
+   gutenprint-cups
+   hplip
+   mpage
+   nss-mdns
+   paps
+   samba-client
+   system-config-printer-udev
+ Optional Packages:
+   a2ps
+   cups-bjnp
+   cups-pdf
+   enscript
+   foomatic
+   foomatic-db-ppds
+   pnm2ppa
+   ptouch-driver
+   splix
+   system-config-printer
+
+Need:
+
+cups
+cups-filters
+ghostscript
+bluez-cups
+colord
+cups-pk-helper
+gutenprint
+gutenprint-cups
+hplip
+mpage
+nss-mdns
+paps
+samba-client
+system-config-printer-udev
+```
+
+### base-x
+
+```
+ Mandatory Packages:
+   glx-utils
+   mesa-dri-drivers
+   mesa-vulkan-drivers
+   plymouth-system-theme
+   xorg-x11-drv-amdgpu
+   xorg-x11-drv-armsoc
+   xorg-x11-drv-ati
+   xorg-x11-drv-evdev
+   xorg-x11-drv-fbdev
+   xorg-x11-drv-intel
+   xorg-x11-drv-libinput
+   xorg-x11-drv-nouveau
+   xorg-x11-drv-openchrome
+   xorg-x11-drv-qxl
+   xorg-x11-drv-vesa
+   xorg-x11-drv-vmware
+   xorg-x11-drv-wacom
+   xorg-x11-server-Xorg
+   xorg-x11-xauth
+   xorg-x11-xinit
+
+Need:
+
+glx-utils
+mesa-dri-drivers
+mesa-vulkan-drivers
+plymouth-system-theme
+xorg-x11-drv-amdgpu
+xorg-x11-drv-armsoc
+xorg-x11-drv-ati
+xorg-x11-drv-evdev
+xorg-x11-drv-fbdev
+xorg-x11-drv-intel
+xorg-x11-drv-libinput
+xorg-x11-drv-nouveau
+xorg-x11-drv-openchrome
+xorg-x11-drv-qxl
+xorg-x11-drv-vesa
+xorg-x11-drv-vmware
+xorg-x11-drv-wacom
+xorg-x11-server-Xorg
+xorg-x11-xauth
+xorg-x11-xinit
 ```
