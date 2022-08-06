@@ -5,6 +5,9 @@
   "passwd": {
     "users": [
       {
+        "groups": [
+          "sudo"
+        ],
         "name": "autiboy",
         "passwordHash": "$y$j9T$exrjXRZLP6dEZ.9bQ0Rwh.$XygtMXdRa1XntnSLq4w2t9Yk./KVSXtHVlJgGVD2XIC"
       }
