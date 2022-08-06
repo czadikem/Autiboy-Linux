@@ -1,0 +1,13 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "autiboy",
+        "passwordHash": "$y$j9T$exrjXRZLP6dEZ.9bQ0Rwh.$XygtMXdRa1XntnSLq4w2t9Yk./KVSXtHVlJgGVD2XIC"
+      }
+    ]
+  }
+}
