@@ -19,7 +19,7 @@
 
 `sudo nano /etc/group`
 
-### paste this in at bottom of file fis found at https://blog.2to.fun/en/posts/install-docker-in-silverblue/
+### paste this in at bottom of file fix found at https://blog.2to.fun/en/posts/install-docker-in-silverblue/
 
 `docker:x:998:autiboy`
 
