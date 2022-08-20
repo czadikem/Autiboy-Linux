@@ -1,0 +1,250 @@
+version: "3"
+
+services:
+
+  # With watchtower you can update the running version of your containerized app simply by pushing a new image to the
+  # Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your
+  # existing container and restart it with the same options that were used when it was deployed initially.
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+
+  # Docker container for managing Nginx proxy hosts with a simple, powerful interface 
+  
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    # Uncomment the next line if you uncomment anything in the section
+    environment:
+      # Uncomment this if you want to change the location of 
+      # the SQLite DB file within the container
+      # DB_SQLITE_FILE: /data/database.sqlite
+
+      # Uncomment this if IPv6 is not enabled on your host
+      - DISABLE_IPV6=true
+    volumes:
+      - /home/autiboy/nginx-proxy-manager/data:/data
+      - /home/autiboy/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - 80:80 # Public HTTP Port
+      - 443:443 # Public HTTPS Port
+      - 81:81 # Admin Web Port
+      # Add any other Stream port you want to expose
+      # - 21:21 # FTP
+    restart: unless-stopped
+
+  # A Docker Container for Apache Guacamole, a client-less remote desktop gateway. It supports standard protocols like
+  # VNC, RDP, and SSH over HTML5.
+  
+  guacamole:
+    image: oznu/guacamole:latest
+    container_name: guacamole
+    volumes:
+      - /home/autiboy/guacamole/config:/config
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    
+    
+  # Remotely A remote control and remote scripting solution, built with .NET 5, Blazor, SignalR Core, and WebRTC.
+
+  remotely:
+    image: translucency/remotely:latest
+    container_name: remotely
+    volumes:
+      - /home/autiboy/remotely/data:/remotely-data
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+
+
+  # Recipes is a Django application to manage, tag and search recipes using either built in models or external storage
+  # providers hosting PDF's, Images or other files.
+
+  #db_recipes for tandoor
+  tandoor-db_recipes:
+    image: postgres:11-alpine
+    container_name: tandoor-db_recipes
+    environment:
+      - DEBUG=0
+      - SQL_DEBUG=0
+      - ALLOWED_HOSTS=*
+      - SECRET_KEY=YOUR_SECRET_KEY
+      - TIMEZONE=America/Denver
+      - DB_ENGINE=django.db.backends.postgresql
+      - POSTGRES_HOST=tandoor-db_recipes
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=djangouser
+      - POSTGRES_PASSWORD=YOUR_POSTGRES_SECRET_KEY
+      - POSTGRES_DB=djangodb
+      - FRACTION_PREF_DEFAULT=0
+      - COMMENT_PREF_DEFAULT=1
+      - SHOPPING_MIN_AUTOSYNC_INTERVAL=5
+      - GUNICORN_MEDIA=0
+      - REVERSE_PROXY_AUTH=0
+    volumes:
+      - /home/autiboy/tandoor-recipes/postgresql:/var/lib/postgresql/data
+    restart: unless-stopped
+  #web_recipes for tandoor
+  tandoor-web_recipes:
+    image: vabene1111/recipes:latest
+    container_name: tandoor-web_recipes
+    depends_on:
+      - tandoor-db_recipes
+    environment:
+      - DEBUG=0
+      - SQL_DEBUG=0
+      - ALLOWED_HOSTS=*
+      - SECRET_KEY=YOUR_SECRET_KEY
+      - TIMEZONE=America/Denver
+      - DB_ENGINE=django.db.backends.postgresql
+      - POSTGRES_HOST=tandoor-db_recipes
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=djangouser
+      - POSTGRES_PASSWORD=YOUR_POSTGRES_SECRET_KEY
+      - POSTGRES_DB=djangodb
+      - FRACTION_PREF_DEFAULT=0
+      - COMMENT_PREF_DEFAULT=1
+      - SHOPPING_MIN_AUTOSYNC_INTERVAL=5
+      - GUNICORN_MEDIA=0
+      - REVERSE_PROXY_AUTH=0
+    volumes:
+      - /home/autiboy/tandoor-recipes/staticfiles:/opt/recipes/staticfiles
+      - /home/autiboy/tandoor-recipes/mediafiles:/opt/recipes/mediafiles
+    ports:
+      - 82:8080
+    restart: unless-stopped
+
+
+  # Airsonic-Advanced is a free, web-based media streamer, providing ubiquitous access to your music. It is a more
+  # modern implementation of the Airsonic fork with several key performance and feature enhancements. It adds and
+  # supersedes several features in Airsonic.
+
+  airsonic-advanced:
+    image: airsonicadvanced/airsonic-advanced:latest
+    container_name: airsonic-advanced
+    user: 1000:1000 #optional - run container as user
+    environment:
+      - TZ=America/Denver #optional - show logs in local timezone
+      #- JAVA_OPTS=-Dserver.forward-headers-strategy=native #optional - if you use a reverse-proxy
+    volumes:
+      - /home/autiboy/airsonic-advanced/playlists:/var/playlists
+      - /home/autiboy/airsonic-advanced/podcasts:/var/podcasts
+      - /home/autiboy/airsonic-advanced/data:/var/airsonic
+      - /home/autiboy/airsonic-advanced/music:/var/music
+    ports:
+      - 4040:4040
+      - 4041:4041 #UPnp
+    restart: unless-stopped
+
+
+  # Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an
+  # alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via
+  # multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full
+  # cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just
+  # a team who want to build something better and work together to achieve it. We welcome anyone who is interested in
+  # joining us in our quest!
+
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+      - JELLYFIN_PublishedServerUrl=192.168.11.99 #optional
+    volumes:
+      - /home/autiboy/jellyfin/library:/config
+      - /home/autiboy/jellyfin/tvseries:/data/tvshows
+      - /home/autiboy/jellyfin/movies:/data/movies
+      - /home/autiboy/jellyfin/music:/data/music
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional
+      - 7359:7359/udp #optional
+      - 1900:1900/udp #optional
+    restart: unless-stopped
+
+
+  # Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or
+  # at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you
+  # access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data
+  # on that FTP drive at the office, a Dropbox or a NAS you have at home.
+
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - /home/autiboy/nextcloud/appdata:/config
+      - /home/autiboy/nextcloud/data:/data
+    ports:
+      - 444:443
+    restart: unless-stopped
+
+
+  # Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new
+  # episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically
+  # upgrade the quality of files already downloaded when a better quality format becomes available.
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - /home/autiboy/sonarr/data:/config
+      - /home/autiboy/sonarr/tvseries:/tv #optional
+      - /home/autiboy/sonarr/downloadclient-downloads:/downloads #optional
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+
+
+  # Radarr - A fork of Sonarr to work with movies
+
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - /home/autiboy/radarr/data:/config
+      - /home/autiboy/radarr/movies:/movies #optional
+      - /home/autiboy/radarr/downloadclient-downloads:/downloads #optional
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+
+
+  # Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks
+  # from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the
+  # quality of files already downloaded when a better quality format becomes available.
+
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - /home/autiboy/lidarr/data:/config
+      - /home/autiboy/lidarr/music:/music #optional
+      - /home/autiboy/lidarr/downloadclient-downloads:/downloads #optional
+    ports:
+      - 8686:8686
+    restart: unless-stopped
