@@ -5,9 +5,11 @@
 
 # Install and Setup
 
-`rpm-ostree install docker docker-compose`
+### SSH into server
 
-`systemctl reboot`
+`sudo rpm-ostree install docker docker-compose`
+
+`sudo systemctl reboot`
 
 ### login open terminal
 
