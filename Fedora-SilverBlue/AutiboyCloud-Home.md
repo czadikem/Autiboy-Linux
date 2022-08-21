@@ -57,7 +57,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 ### click the add stacks plus button
 
 ### name it
-`containerization`
+`AutiboyCloud-Home-Containerization`
 
 ### paste the docker-compose.yml text into the text box in portainer
 
