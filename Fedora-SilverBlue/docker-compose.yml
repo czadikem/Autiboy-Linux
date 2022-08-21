@@ -9,6 +9,8 @@ services:
   watchtower:
     image: containrrr/watchtower:latest
     container_name: watchtower
+    security_opt:
+      - label:disable
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
