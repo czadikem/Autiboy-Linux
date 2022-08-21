@@ -137,7 +137,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 `mkdir /home/autiboy/airsonic-advanced/music`
 
-`docker pull airsonic-advanced`
+`docker pull airsonicadvanced/airsonic-advanced`
 
 ### go to ip-address:4040 login with
 
