@@ -31,7 +31,7 @@
 
 ### login open terminal again
 
-`docker run -d --name="portainer" --restart on-failure  -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
+`docker run -d --name="portainer" --restart on-failure  -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock:z -v portainer_data:/data portainer/portainer-ce:latest`
 
 ### go to your ip-address:9000
 replace ip-address with your servers ip, you can get your servers ip by doing 
