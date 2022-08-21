@@ -48,7 +48,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 ### click local
 
-### change name to containerization
+### change name to AutiboyCloud-Home-Containerization
 
 ### change public ip to this servers ip address
 
