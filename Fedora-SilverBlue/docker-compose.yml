@@ -21,6 +21,8 @@ services:
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx-proxy-manager
+    security_opt:
+      - label:disable
     # Uncomment the next line if you uncomment anything in the section
     environment:
       # Uncomment this if you want to change the location of 
@@ -47,6 +49,8 @@ services:
   guacamole:
     image: oznu/guacamole:latest
     container_name: guacamole
+    security_opt:
+      - label:disable
     volumes:
       - /home/autiboy/guacamole/config:/config
     ports:
@@ -59,6 +63,8 @@ services:
   remotely:
     image: translucency/remotely:latest
     container_name: remotely
+    security_opt:
+      - label:disable
     volumes:
       - /home/autiboy/remotely/data:/remotely-data
     ports:
@@ -73,6 +79,8 @@ services:
   tandoor-db_recipes:
     image: postgres:11-alpine
     container_name: tandoor-db_recipes
+    security_opt:
+      - label:disable
     environment:
       - DEBUG=0
       - SQL_DEBUG=0
@@ -97,6 +105,8 @@ services:
   tandoor-web_recipes:
     image: vabene1111/recipes:latest
     container_name: tandoor-web_recipes
+    security_opt:
+      - label:disable
     depends_on:
       - tandoor-db_recipes
     environment:
@@ -131,6 +141,8 @@ services:
   airsonic-advanced:
     image: airsonicadvanced/airsonic-advanced:latest
     container_name: airsonic-advanced
+    security_opt:
+      - label:disable
     user: 1000:1000 #optional - run container as user
     environment:
       - TZ=America/Denver #optional - show logs in local timezone
@@ -156,6 +168,8 @@ services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
+    security_opt:
+      - label:disable
     environment:
       - PUID=1000
       - PGID=1000
@@ -182,6 +196,8 @@ services:
   nextcloud:
     image: lscr.io/linuxserver/nextcloud:latest
     container_name: nextcloud
+    security_opt:
+      - label:disable
     environment:
       - PUID=1000
       - PGID=1000
