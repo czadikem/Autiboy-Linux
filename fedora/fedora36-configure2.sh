@@ -16,6 +16,9 @@ echo "Installing Gitlab Workflow Extension"
 codium --install-extension GitLab.gitlab-workflow
 echo "Installing Arduino Extension Pack"
 codium --install-extension mpty.pack-arduino
+echo "Installing Extension Pack for Java"
+codium --install-extension vscjava.vscode-java-pack
+
 
 # Setup VSCodium Git
 echo "Setting up VSCodium Git"
