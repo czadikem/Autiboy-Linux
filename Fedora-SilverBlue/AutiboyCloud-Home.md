@@ -180,3 +180,11 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `mkdir /home/autiboy/nextcloud/data`
 
 `docker pull lscr.io/linuxserver/nextcloud`
+
+# HOME-ASSISTANT
+
+`mkdir /home/autiboy/homeassistant`
+
+`mkdir /home/autiboy/homeassistant/config`
+
+`docker pull ghcr.io/home-assistant/home-assistant:stable`
