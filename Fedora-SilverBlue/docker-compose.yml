@@ -224,3 +224,15 @@ services:
     ports:
       - 8123:8123
     restart: unless-stopped
+    
+
+  # Alternative implementation of the Bitwarden server API in Rust, including the Web Vault.
+
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    volumes:
+      - /home/autiboy/vaultwarden/data:/data
+    ports:
+      - 8888:80
+    restart: unless-stopped
