@@ -214,11 +214,13 @@ services:
   # and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
   
   homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
     container_name: homeassistant
-    image: "ghcr.io/home-assistant/home-assistant:stable"
+    security_opt:
+      - label:disable
     volumes:
       - /home/autiboy/homeassistant/config:/config
       - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8123:8123
     restart: unless-stopped
-    privileged: true
-    network_mode: host
