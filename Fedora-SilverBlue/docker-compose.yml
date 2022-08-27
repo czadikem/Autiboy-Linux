@@ -231,6 +231,8 @@ services:
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
+    security_opt:
+      - label:disable
     volumes:
       - /home/autiboy/vaultwarden/data:/data
     ports:
