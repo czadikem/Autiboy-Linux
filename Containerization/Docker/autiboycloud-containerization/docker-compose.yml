@@ -1,0 +1,292 @@
+version: "3"
+
+services:
+
+  # With watchtower you can update the running version of your containerized app simply by pushing a new image to the
+  # Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your
+  # existing container and restart it with the same options that were used when it was deployed initially.
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+
+  # Docker container for managing Nginx proxy hosts with a simple, powerful interface 
+  
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    # Uncomment the next line if you uncomment anything in the section
+    environment:
+      # Uncomment this if you want to change the location of 
+      # the SQLite DB file within the container
+      # DB_SQLITE_FILE: /data/database.sqlite
+
+      # Uncomment this if IPv6 is not enabled on your host
+      - DISABLE_IPV6=true
+    volumes:
+      - /home/autiboy/nginx-proxy-manager/data:/data
+      - /home/autiboy/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - 80:80 # Public HTTP Port
+      - 443:443 # Public HTTPS Port
+      - 127.0.0.1:81:81 # Admin Web Port
+      # Add any other Stream port you want to expose
+      # - 21:21 # FTP
+    restart: unless-stopped
+    
+    
+  # # SearXNG is a free internet metasearch engine which aggregates results from various search services and databases.
+  # # Users are neither tracked nor profiled. 
+  
+  # searxng:
+  #   image: searxng/searxng:latest
+  #   container_name: searxng
+  #   environment:
+  #     - BASE_URL=http://localhost:8080
+  #     - INSTANCE_NAME=autiboys-searx-instance
+  #   volumes:
+  #     - /home/autiboy/searxng:/etc/searxng
+  #   ports:
+  #     - 127.0.0.1:8080:8080
+  #   restart: unless-stopped
+    
+    
+  # LanguageTool is an Open Source proofreading software for English, French, German, Polish, and more than 20 other
+  # languages.
+  
+  languagetool:
+    image: silviof/docker-languagetool:latest
+    container_name: languagetool
+    environment:
+        - langtool_languageModel=/ngrams  # OPTIONAL: Using ngrams data
+        - Java_Xms=512m  # OPTIONAL: Setting a minimal Java heap size of 512 mib
+        - Java_Xmx=1g  # OPTIONAL: Setting a maximum Java heap size of 1 Gib
+    volumes:
+      - /home/autiboy/languagetool/ngrams:/ngrams:ro
+    ports:
+      - 127.0.0.1:8010:8010  # Using default port from the image
+    restart: unless-stopped
+
+
+  # Synapse: Matrix homeserver written in Python 3/Twisted. 
+  # run before you run synapse
+  # change th Synapse_Server_Name
+  # docker run -it --rm -v /home/autiboy/synapse/data:/data -e SYNAPSE_SERVER_NAME=matrix.autiboystech.com -e SYNAPSE_REPORT_STATS=no matrixdotorg/synapse:latest generate
+
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: synapse
+    volumes:
+      - /home/autiboy/synapse/data:/data
+    # ports:
+      # - 127.0.0.1:8008:8008
+    restart: unless-stopped
+
+
+  # Admin UI for Matrix Synapse homeserver.
+  # run
+  # register_new_matrix_user -c homeserver.yaml -u admin -p @ut1b0yM@tr1x@dm1n! -a https://matrix.autiboystech.com 
+  # using portainer
+
+  synapse-admin:
+    image: awesometechnologies/synapse-admin:latest
+    container_name: synapse-admin
+    hostname: synapse-adminm
+    # build:
+    # context: .
+    # to use the docker-compose as standalone without a local repo clone,
+    # replace the context definition with this:
+    # context: https://github.com/Awesome-Technologies/synapse-admin.git
+    # if you're building on an architecture other than amd64, make sure
+    # to define a maximum ram for node. otherwise the build will fail.
+    # args:
+    #   - NODE_OPTIONS="--max_old_space_size=1024"
+    # ports:
+      # - "8888:80"
+    restart: unless-stopped
+
+
+  # Element-Web: A glossy Matrix collaboration client for the web. 
+
+  element-web:
+    image: vectorim/element-web:latest
+    container_name: element-web
+    volumes:
+      - /home/autiboy/element-web/config.json:/app/config.json:ro
+    # ports:
+      # - 127.0.0.1:88:80
+    restart: unless-stopped
+    
+  # # Openvscode-server provides a version of VS Code that runs a server on a remote machine and allows access through a 
+  # # modern web browser.
+
+  # openvscode-server:
+  #   image: lscr.io/linuxserver/openvscode-server:latest
+  #   container_name: openvscode-server
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=America/Denver
+  #     # - CONNECTION_TOKEN= #optional
+  #     # - CONNECTION_SECRET= #optional
+  #     # - SUDO_PASSWORD=password #optional
+  #     # - SUDO_PASSWORD_HASH= #optional
+  #   volumes:
+  #     - /home/autiboy/openvscode-server/config:/config
+  #   ports:
+  #     - 3000:3000
+  #   restart: unless-stopped
+
+
+  # WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be
+  # faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be
+  # considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on
+  # embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux
+  # kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under
+  # heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in
+  # the industry.
+
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+      - SERVERURL=wireguard.autiboystech.com #optional
+      - SERVERPORT=51820 #optional
+      - PEERS=Nokia_Phone,AutiboyMainLaptop #optional
+      - PEERDNS=auto #optional
+      - INTERNAL_SUBNET=172.27.66.1 #optional
+      - ALLOWEDIPS=0.0.0.0/0 #optional
+    volumes:
+      - /home/autiboy/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+
+
+  # Alternative implementation of the Bitwarden server API in Rust, including the Web Vault.
+
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    volumes:
+      - /home/autiboy/vaultwarden/data:/data
+    # ports:
+    #   - 80:80
+    restart: unless-stopped
+
+
+  # GitLab Community Edition docker image based on the Omnibus package
+
+  gitlab-ce:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab-ce
+    hostname: gitlab.autiboystech.com
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.autiboystech.com'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2224
+    ports:
+      # - 80:80
+      - '2224:22'
+    volumes:
+      - /home/autiboy/gitlab-ce/config:/etc/gitlab
+      - /home/autiboy/gitlab-ce/logs:/var/log/gitlab
+      - /home/autiboy/gitlab-ce/data:/var/opt/gitlab
+    shm_size: 256m
+    restart: unless-stopped
+
+
+  # # Presearch run a search node in Presearch's decentralized search engine at https://presearch.org 
+
+  # presearch-node:
+  #   image: presearch/node:latest
+  #   container_name: presearch-node
+  #   hostname: presearch-node
+  #   environment:
+  #     - REGISTRATION_CODE=9b0935c6a174bd37e48b026c171cb8c5
+  #   volumes:
+  #     - /home/autiboy/presearch/data:/app/node
+  #   restart: unless-stopped
+
+
+  # Onlyoffice feature-rich web-based office suite with a vast range of collaborative capabilities  
+
+  onlyoffice-documentserver:
+    image: onlyoffice/documentserver:latest
+    container_name: onlyoffice-documentserver
+    # ports:
+      # - 80:80
+    volumes:
+      - /home/autiboy/onlyoffice-documentserver/logs:/var/log/onlyoffice
+      - /home/autiboy/onlyoffice-documentserver/data:/var/www/onlyoffice/Data 
+      - /home/autiboy/onlyoffice-documentserver/lib:/var/lib/onlyoffice
+      - /home/autiboy/onlyoffice-documentserver/rabbitmq:/var/lib/rabbitmq
+      - /home/autiboy/onlyoffice-documentserver/redis:/var/lib/redis
+      - /home/autiboy/onlyoffice-documentserver/db:/var/lib/postgresql
+      - /home/autiboy/onlyoffice-documentserver/sdkjs-plugins:/var/www/onlyoffice/documentserver/sdkjs-plugins
+    restart: unless-stopped
+
+
+  # Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or
+  # at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you
+  # access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data
+  # on that FTP drive at the office, a Dropbox or a NAS you have at home.
+
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+    volumes:
+      - /home/autiboy/nextcloud/appdata:/config
+      - /home/autiboy/nextcloud/data:/data
+    # ports:
+    #   - 444:443
+    restart: unless-stopped
+
+
+  # # The WordPress rich content management system can utilize plugins, widgets, and themes.
+
+  # wordpress-db:
+  #   image: mysql:5.7
+  #   container_name: wordpress-db
+  #   environment:
+  #     MYSQL_DATABASE: dbwordpress
+  #     MYSQL_USER: userwordpress
+  #     MYSQL_PASSWORD: passwordpress
+  #     MYSQL_RANDOM_ROOT_PASSWORD: '1'
+  #   volumes:
+  #     - /home/autiboy/wordpress/mysql:/var/lib/mysql
+  #   restart: unless-stopped
+
+  # wordpress:
+  #   image: wordpress:latest
+  #   container_name: wordpress
+  #   depends_on:
+  #     - wordpress-db
+  #   # ports:
+  #   #   - 4884:80
+  #   environment:
+  #     WORDPRESS_DB_HOST: wordpress-db
+  #     WORDPRESS_DB_USER: userwordpress
+  #     WORDPRESS_DB_PASSWORD: passwordpress
+  #     WORDPRESS_DB_NAME: dbwordpress
+  #   volumes:
+  #     - /home/autiboy/wordpress/html:/var/www/html
+  #   restart: unless-stopped
