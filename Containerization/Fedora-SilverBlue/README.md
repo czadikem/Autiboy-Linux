@@ -52,9 +52,12 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 ### or change name to this if it for cloud
 `AutiboyCloud-Containerization`
 
-### change name to AutiboyCloud-Containerization
-
 ### change public ip to this servers ip address
+
+## Reboot server
+`sudo reboot now`
+
+## Login to Portainer
 
 ### click stacks
 
