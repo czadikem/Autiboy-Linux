@@ -109,7 +109,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 ### name it
 `autiboycloud-home-containerization`
 
-### paste the docker-compose.yml text into the text box in portainer
+### paste the ![docker-compose.yml](https://github.com/czadikem/autiboys-linux/blob/master/Containerization/docker-compose.yml) text into the text box in portainer
 
 ### Then follow the Docker Containers Setup section then press deploy stack
 
