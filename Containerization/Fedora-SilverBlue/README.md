@@ -46,7 +46,13 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 ### click local
 
-### change name to AutiboyCloud-Home-Containerization
+### change name to this if it for home
+`AutiboyCloud-Home-Containerization`
+
+### or change name to this if it for cloud
+`AutiboyCloud-Containerization`
+
+### change name to AutiboyCloud-Containerization
 
 ### change public ip to this servers ip address
 
@@ -54,8 +60,11 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 ### click the add stacks plus button
 
-### name it
+### name it this if it for home
 `autiboycloud-home-containerization`
+
+### or name it this if it for cloud
+`autiboycloud-containerization`
 
 ### paste the ![docker-compose.yml](https://github.com/czadikem/autiboys-linux/blob/master/Containerization/docker-compose.yml) text into the text box in portainer
 
