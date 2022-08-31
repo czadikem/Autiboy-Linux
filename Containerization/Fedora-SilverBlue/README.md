@@ -1,34 +1,87 @@
-# Containerization using Docker and Portainer
+# Fedora Silverblue Containerization using Docker and Portainer
 
 # Install and Setup
 
-### SSH into server
+### SSH into server as root
+#### If Fedora 33 ssdnodes do and upgrade to the new fedora release https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
 
-`sudo rpm-ostree install docker docker-compose`
+`dnf upgrade --refresh`
 
-`sudo systemctl reboot`
+`dnf install dnf-plugin-system-upgrade`
 
-### login open terminal
+#### Replace 36 with the latest stable release or Fedora
+
+`dnf system-upgrade download --releasever=36`
+
+`dnf system-upgrade reboot`
+
+### SSH into server again as root
+
+`dnf install rpmconf`
+
+`rpmconf -a`
+
+`dnf install remove-retired-packages`
+
+`remove-retired-packages`
+
+`dnf repoquery --unsatisfied`
+
+`dnf repoquery --duplicates`
+
+`dnf list extras`
+
+`dnf autoremove`
+
+`rpm --rebuilddb`
+
+`dnf distro-sync --allowerasing`
+
+`fixfiles -B onboot`
+
+`usermod -aG wheel autiboy`
+
+#### Set passwd for user autiboy
+
+`passwd autiboy`
+
+`reboot now`
+
+### SSH into server again as autiboy and check sudo permissions
+
+`sudo nano /etc/ssh/sshd_config`
+
+#### Ad  to bottom of file
+
+`PermitRootLogin no`
+
+#### Save the file
+
+`sudo reboot now`
+
+##  Setup Docker and Portainer https://docs.docker.com/engine/install/fedora/
+
+### SSH into server again as autiboy
+
+`sudo dnf -y install dnf-plugins-core`
+
+`sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo`
+    
+`sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y`
+
+#### Start docker on boot
 
 `sudo systemctl enable docker`
 
 `sudo systemctl start docker`
 
-`sudo systemctl status docker`
+### Add autiboy to docker group https://docs.docker.com/engine/install/linux-postinstall/
 
-`sudo nano /etc/group`
+`sudo usermod -aG docker $USER`
 
-### paste this in at bottom of file fix found at https://blog.2to.fun/en/posts/install-docker-in-silverblue/
-
-`docker:x:998:autiboy`
-
-### save it
-
-`sudo reboot`
-
-### login open terminal again fix selinux error https://danwalsh.livejournal.com/78373.html
-
-`docker run --security-opt label:disable -d --name="portainer" --restart on-failure -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
+`sudo docker run -d --name="portainer" --restart on-failure -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
 
 ### go to your ip-address:9000
 replace ip-address with your servers ip, you can get your servers ip by doing 
@@ -58,13 +111,16 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 ### paste the ![docker-compose.yml](https://github.com/czadikem/autiboys-linux/blob/master/Containerization/docker-compose.yml) text into the text box in portainer
 
+### Then follow the Docker Containers Setup section then press deploy stack
 
-# WATCHTOWER
+# Docker Containers Setup
+
+## WATCHTOWER
 
 ### Look at the docker-compose.yml
 
 
-# NGINX-PROXY-MANAGER
+## NGINX-PROXY-MANAGER
 
 `mkdir /home/autiboy/nginx-proxy-manager`
 
@@ -85,7 +141,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `changeme`
 
 
-# GUACAMOLE
+## GUACAMOLE
 
 `mkdir /home/autiboy/guacamole`
 
@@ -94,7 +150,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `docker pull oznu/guacamole`
 
 
-# REMOTELY
+## REMOTELY
 
 `mkdir /home/autiboy/remotely`
 
@@ -103,7 +159,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `docker pull translucency/remotely`
 
 
-# TANDOOR-RECIPES
+## TANDOOR-RECIPES
 
 `mkdir /home/autiboy/tandoor-recipes`
 
@@ -122,7 +178,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `docker pull vabene1111/recipes`
 
 
-# AIRSONIC_ADVANCED
+## AIRSONIC_ADVANCED
 
 `mkdir /home/autiboy/airsonic-advanced`
 
@@ -155,7 +211,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 ### tick the old password under credentials and save
 
 
-# JELLYFIN
+## JELLYFIN
 
 `mkdir /home/autiboy/jellyfin`
 
@@ -168,7 +224,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 `docker pull lscr.io/linuxserver/jellyfin`
 
 
-# NEXTCLOUD
+## NEXTCLOUD
 
 `mkdir /home/autiboy/nextcloud`
 
@@ -178,7 +234,7 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 
 `docker pull lscr.io/linuxserver/nextcloud`
 
-# HOME-ASSISTANT
+## HOME-ASSISTANT
 
 `mkdir /home/autiboy/homeassistant`
 
