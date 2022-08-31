@@ -47,6 +47,10 @@
 
 `reboot now`
 
+#### Disable cockpit
+
+`systemctl disable cockpit.socket`
+
 ### SSH into server again as autiboy and check sudo permissions
 
 `sudo nano /etc/ssh/sshd_config`
