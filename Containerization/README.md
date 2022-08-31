@@ -4,4 +4,4 @@
 
 # For Fedora Server Setup guide click ![here](https://github.com/czadikem/autiboys-linux/tree/master/Containerization/Fedora)
 
-# For Fedora Silverblue Setup guide click ![here](https://github.com/czadikem/autiboys-linux/tree/master/Containerization/Fedora-Silverblue)
+# For Fedora Silverblue Setup guide click ![here](https://github.com/czadikem/autiboys-linux/tree/master/Containerization/Fedora-SilverBlue)
