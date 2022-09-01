@@ -68,6 +68,8 @@
 
 ## ONLYOFFICE
 
+`mkdir  /home/autiboy/onlyoffice-documentserver`
+
 `mkdir  /home/autiboy/onlyoffice-documentserver/logs`
 
 `mkdir /home/autiboy/onlyoffice-documentserver/data`
