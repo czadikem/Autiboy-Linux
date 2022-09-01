@@ -34,7 +34,7 @@ services:
       # These ports are in format <host-port>:<container-port>
       - 80:80 # Public HTTP Port
       - 443:443 # Public HTTPS Port
-      - 127.0.0.1:81:81 # Admin Web Port
+      # - 81:81 # Admin Web Port
       # Add any other Stream port you want to expose
       # - 21:21 # FTP
     restart: unless-stopped
@@ -69,7 +69,7 @@ services:
     volumes:
       - /home/autiboy/languagetool/ngrams:/ngrams:ro
     ports:
-      - 127.0.0.1:8010:8010  # Using default port from the image
+      # - 8010:8010  # Using default port from the image
     restart: unless-stopped
 
 
