@@ -68,8 +68,8 @@ services:
         - Java_Xmx=1g  # OPTIONAL: Setting a maximum Java heap size of 1 Gib
     volumes:
       - /home/autiboy/languagetool/ngrams:/ngrams:ro
-    ports:
-      # - 8010:8010  # Using default port from the image
+    # ports:
+    #   - 8010:8010  # Using default port from the image
     restart: unless-stopped
 
 
@@ -229,7 +229,7 @@ services:
     image: onlyoffice/documentserver:latest
     container_name: onlyoffice-documentserver
     # ports:
-      # - 80:80
+    #   - 80:80
     volumes:
       - /home/autiboy/onlyoffice-documentserver/logs:/var/log/onlyoffice
       - /home/autiboy/onlyoffice-documentserver/data:/var/www/onlyoffice/Data 
