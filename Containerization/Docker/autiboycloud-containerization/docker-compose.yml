@@ -73,54 +73,54 @@ services:
     restart: unless-stopped
 
 
-  # Synapse: Matrix homeserver written in Python 3/Twisted. 
-  # run before you run synapse
-  # change th Synapse_Server_Name
-  # docker run -it --rm -v /home/autiboy/synapse/data:/data -e SYNAPSE_SERVER_NAME=matrix.autiboystech.com -e SYNAPSE_REPORT_STATS=no matrixdotorg/synapse:latest generate
+  # # Synapse: Matrix homeserver written in Python 3/Twisted. 
+  # # run before you run synapse
+  # # change th Synapse_Server_Name
+  # # docker run -it --rm -v /home/autiboy/synapse/data:/data -e SYNAPSE_SERVER_NAME=matrix.autiboystech.com -e SYNAPSE_REPORT_STATS=no matrixdotorg/synapse:latest generate
 
-  synapse:
-    image: matrixdotorg/synapse:latest
-    container_name: synapse
-    volumes:
-      - /home/autiboy/synapse/data:/data
-    # ports:
-      # - 127.0.0.1:8008:8008
-    restart: unless-stopped
-
-
-  # Admin UI for Matrix Synapse homeserver.
-  # run
-  # register_new_matrix_user -c homeserver.yaml -u admin -p @ut1b0yM@tr1x@dm1n! -a https://matrix.autiboystech.com 
-  # using portainer
-
-  synapse-admin:
-    image: awesometechnologies/synapse-admin:latest
-    container_name: synapse-admin
-    hostname: synapse-adminm
-    # build:
-    # context: .
-    # to use the docker-compose as standalone without a local repo clone,
-    # replace the context definition with this:
-    # context: https://github.com/Awesome-Technologies/synapse-admin.git
-    # if you're building on an architecture other than amd64, make sure
-    # to define a maximum ram for node. otherwise the build will fail.
-    # args:
-    #   - NODE_OPTIONS="--max_old_space_size=1024"
-    # ports:
-      # - "8888:80"
-    restart: unless-stopped
+  # synapse:
+  #   image: matrixdotorg/synapse:latest
+  #   container_name: synapse
+  #   volumes:
+  #     - /home/autiboy/synapse/data:/data
+  #   # ports:
+  #     # - 127.0.0.1:8008:8008
+  #   restart: unless-stopped
 
 
-  # Element-Web: A glossy Matrix collaboration client for the web. 
+  # # Admin UI for Matrix Synapse homeserver.
+  # # run
+  # # register_new_matrix_user -c homeserver.yaml -u admin -p @ut1b0yM@tr1x@dm1n! -a https://matrix.autiboystech.com 
+  # # using portainer
 
-  element-web:
-    image: vectorim/element-web:latest
-    container_name: element-web
-    volumes:
-      - /home/autiboy/element-web/config.json:/app/config.json:ro
-    # ports:
-      # - 127.0.0.1:88:80
-    restart: unless-stopped
+  # synapse-admin:
+  #   image: awesometechnologies/synapse-admin:latest
+  #   container_name: synapse-admin
+  #   hostname: synapse-adminm
+  #   # build:
+  #   # context: .
+  #   # to use the docker-compose as standalone without a local repo clone,
+  #   # replace the context definition with this:
+  #   # context: https://github.com/Awesome-Technologies/synapse-admin.git
+  #   # if you're building on an architecture other than amd64, make sure
+  #   # to define a maximum ram for node. otherwise the build will fail.
+  #   # args:
+  #   #   - NODE_OPTIONS="--max_old_space_size=1024"
+  #   # ports:
+  #     # - "8888:80"
+  #   restart: unless-stopped
+
+
+  # # Element-Web: A glossy Matrix collaboration client for the web. 
+
+  # element-web:
+  #   image: vectorim/element-web:latest
+  #   container_name: element-web
+  #   volumes:
+  #     - /home/autiboy/element-web/config.json:/app/config.json:ro
+  #   # ports:
+  #     # - 127.0.0.1:88:80
+  #   restart: unless-stopped
     
   # # Openvscode-server provides a version of VS Code that runs a server on a remote machine and allows access through a 
   # # modern web browser.
