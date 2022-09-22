@@ -187,8 +187,8 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numwork
 # Download Configure1 Script
 echo "Downloading Configure1 Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora36-configure1.sh -P /home/autiboy/
-chmod +x /home/autiboy/fedora36-configure1.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora-sb/fedoraSB36-configure1.sh -P /home/autiboy/
+chmod +x /home/autiboy/fedoraSB36-configure1.sh
 chown autiboy:autiboy /home/autiboy/fedoraSB36-configure1.sh
 
 # Rebooting Computer
