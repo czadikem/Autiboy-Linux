@@ -157,10 +157,10 @@ echo "Installing Godot"
 sleep 5
 dnf install godot -y
 
-# Install OBS-Studio
-echo "Installing OBS-Studio"
-sleep 5
-dnf install obs-studio -y
+## Install OBS-Studio
+#echo "Installing OBS-Studio"
+#sleep 5
+#dnf install obs-studio -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
