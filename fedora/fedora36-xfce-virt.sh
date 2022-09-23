@@ -5,13 +5,6 @@ echo "Running dnf upgrade -y"
 sleep 5
 dnf upgrade -y
 
-# Uninstall Apps
-echo "Uninstalling Totem, Libreoffice"
-sleep 5
-dnf autoremove totem -y
-dnf autoremove libreoffice* -y
-dnf autoremove -y
-
 # Install Virtualization Package Group
 # https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
 echo "Installing Virtualization Package Group"
@@ -27,3 +20,8 @@ dnf install cockpit cockpit-storaged  cockpit-networkmanager cockpit-packagekit 
 systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
+
+# Rebooting Computer
+echo "Rebooting Computer Now"
+sleep 5
+reboot now
