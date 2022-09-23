@@ -19,7 +19,8 @@ sleep 5
 dnf group install --with-optional virtualization -y
 
 # Install Cockpit and Addons
-# https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
+# https://cockpit-project.org/
+# https://cockpit-project.org/applications.html
 echo "Installing Cockpit and Addons"
 sleep 5
 dnf install cockpit cockpit-storaged  cockpit-networkmanager cockpit-packagekit cockpit-machines cockpit-podman cockpit-selinux cockpit-sosreport -y
