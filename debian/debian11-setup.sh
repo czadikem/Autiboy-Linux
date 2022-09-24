@@ -215,7 +215,7 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/deb
 chmod +x /home/autiboy/debian11-configure.sh
 chown autiboy:autiboy /home/autiboy/debian11-configure.sh
 
-# Rebooting Computer
-echo "Rebooting Computer Now"
+# Run Configure Script
+echo "Please run Configure Script"
 sleep 5
-reboot now
+echo "./debian11-configure.sh"
