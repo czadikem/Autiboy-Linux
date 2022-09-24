@@ -26,6 +26,7 @@ sleep 5
 apt install openjdk-17-jdk -y
 
 # Install Microsoft Fonts
+# https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
 echo "Installing Codecs"
 sleep 5
 apt install ttf-mscorefonts-installer -y
