@@ -25,6 +25,19 @@ echo "Installing Java SDK"
 sleep 5
 apt install openjdk-17-jdk -y
 
+# Install Microsoft Fonts
+echo "Installing Codecs"
+sleep 5
+apt install ttf-mscorefonts-installer -y
+
+# Install Codecs
+echo "Installing Codecs"
+sleep 5
+# https://wiki.debian.org/MultimediaCodecs
+apt install libavcodec-extra -y
+# https://wiki.debian.org/CDDVD#Video_DVD
+apt install libdvd-pkg -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
@@ -144,22 +157,9 @@ pip3 install opencv-python
 pip3 install matplotlib
 
 # Install Gparted
-echo "Installing gparted"
+echo "Installing Gparted"
 sleep 5
 apt install gparted -y
-
-# Install Microsoft Fonts
-echo "Installing Codecs"
-sleep 5
-apt install ttf-mscorefonts-installer -y
-
-# Install Codecs
-echo "Installing Codecs"
-sleep 5
-# https://wiki.debian.org/MultimediaCodecs
-apt install libavcodec-extra -y
-# https://wiki.debian.org/CDDVD#Video_DVD
-apt install libdvd-pkg -y
 
 # Install VLC
 echo "Installing VLC"
