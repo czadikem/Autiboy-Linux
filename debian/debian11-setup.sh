@@ -15,14 +15,20 @@ echo "Running apt update"
 sleep 5
 apt update
 
+# Install pacinstall
+echo "Installing pacinstall"
+sleep 5
+bash -c "$(curl -fsSL https://git.io/JsADh || wget -q https://git.io/JsADh -O -)"
+
 # Install Nala
 # https://gitlab.com/volian/nala/
+# https://trendoceans.com/nala-package-manager/
 # https://gitlab.com/volian/nala/-/wikis/Installation#volian-scar
 # https://gitlab.com/volian/nala/-/wikis/Installation#ubuntu-2104-debian-stable
-# https://christitus.com/stop-using-apt/
 echo "Installing Nala"
 sleep 5
-echo "deb http://deb.volian.org/volian/ scar main" | tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
+echo "deb [arch=amd64,arm64,armhf] http://deb.volian.org/volian/ scar main" | tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 apt update && apt install nala-legacy -y
 
 # Update and Install Upgrades
