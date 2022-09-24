@@ -1,7 +1,5 @@
 # deb cdrom:[Debian GNU/Linux 11.3.0 _Bullseye_ - Unofficial amd64 DVD Binary-1 with firmware >
 
-# deb cdrom:[Debian GNU/Linux 11.3.0 _Bullseye_ - Unofficial amd64 DVD Binary-1 with firmware >
-
 deb http://deb.debian.org/debian/ bullseye main non-free contrib
 deb-src http://deb.debian.org/debian/ bullseye main non-free contrib
 
