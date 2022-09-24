@@ -148,6 +148,11 @@ echo "Installing gparted"
 sleep 5
 apt install gparted -y
 
+# Install Microsoft Fonts
+echo "Installing Codecs"
+sleep 5
+apt install ttf-mscorefonts-installer -y
+
 # Install Codecs
 echo "Installing Codecs"
 sleep 5
