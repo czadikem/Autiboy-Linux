@@ -15,11 +15,6 @@ echo "Running apt update"
 sleep 5
 apt update
 
-# Install pacinstall
-echo "Installing pacinstall"
-sleep 5
-bash -c "$(curl -fsSL https://git.io/JsADh || wget -q https://git.io/JsADh -O -)"
-
 # Install Nala
 # https://gitlab.com/volian/nala/
 # https://trendoceans.com/nala-package-manager/
