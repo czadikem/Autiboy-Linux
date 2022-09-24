@@ -216,6 +216,6 @@ chmod +x /home/autiboy/debian11-configure.sh
 chown autiboy:autiboy /home/autiboy/debian11-configure.sh
 
 # Run Configure Script
-echo "Please run Configure Script"
+echo "Please from Terminal to Desktop and run the Configure Script"
 sleep 5
 echo "./debian11-configure.sh"
