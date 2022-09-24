@@ -201,7 +201,7 @@ flatpak install flathub org.polymc.PolyMC -y
 # https://www.wireguard.com/install/#ubuntu-module-tools
 echo "Installing WireGuard"
 sleep 5
-apt install wireguard resolvconf -y
+apt install wireguard -y
 
 # Setup WireGuard
 echo "Setting up WireGuard"
