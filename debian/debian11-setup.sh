@@ -10,26 +10,41 @@ sleep 5
 rm -r /etc/apt/sources.list
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/sources.list -P /etc/apt/
 
-# Install Updates and Upgrade
-echo "Running apt update && apt upgrade -y"
+# Install Updates
+echo "Running apt update"
 sleep 5
-apt update && apt upgrade -y
+apt update
+
+# Install Nala
+# https://gitlab.com/volian/nala/
+# https://gitlab.com/volian/nala/-/wikis/Installation#volian-scar
+# https://gitlab.com/volian/nala/-/wikis/Installation#ubuntu-2104-debian-stable
+# https://christitus.com/stop-using-apt/
+echo "Installing Nala"
+sleep 5
+echo "deb-src https://deb.volian.org/volian/ scar main" | tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+apt update && apt install nala-legacy -y
+
+# Update and Install Upgrades
+echo "Running nala update and nala upgrade -y"
+sleep 5
+nala update && nala upgrade -y
 
 # Install git and curl
 echo "Installing Git and Curl"
 sleep 5
-apt install git curl -y
+nala install git curl -y
 
 # Install Java SDK
 echo "Installing Java SDK"
 sleep 5
-apt install openjdk-17-jdk -y
+nala install openjdk-17-jdk -y
 
 # Install Microsoft Fonts
 # https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
 echo "Installing Codecs"
 sleep 5
-apt install ttf-mscorefonts-installer -y
+nala install ttf-mscorefonts-installer -y
 
 # Install Codecs
 echo "Installing Codecs"
@@ -37,7 +52,7 @@ sleep 5
 # https://wiki.debian.org/MultimediaCodecs
 apt install libavcodec-extra -y
 # https://wiki.debian.org/CDDVD#Video_DVD
-apt install libdvd-pkg -y
+nala install libdvd-pkg -y
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
@@ -74,8 +89,8 @@ chown -R autiboy:autiboy /home/autiboy/Applications
 # https://flatpak.org/setup/Ubuntu
 echo "Installing Flatpak and Gnome Software"
 sleep 5
-apt install flatpak -y
-apt install gnome-software-plugin-flatpak -y
+nala install flatpak -y
+nala install gnome-software-plugin-flatpak -y
 
 # Add Flathub repo to Flatpak
 echo "Adding Flathub repo"
@@ -85,7 +100,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
-apt install gnome-tweaks gnome-shell-extensions -y
+nala install gnome-tweaks gnome-shell-extensions -y
 
 # Uninstall Apps
 echo "Uninstalling Totem, Transmission, and Libreoffice"
