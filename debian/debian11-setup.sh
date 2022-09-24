@@ -105,18 +105,18 @@ nala install gnome-tweaks gnome-shell-extensions -y
 # Uninstall Apps
 echo "Uninstalling Totem, Transmission, and Libreoffice"
 sleep 5
-sudo apt autoremove totem transmission -y
-sudo apt-get remove --purge libreoffice* -y
-sudo apt-get clean
-sudo apt-get autoremove -y
+nala autoremove totem transmission -y
+nala remove --purge libreoffice* -y
+nala clean
+nala autoremove -y
 
 # Install Tabby-Terminal
 # https://github.com/Eugeny/tabby
+# https://packagecloud.io/eugeny/tabby/install#bash-deb
 echo "Installing Tabby-Terminal"
 sleep 5
-wget https://github.com/Eugeny/tabby/releases/download/v1.0.179/tabby-1.0.179-linux-x64.deb -P /home/autiboy/
-chown autiboy:autiboy /home/autiboy/tabby-1.0.179-linux-x64.deb
-apt install /home/autiboy/tabby-1.0.179-linux-x64.deb -y
+curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | bash
+nala install tabby-terminal -y
 
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
@@ -124,7 +124,7 @@ echo "Installing AngryIP Scanner"
 sleep 5
 wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/ipscan_3.8.2_amd64.deb
-apt install /home/autiboy/ipscan_3.8.2_amd64.deb -y
+nala install /home/autiboy/ipscan_3.8.2_amd64.deb -y
 
 # Install Raspberry Pi Imager
 # https://github.com/raspberrypi/rpi-imager
@@ -132,7 +132,7 @@ echo "Installing Raspberry Pi Imager"
 sleep 5
 wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/imager_latest_amd64.deb
-apt install /home/autiboy/imager_latest_amd64.deb -y
+nala install /home/autiboy/imager_latest_amd64.deb -y
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
@@ -140,16 +140,16 @@ echo "Installing AppImageLauncher"
 sleep 5
 wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
-apt install /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
+nala install /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
 
 # Install Brave browser
 # https://vscodium.com/#install
 echo "Installing Brave Browser"
 sleep 5
-apt install apt-transport-https curl -y
+nala install apt-transport-https curl -y
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-apt update && apt install brave-browser -y
+nala update && nala install brave-browser -y
 
 # Install VSCodium
 # https://brave.com
@@ -161,13 +161,13 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
     | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
 echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
     | tee /etc/apt/sources.list.d/vscodium.list
-apt update && apt install codium
+nala update && nala install codium
 
 # Setup VSCodium
 echo "Setting up VSCodium"
 sleep 5
-apt install python3-tk -y
-apt install python3-pip -y
+nala install python3-tk -y
+nala install python3-pip -y
 pip3 install setuptools
 pip3 install opencv-python
 pip3 install matplotlib
@@ -175,17 +175,17 @@ pip3 install matplotlib
 # Install Gparted
 echo "Installing Gparted"
 sleep 5
-apt install gparted -y
+nala install gparted -y
 
 # Install VLC
 echo "Installing VLC"
 sleep 5
-apt install vlc -y
+nala install vlc -y
 
 # Install qBittorent
 echo "Installing qBittorent"
 sleep 5
-apt install qbittorrent -y
+nala install qbittorrent -y
 
 # Install Flatpaks
 echo "Installing OnlyOffice"
@@ -217,7 +217,7 @@ flatpak install flathub org.polymc.PolyMC -y
 # https://www.wireguard.com/install/#ubuntu-module-tools
 echo "Installing WireGuard"
 sleep 5
-apt install wireguard -y
+nala install wireguard -y
 
 # Setup WireGuard
 echo "Setting up WireGuard"
