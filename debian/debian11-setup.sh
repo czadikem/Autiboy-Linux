@@ -148,16 +148,28 @@ echo "Installing gparted"
 sleep 5
 apt install gparted -y
 
-# Install Flatpaks
+# Install Codecs
+echo "Installing Codecs"
+sleep 5
+# https://wiki.debian.org/MultimediaCodecs
+apt install libavcodec-extra -y
+# https://wiki.debian.org/CDDVD#Video_DVD
+apt install libdvd-pkg -y
+
+# Install VLC
 echo "Installing VLC"
 sleep 5
-flatpak install flathub org.videolan.VLC -y
+apt install vlc -y
+
+# Install qBittorent
+echo "Installing qBittorent"
+sleep 5
+apt install qbittorrent -y
+
+# Install Flatpaks
 echo "Installing OnlyOffice"
 sleep 5
 flatpak install flathub org.onlyoffice.desktopeditors -y
-echo "Installing Transmission"
-sleep 5
-flatpak install flathub com.transmissionbt.Transmission -y
 echo "Installing Thunderbird"
 sleep 5
 flatpak install flathub org.mozilla.Thunderbird -y
