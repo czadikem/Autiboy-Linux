@@ -22,7 +22,7 @@ apt update
 # https://christitus.com/stop-using-apt/
 echo "Installing Nala"
 sleep 5
-echo "deb-src https://deb.volian.org/volian/ scar main" | tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+echo "deb http://deb.volian.org/volian/ scar main" | tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 apt update && apt install nala-legacy -y
 
 # Update and Install Upgrades
