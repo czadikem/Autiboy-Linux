@@ -40,7 +40,5 @@ echo "Enable Battery Percentage in Gnome"
 sleep 5
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 
-# Rebooting Computer
-echo "Rebooting Computer Now"
-sleep 5
-reboot now
+# Reboot Computer
+echo "Please Reboot your Computer Now"
