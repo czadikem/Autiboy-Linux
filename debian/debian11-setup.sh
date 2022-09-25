@@ -54,6 +54,7 @@ sleep 5
 apt install libavcodec-extra -y
 # https://wiki.debian.org/CDDVD#Video_DVD
 nala install libdvd-pkg -y
+dpkg-reconfigure libdvd-pkg
 
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
