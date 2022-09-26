@@ -242,6 +242,9 @@ chmod +x /home/autiboy/debian11-configure.sh
 chown autiboy:autiboy /home/autiboy/debian11-configure.sh
 
 # Run Configure Script
-echo "Please from Terminal to Desktop and run the Configure Script"
+echo "Please Switch from the Terminal to your Desktop Environment"
+echo "Then Launch Blender with Integrated Graphics Card and close it"
+echo "Then Launch VSCodium and close it"
+echo "Finally run the below in a Terminal in your Desktop Environment"
 sleep 5
 echo "./debian11-configure.sh"
