@@ -218,6 +218,13 @@ echo "Installing PolyMC"
 sleep 5
 flatpak install flathub org.polymc.PolyMC -y
 
+# Install NordVPN
+# https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
+echo "Installing NordVPN"
+sleep 5
+sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh)
+usermod -aG nordvpn autiboy
+
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
 echo "Installing WireGuard"
