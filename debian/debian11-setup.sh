@@ -108,7 +108,7 @@ nala install gnome-tweaks gnome-shell-extensions -y
 echo "Uninstalling Totem, Transmission, and Libreoffice"
 sleep 5
 nala autoremove totem transmission -y
-nala remove --purge libreoffice* -y
+#nala remove --purge libreoffice* -y
 nala clean
 nala autoremove -y
 
