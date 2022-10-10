@@ -144,18 +144,24 @@ wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/ap
 chown autiboy:autiboy /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
 nala install /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
 
-# Install Brave browser
-# https://vscodium.com/#install
-echo "Installing Brave Browser"
+# Install Chromium Web browser
+# https://www.chromium.org/getting-involved/download-chromium/
+echo "Installing Chromium Web Browser"
 sleep 5
-nala install apt-transport-https curl -y
-curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-nala update && nala install brave-browser -y
+nala install chromium -y
+
+## Install Brave browser
+## https://brave.com
+## https://brave.com/linux/#release-channel-installation
+#echo "Installing Brave Browser"
+#sleep 5
+#nala install apt-transport-https curl -y
+#curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+#echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#nala update && nala install brave-browser -y
 
 # Install VSCodium
-# https://brave.com
-# https://brave.com/linux/#release-channel-installation
+# https://vscodium.com/#install
 echo "Installing VSCodium"
 sleep 5
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
