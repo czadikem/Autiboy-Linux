@@ -42,5 +42,10 @@ echo "Enable Battery Percentage in Gnome"
 sleep 5
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 
+# Open Terminator with CTRL, ALT, t
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'terminal'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Primary><Alt>t'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'terminator'"
+
 # Reboot Computer
 echo "Please Reboot your Computer Now"
