@@ -112,13 +112,19 @@ nala autoremove totem transmission -y
 nala clean
 nala autoremove -y
 
-# Install Tabby-Terminal
-# https://github.com/Eugeny/tabby
-# https://packagecloud.io/eugeny/tabby/install#bash-deb
-echo "Installing Tabby-Terminal"
+## Install Tabby-Terminal
+## https://github.com/Eugeny/tabby
+## https://packagecloud.io/eugeny/tabby/install#bash-deb
+#echo "Installing Tabby-Terminal"
+#sleep 5
+#curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | bash
+#nala install tabby-terminal -y
+
+# Install Terminator
+# https://gnome-terminator.org/
+echo "Installing Terminator"
 sleep 5
-curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | bash
-nala install tabby-terminal -y
+nala install terminator -y
 
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
