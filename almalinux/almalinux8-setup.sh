@@ -180,5 +180,5 @@ chown autiboy:autiboy /home/autiboy/kde-install.sh
 
 # Choose a Desktop Environment
 echo "Choose a Desktop Environment"
-echo "For Gnome run './gnome-install.sh'"
-echo "For KDE run './kde-install.sh'"
+echo "For Gnome run 'sudo ./gnome-install.sh'"
+echo "For KDE run 'sudo ./kde-install.sh'"
