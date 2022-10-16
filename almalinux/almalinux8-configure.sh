@@ -1,5 +1,34 @@
 #!/bin/bash
 
+# Install Flatpaks
+echo "Installing OnlyOffice"
+sleep 5
+flatpak install flathub org.onlyoffice.desktopeditors -y
+echo "Installing Thunderbird"
+sleep 5
+flatpak install flathub org.mozilla.Thunderbird -y
+echo "Installing appeditor"
+sleep 5
+flatpak install flathub com.github.donadigo.appeditor -y
+echo "Installing Godot"
+sleep 5
+flatpak install flathub org.godotengine.Godot -y
+echo "Installing Tor Browser"
+sleep 5
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+echo "Installing Extension Manager"
+sleep 5
+flatpak install flathub com.mattjakeman.ExtensionManager -y
+echo "Installing Blender"
+sleep 5
+flatpak install flathub org.blender.Blender -y
+echo "Installing BlueJ"
+sleep 5
+flatpak install flathub org.bluej.BlueJ -y
+echo "Installing PolyMC"
+sleep 5
+flatpak install flathub org.polymc.PolyMC -y
+
 # Enable Microsoft VS Code Marketplace
 # https://stackoverflow.com/a/21549836
 # https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
