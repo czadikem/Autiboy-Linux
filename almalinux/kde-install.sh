@@ -12,11 +12,5 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/
 chmod +x /home/autiboy/almalinux8-configure.sh
 chown autiboy:autiboy /home/autiboy/almalinux8-configure.sh
 
-# Run Configure Script
+# Reboot Computer
 echo "Please Reboot your Computer then"
-echo "Please Switch from the Terminal to your Desktop Environment"
-echo "Then Launch Blender with Integrated Graphics Card and close it"
-echo "Then Launch VSCodium and close it"
-echo "Finally run the below in a Terminal in your Desktop Environment"
-sleep 5
-echo "./almalinux8-configure.sh"
