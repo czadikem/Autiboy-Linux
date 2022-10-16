@@ -155,35 +155,6 @@ echo "Installing qBittorent"
 sleep 5
 dnf install qbittorrent -y
 
-# Install Flatpaks
-echo "Installing OnlyOffice"
-sleep 5
-flatpak install flathub org.onlyoffice.desktopeditors -y
-echo "Installing Thunderbird"
-sleep 5
-flatpak install flathub org.mozilla.Thunderbird -y
-echo "Installing appeditor"
-sleep 5
-flatpak install flathub com.github.donadigo.appeditor -y
-echo "Installing Godot"
-sleep 5
-flatpak install flathub org.godotengine.Godot -y
-echo "Installing Tor Browser"
-sleep 5
-flatpak install flathub com.github.micahflee.torbrowser-launcher -y
-echo "Installing Extension Manager"
-sleep 5
-flatpak install flathub com.mattjakeman.ExtensionManager -y
-echo "Installing Blender"
-sleep 5
-flatpak install flathub org.blender.Blender -y
-echo "Installing BlueJ"
-sleep 5
-flatpak install flathub org.bluej.BlueJ -y
-echo "Installing PolyMC"
-sleep 5
-flatpak install flathub org.polymc.PolyMC -y
-
 # Install NordVPN
 # https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
 echo "Installing NordVPN"
@@ -196,17 +167,7 @@ echo "Installing NumWorks Calc Driver"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
-# Download Configure Script
-echo "Downloading Configure Script"
-sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/almalinux8-configure.sh -P /home/autiboy/
-chmod +x /home/autiboy/almalinux8-configure.sh
-chown autiboy:autiboy /home/autiboy/almalinux8-configure.sh
-
-# Run Configure Script
-echo "Please Switch from the Terminal to your Desktop Environment"
-echo "Then Launch Blender with Integrated Graphics Card and close it"
-echo "Then Launch VSCodium and close it"
-echo "Finally run the below in a Terminal in your Desktop Environment"
-sleep 5
-echo "./debian11-configure.sh"
+# Choose a Desktop Environment
+echo "Choose a Desktop Environment"
+echo "For Gnome run 'gnome-install.sh'"
+echo "For KDE run 'kde-install.sh'"
