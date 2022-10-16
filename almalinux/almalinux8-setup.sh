@@ -26,6 +26,7 @@ dnf install java-17-openjdk -y
 echo "Installing RPM Fusion"
 sleep 5
 dnf install epel-release -y
+dnf --enablerepo=epel group
 dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm -y
 dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm -y
 dnf config-manager --enable powertools
