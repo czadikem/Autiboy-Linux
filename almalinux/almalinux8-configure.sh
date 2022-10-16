@@ -29,6 +29,9 @@ echo "Installing PolyMC"
 sleep 5
 flatpak install flathub org.polymc.PolyMC -y
 
+# Launch VSCodium
+flatpak run com.vscodium.codium&
+
 # Enable Microsoft VS Code Marketplace
 # https://stackoverflow.com/a/21549836
 # https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
@@ -53,6 +56,9 @@ echo "Setting up VSCodium Git"
 sleep 5
 git config --global user.name "Autiboy"
 git config --global user.email czadikem@readytodream.com
+
+#  Launch Blender
+flatpak run org.blender.Blender &
 
 # Setup Blender
 echo "Setting up Blender"
