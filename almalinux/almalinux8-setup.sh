@@ -167,7 +167,16 @@ echo "Installing NumWorks Calc Driver"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
+# Download Desktop Install Scripts
+echo "Downloading Desktop Install Scripts"
+# Gnome
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/gnome-install.sh -P /home/autiboy/
+chown autiboy:autiboy /home/autiboy/gnome-install.sh
+# KDE
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/kde-install.sh -P /home/autiboy/
+chown autiboy:autiboy /home/autiboy/kde-install.sh
+
 # Choose a Desktop Environment
 echo "Choose a Desktop Environment"
-echo "For Gnome run 'gnome-install.sh'"
-echo "For KDE run 'kde-install.sh'"
+echo "For Gnome run './gnome-install.sh'"
+echo "For KDE run './kde-install.sh'"
