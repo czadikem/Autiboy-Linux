@@ -38,4 +38,4 @@ chmod +x /home/autiboy/almalinux8-configure.sh
 chown autiboy:autiboy /home/autiboy/almalinux8-configure.sh
 
 # Reboot Computer
-echo "Please Reboot your Computer then"
+echo "Please Reboot your Computer Now"
