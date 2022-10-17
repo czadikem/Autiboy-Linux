@@ -7,13 +7,9 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/
 chmod +x almalinux8-setup.sh
 sudo ./almalinux8-setup.sh
 ```
-After your computer has reboots Login
+After your computer has rebooted Login
 
-Then Launch Blender with Integrated Graphics Card and close it
-
-Then Launch VSCodium and close it
-
-Finally run the below in a Terminal in your Desktop Environment
+Run the following in a Terminal in your Desktop Environment
 
 ```./almalinux8-configure.sh```
 
