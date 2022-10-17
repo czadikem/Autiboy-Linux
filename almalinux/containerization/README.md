@@ -4,6 +4,8 @@
 
 ### SSH into server as root
 
+`sudo apt upgrade -y`
+
 #### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
 #### create user autiboy with sudo group "wheel"
 `sudo useradd -m autiboy -G wheel`
