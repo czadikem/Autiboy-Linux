@@ -97,6 +97,6 @@ replace ip-address with your servers ip, you can get your servers ip by doing
 ### Then follow the Docker Containers Setup section and then press deploy stack
 
 # Docker Compose Setup Files and Docs
-![autiboycloud-home-containerization.yml](https://github.com/czadikem/autiboys-linux/tree/master/Containerization/Docker/autiboycloud-home-containerization)
+![autiboycloud-home-containerization.yml](https://github.com/czadikem/autiboys-linux/tree/master/docker/autiboycloud-home-containerization)
 
-![autiboycloud-containerization.yml](https://github.com/czadikem/autiboys-linux/tree/master/Containerization/Docker/autiboycloud-containerization)
+![autiboycloud-containerization.yml](https://github.com/czadikem/autiboys-linux/tree/master/docker/autiboycloud-containerization)
