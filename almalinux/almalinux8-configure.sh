@@ -30,7 +30,7 @@ sleep 5
 flatpak install flathub org.polymc.PolyMC -y
 
 # Launch VSCodium
-flatpak run com.vscodium.codium &
+codium &
 
 # Enable Microsoft VS Code Marketplace
 # https://stackoverflow.com/a/21549836
