@@ -4,6 +4,12 @@
 
 ### SSH into server as root
 
+#### Connect to network and edit it to auto connect
+
+`nmtui`
+
+#### Install updates
+
 `sudo dnf upgrade -y`
 
 #### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
