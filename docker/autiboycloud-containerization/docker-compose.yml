@@ -302,6 +302,6 @@ services:
     ports:
       - 25565:25565
     environment:
-      MEMORYSIZE: "1G"
+      MEMORYSIZE: "4G"
       PAPERMC_FLAGS: ""
     restart: unless-stopped
