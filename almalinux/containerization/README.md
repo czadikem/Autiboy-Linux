@@ -42,7 +42,7 @@
     
 `dnf remove podman buildah -y`
 
-`dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+`dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y`
 
 #### Start docker on boot
 
