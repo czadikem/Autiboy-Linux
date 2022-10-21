@@ -4,7 +4,7 @@
 
 ### SSH into server as root
 
-`sudo apt upgrade -y`
+`sudo dnf upgrade -y`
 
 #### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
 #### create user autiboy with sudo group "wheel"
