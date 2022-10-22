@@ -25,9 +25,9 @@ flatpak install flathub org.blender.Blender -y
 echo "Installing BlueJ"
 sleep 5
 flatpak install flathub org.bluej.BlueJ -y
-echo "Installing PolyMC"
+echo "Installing Prism Launcher"
 sleep 5
-flatpak install flathub org.polymc.PolyMC -y
+flatpak install flathub org.prismlauncher.PrismLauncher -y
 
 # Launch VSCodium
 codium &
