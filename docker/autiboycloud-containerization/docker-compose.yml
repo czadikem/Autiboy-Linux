@@ -291,8 +291,8 @@ services:
   #     - /home/autiboy/wordpress/html:/var/www/html
   #   restart: unless-stopped
   
-  # Docker Minecraft PaperMC server for 1.19, 1.18, 1.17 for AMD64 and ARM64 platforms.
-  # Works on Synology, Raspberry Pi 4 or any other systems that support docker.
+  # This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can
+  # also run/upgrade to any specific version or the latest snapshot.
 
   minecraft-papermc:
     image: itzg/minecraft-server
@@ -304,4 +304,5 @@ services:
     environment:
       TYPE: Paper
       EULA: TRUE
+      MEMORY: 8G
     restart: unless-stopped
