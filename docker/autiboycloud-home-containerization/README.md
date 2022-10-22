@@ -3,7 +3,7 @@
 ## Setup Docker
 
 ```
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/masterocker/autiboycloud-home-containerization/docker-setup.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/docker/autiboycloud-home-containerization/docker-setup.sh
 chmod +x docker-setup.sh
 sudo ./docker-setup.sh
 ```
