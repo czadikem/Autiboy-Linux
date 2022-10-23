@@ -166,9 +166,9 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 echo "Installing Blender"
 sleep 5
 flatpak install flathub org.blender.Blender -y
-echo "Installing PolyMC"
+echo "Installing Prism Launcher"
 sleep 5
-flatpak install flathub org.polymc.PolyMC -y
+flatpak install flathub org.prismlauncher.PrismLauncher -y
 
 # Install WireGuard
 # https://www.wireguard.com/install/#ubuntu-module-tools
