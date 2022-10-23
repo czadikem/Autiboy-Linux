@@ -226,9 +226,9 @@ flatpak install flathub org.blender.Blender -y
 echo "Installing BlueJ"
 sleep 5
 flatpak install flathub org.bluej.BlueJ -y
-echo "Installing PolyMC"
+echo "Installing Prism Launcher"
 sleep 5
-flatpak install flathub org.polymc.PolyMC -y
+flatpak install flathub org.prismlauncher.PrismLauncher -y
 
 # Install NordVPN
 # https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
