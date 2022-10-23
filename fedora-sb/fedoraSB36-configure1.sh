@@ -18,9 +18,9 @@ flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 echo "Installing Extension Manager"
 sleep 5
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-echo "Installing PolyMC"
+echo "Installing Prism Launcher"
 sleep 5
-flatpak install flathub org.polymc.PolyMC -y
+flatpak install flathub org.prismlauncher.PrismLauncher -y
 
 # Download Configure2 Script
 echo "Downloading Configure2 Script"
