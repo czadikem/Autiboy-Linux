@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # Install Flatpaks
+echo "Installing KeePassXC"
+sleep 5
+flatpak install flathub org.keepassxc.KeePassXC -y
 echo "Installing OnlyOffice"
 sleep 5
 flatpak install flathub org.onlyoffice.desktopeditors -y
