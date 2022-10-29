@@ -6,7 +6,7 @@
 echo "Disabling Screen Lock"
 sleep 5
 gsettings set org.gnome.desktop.session idle-delay 0
-gsettings set org.gnome.desktop.session lock-enabled 'false'
+gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
 
 
 # Install Flatpaks
@@ -83,7 +83,7 @@ mv /home/autiboy/Applications/3.3 /home/autiboy/.var/app/org.blender.Blender/con
 echo "Enabling Screen Lock"
 sleep 5
 gsettings set org.gnome.desktop.session idle-delay 300
-gsettings set org.gnome.desktop.session lock-enabled 'true'
+gsettings set org.gnome.desktop.screensaver lock-enabled 'true'
 
 # Set time to AM/PM for Gnome
 # https://askubuntu.com/a/1183891
