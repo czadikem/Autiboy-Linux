@@ -50,6 +50,12 @@ sleep 5
 dnf install curl cabextract xorg-x11-font-utils fontconfig -y
 dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y
 
+# Install exFAT Drivers
+# https://almalinux.discourse.group/t/unable-to-mount-exfat-volumes/224/2
+echo "Installing exFAT Drivers"
+sleep 5
+dnf install fuse-exfat -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
