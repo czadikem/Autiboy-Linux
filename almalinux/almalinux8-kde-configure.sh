@@ -75,6 +75,8 @@ flatpak run org.blender.Blender &
 # Setup Blender
 echo "Setting up Blender"
 sleep 5
+mkdir /home/autiboy/.var/app/org.blender.Blender/config
+mkdir /home/autiboy/.var/app/org.blender.Blender/config/blender
 mv /home/autiboy/Applications/3.3 /home/autiboy/.var/app/org.blender.Blender/config/blender/
 
 ## Enable Screen Lock
