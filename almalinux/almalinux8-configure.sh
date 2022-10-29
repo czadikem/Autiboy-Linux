@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Disable Screen lock
+# https://stackoverflow.com/a/44358284
+# https://askubuntu.com/a/338321
+echo "Disabling Screen Lock"
+sleep 5
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.desktop.session lock-enabled 'false'
+
+
 # Install Flatpaks
 echo "Installing KeePassXC"
 sleep 5
@@ -67,6 +76,15 @@ flatpak run org.blender.Blender &
 echo "Setting up Blender"
 sleep 5
 mv /home/autiboy/Applications/3.1 /home/autiboy/.var/app/org.blender.Blender/config/blender/
+
+# Enable Screen Lock
+# https://stackoverflow.com/a/44358284
+# https://askubuntu.com/a/338321
+echo "Enabling Screen Lock"
+sleep 5
+gsettings set org.gnome.desktop.session idle-delay 300
+gsettings set org.gnome.desktop.session lock-enabled 'true'
+
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
