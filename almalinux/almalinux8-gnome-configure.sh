@@ -85,6 +85,26 @@ sleep 5
 gsettings set org.gnome.desktop.session idle-delay 300
 gsettings set org.gnome.desktop.session lock-enabled 'true'
 
+# Set time to AM/PM for Gnome
+# https://askubuntu.com/a/1183891
+echo "Setting time to AM/PM for Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface clock-format '12h'
+
+# Show bettery percentage in Gnome
+# https://askubuntu.com/a/947875
+echo "Showing bettery percentage in Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+# Open Terminator with CTRL, ALT, t
+# https://askubuntu.com/questions/597395/how-to-set-custom-keyboard-shortcuts-from-terminal
+echo "Allowing Open Terminator with CTRL, ALT, t"
+sleep 5
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'terminal'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Primary><Alt>t'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'terminator'"
+
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
