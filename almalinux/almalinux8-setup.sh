@@ -118,7 +118,7 @@ echo "Installing AppImageLauncher"
 sleep 5
 wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
-dnf install /home/autiboyappimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm -y
+dnf install /home/autiboy/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm -y
 
 # Install Chromium Web browser
 # https://www.chromium.org/getting-involved/download-chromium/
