@@ -176,11 +176,11 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numwork
 # Download Desktop Install Scripts
 echo "Downloading Desktop Install Scripts"
 # Gnome
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/8/gnome-install.sh -P /home/autiboy/
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/gnome-install.sh -P /home/autiboy/
 chmod +x /home/autiboy/gnome-install.sh
 chown autiboy:autiboy /home/autiboy/gnome-install.sh
 # KDE
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/8/kde-install.sh -P /home/autiboy/
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/kde-install.sh -P /home/autiboy/
 chmod +x /home/autiboy/kde-install.sh
 chown autiboy:autiboy /home/autiboy/kde-install.sh
 
