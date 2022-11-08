@@ -110,7 +110,7 @@ echo "Installing AngryIP Scanner"
 sleep 5
 wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan-3.8.2-1.x86_64.rpm -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/ipscan-3.8.2-1.x86_64.rpm
-dnf install ipscan-3.8.2-1.x86_64.rpm -y
+dnf install /home/autiboy/ipscan-3.8.2-1.x86_64.rpm -y
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
