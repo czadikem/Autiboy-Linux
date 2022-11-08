@@ -1,7 +1,7 @@
-# Autiboy-Linux Almalinux Distro
+# Autiboy-Linux Almalinux 8 Distro
 
-## Autiboy's Almalinux
-After install of Almalinux Server
+## Autiboy's Almalinux 8
+After install of Almalinux 8 Server
 
 Connect to network and edit it to auto connect using
 
@@ -9,7 +9,7 @@ Connect to network and edit it to auto connect using
 
 Then run this script
 ```
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/almalinux8-setup.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/8/almalinux8-setup.sh
 chmod +x almalinux8-setup.sh
 sudo ./almalinux8-setup.sh
 ```
