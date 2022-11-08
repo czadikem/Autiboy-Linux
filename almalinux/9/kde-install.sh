@@ -15,7 +15,7 @@ sudo systemctl set-default graphical
 # Download Configure Script
 echo "Downloading Configure Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/8/almalinux8-kde-configure.sh -P /home/autiboy/ -O almalinux8-configure.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux9-kde-configure.sh -P /home/autiboy/ -O almalinux8-configure.sh
 chmod +x /home/autiboy/almalinux8-configure.sh
 chown autiboy:autiboy /home/autiboy/almalinux8-configure.sh
 
