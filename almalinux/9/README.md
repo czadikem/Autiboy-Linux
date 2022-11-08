@@ -9,7 +9,7 @@ Connect to network and edit it to auto connect using
 
 Then run this script
 ```
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux89-setup.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux9-setup.sh
 chmod +x almalinux9-setup.sh
 sudo ./almalinux9-setup.sh
 ```
