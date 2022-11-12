@@ -176,6 +176,7 @@ services:
       - TZ=America/Denver
       - JELLYFIN_PublishedServerUrl=192.168.11.99 #optional
     volumes:
+      - /home/autiboy/jellyfin/web/dist:/usr/share/jellyfin/web:ro
       - /home/autiboy/jellyfin/library:/config
       - /home/autiboy/jellyfin/tvseries:/data/tvshows
       - /home/autiboy/jellyfin/movies:/data/movies
