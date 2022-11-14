@@ -19,6 +19,11 @@ echo "Installing Java SDK"
 sleep 5
 dnf install java-17-openjdk -y
 
+# Install the CodeReady Builder repository
+echo "Installing the CodeReady Builder repository"
+sleep 5
+dnf config-manager --set-enabled crb -y
+
 # Install RPM Fusion
 # https://wiki.almalinux.org/repos/Extras.html
 # https://rpmfusion.org/Configuration
