@@ -22,7 +22,7 @@ dnf install java-17-openjdk -y
 # Install the CodeReady Builder repository
 echo "Installing the CodeReady Builder repository"
 sleep 5
-dnf config-manager --set-enabled crb -y
+dnf config-manager --set-enabled crb
 
 # Install RPM Fusion
 # https://wiki.almalinux.org/repos/Extras.html
@@ -34,7 +34,6 @@ dnf install epel-release -y
 dnf --enablerepo=epel group
 dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm -y
 dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm -y
-dnf config-manager --enable powertools
 
 # Install Media Codecs
 # https://rpmfusion.org/Howto/Multimedia
