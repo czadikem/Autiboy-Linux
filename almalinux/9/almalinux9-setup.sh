@@ -20,6 +20,7 @@ sleep 5
 dnf install java-17-openjdk -y
 
 # Install the CodeReady Builder repository
+# https://wiki.almalinux.org/repos/AlmaLinux.html
 echo "Installing the CodeReady Builder repository"
 sleep 5
 dnf config-manager --set-enabled crb
