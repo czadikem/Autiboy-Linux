@@ -8,7 +8,7 @@ sleep 20
 echo "Disabling DVD Repo"
 sleep 5
 rm -r /etc/apt/sources.list
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/sources.list -P /etc/apt/
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/11/sources.list -P /etc/apt/
 
 # Install Updates
 echo "Running apt update"
