@@ -20,9 +20,9 @@ dnf install gnome-tweaks gnome-extensions-app -y
 # Download Configure Script
 echo "Downloading Configure Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux9-gnome-configure.sh -P /home/autiboy/ -O almalinux8-configure.sh
-chmod +x /home/autiboy/almalinux8-configure.sh
-chown autiboy:autiboy /home/autiboy/almalinux8-configure.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux9-gnome-configure.sh -P /home/autiboy/ -O almalinux9-configure.sh
+chmod +x /home/autiboy/almalinux9-configure.sh
+chown autiboy:autiboy /home/autiboy/almalinux9-configure.sh
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
