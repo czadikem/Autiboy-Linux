@@ -116,6 +116,7 @@ echo "Deleting Install Scripts"
 sleep 5
 rm -r /home/autiboy/*.sh
 rm -r /home/autiboy/*.deb
+rm -r /home/autiboy/Applications.tar.xz
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
