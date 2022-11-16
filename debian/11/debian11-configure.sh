@@ -7,7 +7,8 @@ echo "Disabling Screen Lock"
 sleep 5
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
-
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
 # Install Flatpaks
 echo "Installing KeePassXC"
@@ -86,6 +87,8 @@ echo "Enabling Screen Lock"
 sleep 5
 gsettings set org.gnome.desktop.session idle-delay 300
 gsettings set org.gnome.desktop.screensaver lock-enabled 'true'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
 
 # Set time to AM/PM for Gnome
 # https://askubuntu.com/a/1183891
