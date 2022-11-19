@@ -69,6 +69,7 @@ mount /dev/sdb1 /media/autiboy/Ventoy
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
 cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
+chown autiboy:autiboy /home/autiboy/Applications.tar.xz
 
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
