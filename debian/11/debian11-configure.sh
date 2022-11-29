@@ -121,6 +121,10 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Primary><Alt>t'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'terminator'"
 
+# Create Templates
+echo "Creating Templates"
+sleep 5
+touch /home/autiboy/Templates/'New Text File.txt' && touch /home/autiboy/Templates/'New Word File.docx' && touch /home/autiboy/Templates/'New Excel Spreadsheet.xlsx' && touch /home/autiboy/Templates/'New Powerpoint Presentation.xlsx' && touch /home/autiboy/Templates/'New Form.docf' && touch /home/autiboy/Templates/'New Script.sh' && touch /home/autiboy/Templates/'New Python Program.py'
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
