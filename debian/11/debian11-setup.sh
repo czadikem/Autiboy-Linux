@@ -126,6 +126,12 @@ echo "Installing Terminator"
 sleep 5
 nala install terminator -y
 
+# Setup Nautilus for Terminator
+# https://pypi.org/project/nautilus-open-any-terminal/#description
+echo "Setting up Nautilus for Terminator"
+sleep 5
+nala uninstall nautilus-extension-gnome-terminal -y
+
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
