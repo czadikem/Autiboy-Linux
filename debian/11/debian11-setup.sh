@@ -46,6 +46,11 @@ echo "Installing Node JS"
 sleep 5
 nala install nodejs -y
 
+# Add user Autiboy to dialout group
+echo "Adding user Autiboy to dialout group"
+sleep 5
+adduser autiboy dialout
+
 # Install Microsoft Fonts
 # https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
 echo "Installing Codecs"
