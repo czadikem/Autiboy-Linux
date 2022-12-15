@@ -26,6 +26,8 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 source "$HOME/.cargo/env" 
 cargo install --locked zellij
 zellij setup --dump-config > ~/.config/zellij/config.kdl
+rm ~/.config/zellij/config.kdl
+mv /home/autiboy/Applications/zellij/config.kdl ~/.config/zellij/config.kdl
 
 # Install Flatpaks
 echo "Installing KeePassXC"
