@@ -25,7 +25,7 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 # https://zellij.dev/documentation/installation.html
 echo "Installing Cargo and Zellij"
 curl https://sh.rustup.rs -sSf | sh -s -- -y
-source "$HOME/.cargo/env" 
+source /home/autiboy/.cargo/env 
 cargo install --locked zellij
 zellij setup --dump-config > ~/.config/zellij/config.kdl
 rm ~/.config/zellij/config.kdl
