@@ -41,6 +41,11 @@ echo "Installing Java SDK"
 sleep 5
 nala install openjdk-17-jdk -y
 
+# Install Node JS
+echo "Installing Node JS"
+sleep 5
+nala install nodejs -y
+
 # Install Microsoft Fonts
 # https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
 echo "Installing Codecs"
