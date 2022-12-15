@@ -71,6 +71,7 @@ codium &
 # https://github.com/VSCodium/vscodium/blob/6a86200d383a5ded36e72e47da024429630e253a/DOCS.md#how-to-use-the-vs-code-marketplace
 echo "Enabling Microsoft VS Code Marketplace"
 sleep 5
+mkdir /home/autiboy/.config/VSCodium
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/VSCodium-product.json -O /home/autiboy/.config/VSCodium/product.json
 chown autiboy:autiboy /home/autiboy/.config/VSCodium/product.json
 # Install VSCodium Plugins
