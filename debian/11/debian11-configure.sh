@@ -21,6 +21,8 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<C
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 
 # Install Cargo and Zellij
+# https://stackoverflow.com/questions/57251508/run-rustups-curl-fetched-installer-script-non-interactively#57251636
+# https://zellij.dev/documentation/installation.html
 echo "Installing Cargo and Zellij"
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source "$HOME/.cargo/env" 
