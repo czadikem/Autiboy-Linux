@@ -18,3 +18,7 @@ After your computer has rebooted Login
 Run the following in a Terminal in your Desktop Environment
 
 ```./debian11-configure.sh```
+
+Then open Terminator and change prefrences to run
+
+```/home/autiboy/Applications/zellij/zellij-start.sh```
