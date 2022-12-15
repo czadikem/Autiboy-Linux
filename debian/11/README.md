@@ -21,4 +21,4 @@ Run the following in a Terminal in your Desktop Environment
 
 Then open Terminator and change prefrences to run
 
-```/home/autiboy/Applications/zellij/zellij-start.sh```
+```/home/autiboy/Applications/zellij/zellij-updated.sh```
