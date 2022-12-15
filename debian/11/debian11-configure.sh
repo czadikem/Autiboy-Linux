@@ -20,6 +20,13 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal termin
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 
+# Install Cargo and Zellij
+echo "Installing Cargo and Zellij"
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source "$HOME/.cargo/env" 
+cargo install --locked zellij
+zellij setup --dump-config > ~/.config/zellij/config.kdl
+
 # Install Flatpaks
 echo "Installing KeePassXC"
 sleep 5
