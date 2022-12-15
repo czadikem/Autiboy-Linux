@@ -73,6 +73,9 @@ echo "Installing Arduino Extension Pack"
 codium --install-extension mpty.pack-arduino
 echo "Installing Extension Pack for Java"
 codium --install-extension vscjava.vscode-java-pack
+# https://github.com/pycom/pymakr-vsc/blob/HEAD/GET_STARTED.md
+echo "Installing Pymakr"
+codium --install-extension pycom.Pymakr
 
 # Setup VSCodium Git
 echo "Setting up VSCodium Git"
