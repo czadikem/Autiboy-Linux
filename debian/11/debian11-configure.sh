@@ -27,6 +27,8 @@ echo "Installing Cargo and Zellij"
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source /home/autiboy/.cargo/env 
 cargo install --locked zellij
+mkdir ~/.config/zellij
+cargo install --locked zellij
 zellij setup --dump-config > ~/.config/zellij/config.kdl
 rm ~/.config/zellij/config.kdl
 mv /home/autiboy/Applications/zellij/config.kdl ~/.config/zellij/config.kdl
