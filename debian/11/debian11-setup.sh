@@ -31,10 +31,10 @@ echo "Running nala update and nala upgrade -y"
 sleep 5
 nala update && nala upgrade -y
 
-# Install git and curl
-echo "Installing Git and Curl"
+# Install git curl and fzf
+echo "Installing Git Curl and fzf"
 sleep 5
-nala install git curl -y
+nala install git curl fzf -y
 
 # Install Java SDK
 echo "Installing Java SDK"
