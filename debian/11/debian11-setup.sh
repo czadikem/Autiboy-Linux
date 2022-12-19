@@ -66,6 +66,12 @@ apt install libavcodec-extra -y
 nala install libdvd-pkg -y
 dpkg-reconfigure libdvd-pkg
 
+# Install Disk Management Drivers
+echo "Installing Disk Management Drivers"
+sleep 5
+# FAT32
+nala install dosfstools mtools -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
