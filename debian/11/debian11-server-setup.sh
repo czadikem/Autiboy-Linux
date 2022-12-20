@@ -46,6 +46,13 @@ echo "Installing Node JS"
 sleep 5
 nala install nodejs -y
 
+# Install Desktop Gnome XFCE SSH-Server
+# https://wiki.debian.org/tasksel
+# https://wiki.debian.org/DesktopEnvironment
+echo "Installing Desktop Gnome XFCE SSH-Server"
+sleep 5
+nala install task-desktop task-gnome-desktop task-xfce-desktop task-ssh-server -y
+
 # Add user Autiboy to dialout group
 echo "Adding user Autiboy to dialout group"
 sleep 5
