@@ -54,11 +54,6 @@ echo "Installing Desktop Gnome XFCE SSH-Server"
 sleep 5
 nala install task-desktop task-gnome-desktop task-xfce-desktop task-ssh-server -y
 
-# Add user Autiboy to dialout group
-echo "Adding user Autiboy to dialout group"
-sleep 5
-adduser autiboy dialout
-
 # Install Microsoft Fonts
 # https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
 echo "Installing Codecs"
