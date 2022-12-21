@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Plug in Ventoy USB Drive
-echo "Please insert the Ventoy USB Drive you used to install this OS."
-sleep 20
-
 # Disable DVD Repo
 echo "Disabling DVD Repo"
 sleep 5
@@ -84,37 +80,6 @@ sleep 5
 # FAT32
 nala install dosfstools mtools -y
 
-# Create mount point and Mount USB Drive
-echo "Creating USB Drive mount point"
-sleep 5
-mkdir /media/autiboy/
-mkdir /media/autiboy/Ventoy
-echo "Attaching Ventoy USB Drive"
-sleep 5
-mount /dev/sdb1 /media/autiboy/Ventoy
-
-# Copy the Applications Folder
-echo "Copying Applications.tar.xz from Ventoy to your home directory"
-sleep 5
-cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
-chown autiboy:autiboy /home/autiboy/Applications.tar.xz
-
-# Unmount USB Drive
-echo "Unmounting Ventoy USB Drive"
-sleep 5
-umount /dev/sdb1
-
-# Delete mount Point
-echo "Deleting USB Drive mount point"
-sleep 5
-rm -r /media/autiboy/Ventoy
-
-# Extract Applications.tar.xz
-echo "Extracting Applications.tar.xz"
-sleep 5
-tar -xf Applications.tar.xz
-chown -R autiboy:autiboy /home/autiboy/Applications
-
 # Install Flatpak and Gnome-Software
 # https://flatpak.org/setup/Ubuntu
 echo "Installing Flatpak and Gnome Software"
@@ -164,25 +129,22 @@ nala uninstall nautilus-extension-gnome-terminal -y
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
 sleep 5
-wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/autiboy/
-chown autiboy:autiboy /home/autiboy/ipscan_3.8.2_amd64.deb
-nala install /home/autiboy/ipscan_3.8.2_amd64.deb -y
+wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/
+nala install /home/ipscan_3.8.2_amd64.deb -y
 
 # Install Raspberry Pi Imager
 # https://github.com/raspberrypi/rpi-imager
 echo "Installing Raspberry Pi Imager"
 sleep 5
-wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb -P /home/autiboy/
-chown autiboy:autiboy /home/autiboy/imager_latest_amd64.deb
-nala install /home/autiboy/imager_latest_amd64.deb -y
+wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb -P /home/
+nala install /home/imager_latest_amd64.deb -y
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
 echo "Installing AppImageLauncher"
 sleep 5
-wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -P /home/autiboy/
-chown autiboy:autiboy /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
-nala install /home/autiboy/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
+wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -P /home/
+nala install /home/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
 
 # Install Chromium Web browser
 # https://www.chromium.org/getting-involved/download-chromium/
@@ -257,13 +219,6 @@ usermod -aG nordvpn autiboy
 echo "Installing NumWorks Calc Driver"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
-
-# Download Configure Script
-echo "Downloading Configure Script"
-sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian//11/debian11-configure.sh -P /home/autiboy/
-chmod +x /home/autiboy/debian11-configure.sh
-chown autiboy:autiboy /home/autiboy/debian11-configure.sh
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
