@@ -31,6 +31,11 @@ echo "Running nala update and nala upgrade -y"
 sleep 5
 nala update && nala upgrade -y
 
+# Install nonfree packages
+echo "Installing nonfree packages"
+sleep 5
+nala install firmware-misc-nonfree firmware-linux-nonfree -y
+
 # Install git curl and fzf
 echo "Installing Git Curl and fzf"
 sleep 5
