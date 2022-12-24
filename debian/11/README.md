@@ -30,7 +30,7 @@ After install of Debian 11 Server
 Create autiboy user and change who can SSH into the server
 ##### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
 ##### https://linuxize.com/post/how-to-add-user-to-sudoers-in-debian/
-```sudo useradd -m autiboy -G wheel```
+```sudo useradd -m autiboy -G sudo```
 
 Now set passwd for user autiboy
 
