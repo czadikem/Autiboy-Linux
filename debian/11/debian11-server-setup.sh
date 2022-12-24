@@ -32,6 +32,23 @@ echo "Installing git curl"
 sleep 5
 nala install git curl -y
 
+# Install docker and docker-compose
+# https://docs.docker.com/engine/install/debian/
+# https://docs.docker.com/engine/install/linux-postinstall/
+echo "Installing docker and docker-compose"
+sleep 5
+nala update && nala install ca-certificates curl gnupg lsb-release -y
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+nala update && nala install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+groupadd docker && usermod -aG docker autiboy
+
+# Install portainer
+echo "Installing portainer"
+sleep 5
+docker run -d --name="portainer" --restart on-failure -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
 # Reboot Computer
 echo "Please Reboot your Computer Now"
 echo "Login to your Desktop Environment, open a Terminal, and run the command below"
