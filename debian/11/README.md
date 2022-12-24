@@ -22,3 +22,48 @@ Run the following in a Terminal in your Desktop Environment
 Then open Terminator and change prefrences to run
 
 ```/home/autiboy/Applications/zellij/zellij-updated.sh```
+
+
+## Autiboy's Debian 11 Server
+After install of Debian 11 Server
+
+Create autiboy user and change who can SSH into the server
+##### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
+##### https://linuxize.com/post/how-to-add-user-to-sudoers-in-debian/
+```sudo useradd -m autiboy -G wheel```
+
+Now set passwd for user autiboy
+
+```
+sudo passwd autiboy
+reboot now
+```
+
+SSH into server as autiboy and change SSH permissions
+
+```sudo nano /etc/ssh/sshd_config```
+
+Add to bottom of file
+
+```PermitRootLogin no```
+
+Save the file
+
+```sudo reboot now```
+
+Login again as autiboy and run this script
+```
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/11/debian11-server-setup.sh
+chmod +x debian11-server-setup.sh
+sudo ./debian11-server-setup.sh
+```
+After your computer has rebooted Login
+
+Run the following in a Terminal in your Desktop Environment
+
+```./debian11-configure.sh```
+
+Then open Terminator and change prefrences to run
+
+```/home/autiboy/Applications/zellij/zellij-updated.sh```
+
