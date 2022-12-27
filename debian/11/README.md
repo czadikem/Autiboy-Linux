@@ -52,7 +52,7 @@ Add to bottom of file
 
 Save the file
 
-```sudo reboot now```
+```reboot now```
 
 Login again as autiboy and run this script
 ```
