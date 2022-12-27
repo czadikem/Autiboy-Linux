@@ -29,6 +29,8 @@ After install of Debian 11 Server
 
 Create autiboy user and change who can SSH into the server
 ##### https://phoenixnap.com/kb/create-a-sudo-user-on-debian
+##### https://linuxhandbook.com/sudo-unable-resolve-host/
+##### https://www.tecmint.com/wget-download-file-to-specific-directory/
 ```
 adduser autiboy
 usermod -aG sudo autiboy
@@ -36,6 +38,9 @@ usermod -aG sudo autiboy
 
 Fix SSH host resolution
 ```
+rm -r /etc/hosts
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/debian/11/debian11-server-hosts -P /etc/
+mv /etc/debian11-server-hosts /etc/hosts
 ```
 
 Now change SSH permissions
