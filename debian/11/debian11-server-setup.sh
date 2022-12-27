@@ -32,6 +32,11 @@ echo "Installing git curl"
 sleep 5
 nala install git curl -y
 
+# Install Java SDK
+echo "Installing Java SDK"
+sleep 5
+nala install openjdk-17-jdk -y
+
 # Install docker and docker-compose
 # https://docs.docker.com/engine/install/debian/
 # https://docs.docker.com/engine/install/linux-postinstall/
