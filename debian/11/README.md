@@ -34,6 +34,10 @@ adduser autiboy
 usermod -aG sudo autiboy
 ```
 
+Fix SSH host resolution
+```
+```
+
 Now change SSH permissions
 
 ```
