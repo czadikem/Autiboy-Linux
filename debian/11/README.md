@@ -28,9 +28,11 @@ Then open Terminator and change prefrences to run
 After install of Debian 11 Server
 
 Create autiboy user and change who can SSH into the server
-##### https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
-##### https://linuxize.com/post/how-to-add-user-to-sudoers-in-debian/
-```useradd -m autiboy -G sudo```
+##### https://phoenixnap.com/kb/create-a-sudo-user-on-debian
+```
+adduser autiboy
+usermod -aG sudo autiboy
+```
 
 Now set passwd for user autiboy
 
