@@ -35,13 +35,16 @@ Create autiboy user and change who can SSH into the server
 Now set passwd for user autiboy
 
 ```
-sudo passwd autiboy
+passwd autiboy
 reboot now
 ```
 
 SSH into server as autiboy and change SSH permissions
 
-```sudo nano /etc/ssh/sshd_config```
+```
+apt install nano -y
+nano /etc/ssh/sshd_config
+```
 
 Add to bottom of file
 
