@@ -34,14 +34,7 @@ adduser autiboy
 usermod -aG sudo autiboy
 ```
 
-Now set passwd for user autiboy
-
-```
-passwd autiboy
-reboot now
-```
-
-SSH into server as autiboy and change SSH permissions
+Now change SSH permissions
 
 ```
 apt install nano -y
