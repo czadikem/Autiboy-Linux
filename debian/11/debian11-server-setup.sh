@@ -56,6 +56,3 @@ docker run -d --name="portainer" --restart on-failure -p 9000:9000 -p 8000:8000 
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
-echo "Login to your Desktop Environment, open a Terminal, and run the command below"
-sleep 5
-echo "./debian11-configure.sh"
