@@ -23,6 +23,12 @@ Then open Terminator and change prefrences to run
 
 ```/home/autiboy/Applications/zellij/zellij-updated.sh```
 
+If installing on USB then run this in terminal
+
+##### https://www.youtube.com/watch?v=2gn-jfcaMLM
+
+```sudo grub-install --removable --recheck --efi-directory=/boot/efi```
+
 
 ## Autiboy's Debian 11 Server
 After install of Debian 11 Server
