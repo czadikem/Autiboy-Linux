@@ -17,6 +17,18 @@ dnf autoremove totem -y
 dnf autoremove libreoffice* -y
 dnf autoremove -y
 
+# Install Terminator
+# https://gnome-terminator.org/
+echo "Installing Terminator"
+sleep 5
+nala install terminator -y
+
+# Setup Nautilus for Terminator
+# https://pypi.org/project/nautilus-open-any-terminal/#description
+echo "Setting up Nautilus for Terminator"
+sleep 5
+nala uninstall nautilus-extension-gnome-terminal -y
+
 # Nvidia Drivers
 # https://www.linuxcapable.com/how-to-install-nvidia-drivers-on-almalinux-9/
 echo "Setting up Nvidia Drivers"
