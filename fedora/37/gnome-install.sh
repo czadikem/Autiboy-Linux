@@ -29,20 +29,13 @@ echo "Setting up Nautilus for Terminator"
 sleep 5
 nala uninstall nautilus-extension-gnome-terminal -y
 
-# Nvidia Drivers
-# https://www.linuxcapable.com/how-to-install-nvidia-drivers-on-almalinux-9/
-echo "Setting up Nvidia Drivers"
-sleep 5
-sudo dnf config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/rhel9/$(uname -i)/cuda-rhel9.repo
-sudo dnf install kernel-headers-$(uname -r) kernel-devel-$(uname -r) tar bzip2 make automake gcc gcc-c++ pciutils elfutils-libelf-devel libglvnd-opengl libglvnd-glx libglvnd-devel acpid pkgconfig dkms -y
-sudo dnf module install nvidia-driver:latest-dkms -y
-
 # Set default to Graphical Boot
-# https://www.linuxcapable.com/how-to-install-kde-plasma-desktop-on-almalinux-8/
+# https://linuxconfig.org/how-to-install-kde-plasma-desktop-on-fedora-linux
 echo "Setting default to Graphical Boot"
 sleep 5
-echo "exec /usr/bin/startkde" >> ~/.xinitrc
-sudo systemctl set-default graphical
+systemctl set-default graphical
+systemctl enable gdm
+switchdesk gnome
 
 # Install Gnome Tweaks
 echo "Installing Gnome-Tweaks and Gnome-Extensions"
