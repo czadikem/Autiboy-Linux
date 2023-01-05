@@ -3,7 +3,7 @@
 # Install Gnome
 echo "Installing Gnome"
 sleep 5
-dnf groupinstall "Workstation" "GNOME Applications" -y
+dnf groupinstall @workstation-product-environment -y
 
 # Install Gnome-Sotware-Plugin-Flatpak Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
