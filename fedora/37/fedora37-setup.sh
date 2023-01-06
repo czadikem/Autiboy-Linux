@@ -211,7 +211,6 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/
 chmod +x /home/autiboy/configure-gnome.sh
 chown autiboy:autiboy /home/autiboy/configure-gnome.sh
 
-# Rebooting Computer
-echo "Rebooting Computer Now"
+# Please Reboot Your Computer
+echo "Please Reboot Your Computer Now"
 sleep 5
-reboot now
