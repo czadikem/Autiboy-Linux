@@ -59,7 +59,7 @@ git config --global user.name "Autiboy"
 git config --global user.email czadikem@readytodream.com
 
 #  Launch Blender
-blender
+blender &
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
