@@ -27,7 +27,7 @@ dnf install nodejs -y
 # Add user Autiboy to dialout group
 echo "Adding user Autiboy to dialout group"
 sleep 5
-adduser autiboy dialout
+usermod -aG dialout autiboy
 
 # Install Disk Management Drivers
 echo "Installing Disk Management Drivers"
