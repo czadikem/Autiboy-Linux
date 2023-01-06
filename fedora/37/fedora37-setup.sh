@@ -71,23 +71,16 @@ echo "Adding RPM Fusion Free and Non-Free repos"
 sleep 5
 dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
-# Install Flatpak and Gnome-Software
+# Install Flatpak
 # https://flatpak.org/setup/Fedora
-echo "Installing Flatpak and Gnome Software"
+echo "Installing Flatpak"
 sleep 5
 dnf install flatpak -y
-nala install gnome-software-plugin-flatpak -y
 
 # Add Flathub repo to Flatpak
 echo "Adding Flathub repo"
 sleep 5
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Uninstall Apps
-echo "Uninstalling Libreoffice"
-sleep 5
-dnf autoremove libreoffice* -y
-dnf autoremove -y
 
 # Install plugins for playing movies and music
 # https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
