@@ -200,12 +200,12 @@ wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numwork
 #chown autiboy:autiboy /home/autiboy/gnome-install.sh
 
 # Download configure-kde.sh Script and configure-gnome.sh Script
-echo "Downloading kde-install.sh Script"
+echo "Downloading configure-kde.sh Script"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/configure-kde.sh -P /home/autiboy/
 chmod +x /home/autiboy/configure-kde.sh
 chown autiboy:autiboy /home/autiboy/configure-kde.sh
-echo "Downloading gnome-install.sh Script"
+echo "Downloading configure-gnome.sh Script"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/configure-gnome.sh -P /home/autiboy/
 chmod +x /home/autiboy/configure-gnome.sh
