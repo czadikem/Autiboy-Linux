@@ -88,7 +88,7 @@ echo "Install plugins for playing movies and music"
 sleep 5
 dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 dnf install lame\* --exclude=lame-devel -y
-sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
+dnf group upgrade --with-optional Multimedia --allowerasing -y
 
 # Install Openh264
 # https://docs.fedoraproject.org/en-US/quick-docs/openh264/#installation-from-fedora-cisco-openh264-repository
@@ -135,8 +135,8 @@ dnf install chromium -y
 # https://vscodium.com/#install
 echo "Installing VSCodium"
 sleep 5
-sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
-printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
+rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | tee -a /etc/yum.repos.d/vscodium.repo
 dnf install codium -y
 
 # Setup VSCodium
@@ -152,6 +152,12 @@ pip3 install matplotlib
 echo "Installing Gparted"
 sleep 5
 dnf install gparted -y
+
+# Install Zellij
+echo "Installing Zellij"
+sleep 5
+dnf copr enable varlad/zellij -y
+dnf install zellij -y
 
 # Install VLC Media PLayer
 echo "Installing VLC Media PLayer"
