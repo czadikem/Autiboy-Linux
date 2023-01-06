@@ -88,7 +88,7 @@ echo "Install plugins for playing movies and music"
 sleep 5
 dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 dnf install lame\* --exclude=lame-devel -y
-sudo dnf group upgrade --with-optional Multimedia -y
+sudo dnf group upgrade --with-optional Multimedia --allowerasing -y
 
 # Install Openh264
 # https://docs.fedoraproject.org/en-US/quick-docs/openh264/#installation-from-fedora-cisco-openh264-repository
