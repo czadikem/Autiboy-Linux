@@ -13,5 +13,12 @@ systemctl set-default graphical
 systemctl enable sddm
 switchdesk kde
 
+# Download Configure Script
+echo "Downloading Configure Script"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/configure-kde.sh -P /home/autiboy/ -O configure-kde.sh
+chmod +x /home/autiboy/configure-kde.sh
+chown autiboy:autiboy /home/autiboy/configure-kde.sh
+
 # Reboot Computer
 echo "Please Reboot your Computer Now"
