@@ -42,7 +42,7 @@ mkdir /media/autiboy/
 mkdir /media/autiboy/Ventoy
 echo "Attaching Ventoy USB Drive"
 sleep 5
-mount /dev/sdb1 /media/autiboy/Ventoy
+mount /dev/sda1 /media/autiboy/Ventoy
 
 # Copy the Applications Folder
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
@@ -52,7 +52,7 @@ cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
 sleep 5
-umount /dev/sdb1
+umount /dev/sda1
 
 # Delete mount Point
 echo "Deleting USB Drive mount point"
