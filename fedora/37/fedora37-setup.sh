@@ -154,6 +154,7 @@ sleep 5
 dnf install gparted -y
 
 # Install Zellij
+# https://copr.fedorainfracloud.org/coprs/varlad/zellij/
 echo "Installing Zellij"
 sleep 5
 dnf copr enable varlad/zellij -y
