@@ -59,10 +59,10 @@ echo "Deleting USB Drive mount point"
 sleep 5
 rm -r /media/autiboy/Ventoy
 
-# Extract Applications.tar.xz
-echo "Extracting Applications.tar.xz"
+# Extract Applications.tar.gz
+echo "Extracting Applications.tar.gz"
 sleep 5
-tar -xf Applications.tar.xz
+tar -xf Applications.tar.gz
 chown -R autiboy:autiboy /home/autiboy/Applications
 
 # Add RPM Fusion Free and Non-Free repos
