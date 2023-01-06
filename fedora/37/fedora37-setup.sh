@@ -187,12 +187,17 @@ echo "Installing NumWorks Calc Driver"
 sleep 5
 wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
-# Download Configure1 Script
-echo "Downloading Configure1 Script"
+# Download kde-install.sh Script and gnome-install.sh Script
+echo "Downloading kde-install.sh Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/fedora36-configure1.sh -P /home/autiboy/
-chmod +x /home/autiboy/fedora36-configure1.sh
-chown autiboy:autiboy /home/autiboy/fedora36-configure1.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/kde-install.sh -P /home/autiboy/
+chmod +x /home/autiboy/kde-install.sh
+chown autiboy:autiboy /home/autiboy/kde-install.sh
+echo "Downloading gnome-install.sh Script"
+sleep 5
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/gnome-install.sh -P /home/autiboy/
+chmod +x /home/autiboy/gnome-install.sh
+chown autiboy:autiboy /home/autiboy/gnome-install.sh
 
 # Rebooting Computer
 echo "Rebooting Computer Now"
