@@ -13,6 +13,12 @@ systemctl set-default graphical
 systemctl enable sddm
 switchdesk kde
 
+# Uninstall Apps
+echo "Uninstalling Libreoffice"
+sleep 5
+dnf autoremove libreoffice* -y
+dnf autoremove -y
+
 # Download Configure Script
 echo "Downloading Configure Script"
 sleep 5
