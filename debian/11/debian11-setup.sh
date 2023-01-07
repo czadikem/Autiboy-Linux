@@ -82,10 +82,10 @@ sleep 5
 mount /dev/sdb1 /media/autiboy/Ventoy
 
 # Copy the Applications Folder
-echo "Copying Applications.tar.xz from Ventoy to your home directory"
+echo "Copying Applications.tar.gz from Ventoy to your home directory"
 sleep 5
-cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
-chown autiboy:autiboy /home/autiboy/Applications.tar.xz
+cp /media/autiboy/Ventoy/Applications.tar.gz /home/autiboy/
+chown autiboy:autiboy /home/autiboy/Applications.tar.gz
 
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
@@ -97,10 +97,10 @@ echo "Deleting USB Drive mount point"
 sleep 5
 rm -r /media/autiboy/Ventoy
 
-# Extract Applications.tar.xz
-echo "Extracting Applications.tar.xz"
+# Extract Applications.tar.gz
+echo "Extracting Applications.tar.gz"
 sleep 5
-tar -xf Applications.tar.xz
+tar -xf Applications.tar.gz
 chown -R autiboy:autiboy /home/autiboy/Applications
 
 # Install Flatpak and Gnome-Software
