@@ -152,9 +152,9 @@ nala uninstall nautilus-extension-gnome-terminal -y
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
 sleep 5
-wget https://github.com/angryip/ipscan/releases/download/3.8.2/ipscan_3.8.2_amd64.deb -P /home/autiboy/
-chown autiboy:autiboy /home/autiboy/ipscan_3.8.2_amd64.deb
-nala install /home/autiboy/ipscan_3.8.2_amd64.deb -y
+wget https://github.com/angryip/ipscan/releases/download/3.9.0/ipscan_3.9.0_amd64.deb -P /home/autiboy/
+chown autiboy:autiboy /home/autiboy/ipscan_3.9.0_amd64.deb
+nala install /home/autiboy/ipscan_3.9.0_amd64.deb -y
 
 # Install Raspberry Pi Imager
 # https://github.com/raspberrypi/rpi-imager
