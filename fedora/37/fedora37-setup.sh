@@ -9,10 +9,10 @@ echo "Running dnf upgrade -y"
 sleep 5
 dnf upgrade -y
 
-# Install git curl and nano
-echo "Installing Git Curl and Nano"
+# Install git curl fzf and nano
+echo "Installing Git Curl Fzf and Nano"
 sleep 5
-dnf install git curl nano -y
+dnf install git curl fzf nano -y
 
 # Install Java SDK
 echo "Installing Java SDK"
