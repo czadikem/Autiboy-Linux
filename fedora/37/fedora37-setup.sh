@@ -35,6 +35,13 @@ sleep 5
 # FAT and FAT32
 dnf install dosfstools mtools -y
 
+# Install HP Printer Drivers
+# https://developers.hp.com/hp-linux-imaging-and-printing/gethplip
+# https://www.linuxcapable.com/how-to-install-hplip-on-ubuntu-22-04-lts/
+echo "Installing HP Printer Drivers"
+sleep 5
+dnf install hplip hplip-gui -y
+
 # Create mount point and Mount USB Drive
 echo "Creating USB Drive mount point"
 sleep 5
