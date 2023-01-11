@@ -77,7 +77,7 @@ echo "Setting up Blender"
 sleep 5
 mkdir /home/autiboy/.var/app/org.blender.Blender/config
 mkdir /home/autiboy/.var/app/org.blender.Blender/config/blender
-mv /home/autiboy/Applications/3.3 /home/autiboy/.var/app/org.blender.Blender/config/blender/
+mv /home/autiboy/Applications/3.4 /home/autiboy/.var/app/org.blender.Blender/config/blender/
 
 # Enable Screen Lock
 # https://stackoverflow.com/a/44358284
