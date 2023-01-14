@@ -6,7 +6,7 @@ sleep 5
 dnf groupinstall "Fedora Workstation" -y
 
 # Install Gnome-Software-Plugin-Flatpak Gnome-Tweaks and Gnome-Shell-Extensions
-echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
+echo "Installing Gnome-Software-Plugin-Flatpak Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
 dnf install gnome-software-plugin-flatpak gnome-tweaks gnome-extensions-app -y
 
