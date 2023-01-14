@@ -5,10 +5,10 @@ echo "Installing Gnome"
 sleep 5
 dnf groupinstall @workstation-product-environment -y
 
-# Install Gnome-Sotware-Plugin-Flatpak Gnome-Tweaks and Gnome-Shell-Extensions
+# Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
-dnf install gnome-software-plugin-flatpak gnome-tweaks gnome-extensions-app -y
+dnf install gnome-tweaks gnome-extensions-app -y
 
 # Uninstall Apps
 echo "Uninstalling Totem"
