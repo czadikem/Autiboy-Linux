@@ -79,7 +79,13 @@ git config --global user.name "Autiboy"
 git config --global user.email czadikem@readytodream.com
 
 #  Launch Blender
-blender
+blender &
+
+# Setup Blender
+echo "Setting up Blender"
+sleep 5
+rm -r /home/autiboy/.config/blender/*
+mv /home/autiboy/Applications/3.4 /home/autiboy/.config/blender/
 
 # Enable Screen Lock
 # https://stackoverflow.com/a/44358284
