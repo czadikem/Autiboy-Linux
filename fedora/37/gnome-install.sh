@@ -11,23 +11,23 @@ sleep 5
 dnf install gnome-software-plugin-flatpak gnome-tweaks gnome-extensions-app -y
 
 # Uninstall Apps
-echo "Uninstalling Totem, Libreoffice"
+echo "Uninstalling Totem"
 sleep 5
 dnf autoremove totem -y
-dnf autoremove libreoffice* -y
+#dnf autoremove libreoffice* -y
 dnf autoremove -y
 
 # Install Terminator
 # https://gnome-terminator.org/
 echo "Installing Terminator"
 sleep 5
-nala install terminator -y
+dnf install terminator -y
 
 # Setup Nautilus for Terminator
 # https://pypi.org/project/nautilus-open-any-terminal/#description
 echo "Setting up Nautilus for Terminator"
 sleep 5
-nala uninstall nautilus-extension-gnome-terminal -y
+dnf autoremove gnome-terminal-nautilus -y
 
 # Set default to Graphical Boot
 # https://linuxconfig.org/how-to-install-kde-plasma-desktop-on-fedora-linux
@@ -45,9 +45,9 @@ dnf install gnome-tweaks gnome-extensions-app -y
 # Download Configure Script
 echo "Downloading Configure Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/almalinux/9/almalinux9-gnome-configure.sh -P /home/autiboy/ -O almalinux9-configure.sh
-chmod +x /home/autiboy/almalinux9-configure.sh
-chown autiboy:autiboy /home/autiboy/almalinux9-configure.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/f37configure-gnome.sh -P /home/autiboy/ -O f37configure-gnome.sh
+chmod +x /home/autiboy/f37configure-gnome.sh
+chown autiboy:autiboy /home/autiboy/f37configure-gnome.sh
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
