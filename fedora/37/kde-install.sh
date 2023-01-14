@@ -13,18 +13,18 @@ systemctl set-default graphical
 systemctl enable sddm
 switchdesk kde
 
-# Uninstall Apps
-echo "Uninstalling Libreoffice"
-sleep 5
-dnf autoremove libreoffice* -y
-dnf autoremove -y
+## Uninstall Apps
+#echo "Uninstalling Libreoffice"
+#sleep 5
+#dnf autoremove libreoffice* -y
+#dnf autoremove -y
 
 # Download Configure Script
 echo "Downloading Configure Script"
 sleep 5
-wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/configure-kde.sh -P /home/autiboy/ -O configure-kde.sh
-chmod +x /home/autiboy/configure-kde.sh
-chown autiboy:autiboy /home/autiboy/configure-kde.sh
+wget https://raw.githubusercontent.com/czadikem/autiboys-linux/master/fedora/37/f37configure-kde.sh -P /home/autiboy/ -O f37configure-kde.sh
+chmod +x /home/autiboy/f37configure-kde.sh
+chown autiboy:autiboy /home/autiboy/f37configure-kde.sh
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
