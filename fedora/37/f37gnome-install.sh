@@ -3,7 +3,7 @@
 # Install Gnome
 echo "Installing Gnome"
 sleep 5
-dnf groupinstall @workstation-product-environment -y
+dnf groupinstall "Fedora Workstation" -y
 
 # Install Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
