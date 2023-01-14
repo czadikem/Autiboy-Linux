@@ -39,7 +39,7 @@ flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 echo "Installing Extension Manager"
 sleep 5
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-echo "Installing Blender"
+echo "Installing BlueJ"
 sleep 5
 flatpak install flathub org.bluej.BlueJ -y
 echo "Installing Prism Launcher"
