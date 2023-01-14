@@ -65,14 +65,14 @@ blender &
 echo "Setting up Blender"
 sleep 5
 rm -r /home/autiboy/.config/blender/*
-mv /home/autiboy/Applications/3.3 /home/autiboy/.config/blender/
+mv /home/autiboy/Applications/3.4 /home/autiboy/.config/blender/
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
 sleep 5
 rm -r /home/autiboy/*.sh
 rm -r /home/autiboy/*.rpm
-rm -r /home/autiboy/Applications.tar.gz
+rm -r /home/autiboy/Applications.tar.xz
 
 # Reboot Computer
 echo "Please Reboot your Computer Now"
