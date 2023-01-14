@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Install Gnome
-echo "Installing Gnome"
+# Install Gnome and Gnome apps
+echo "Installing Gnome and Gnome apps"
 sleep 5
 dnf groupinstall "Fedora Workstation" -y
 
-# Install Gnome-Tweaks and Gnome-Shell-Extensions
+# Install Gnome-Software-Plugin-Flatpak Gnome-Tweaks and Gnome-Shell-Extensions
 echo "Installing Gnome-Tweaks and Gnome-Shell-Extensions"
 sleep 5
-dnf install gnome-tweaks gnome-extensions-app -y
+dnf install gnome-software-plugin-flatpak gnome-tweaks gnome-extensions-app -y
 
 # Uninstall Apps
 echo "Uninstalling Totem"
