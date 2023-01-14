@@ -1,5 +1,29 @@
 # Autiboy-Linux
 
+flatpak VSCOdium move to at some point
+/home/$USER/.var/app/com.vscodium.codium/config/VSCodium/product.json
+
+https://superuser.com/questions/1698922/how-to-give-vscode-flatpak-package-access-to-system-sdk-for-java
+
+/home/autiboy/.var/app/com.vscodium.codium/config/VSCodium/User/
+
+pymakr npm not working
+https://github.com/flathub/com.visualstudio.code-oss/issues/34
+
+```
+{
+    "java.jdt.ls.java.home": "/usr/lib/sdk/openjdk17/jvm/openjdk-17/",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/sdk/openjdk17/jvm/openjdk-17/",
+            "default": true
+        }
+    ],
+}
+```
+
+
 ## Autiboy's Ubuntu
 Install Autiboy's packages and choose a desktop environment with autiboy-ubuntu script.
 ```
