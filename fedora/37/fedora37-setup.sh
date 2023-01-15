@@ -55,6 +55,7 @@ mount /dev/sda1 /media/autiboy/Ventoy
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
 cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
+chown autiboy:autiboy /home/autiboy/Applications.tar.xz
 
 # Unmount USB Drive
 echo "Unmounting Ventoy USB Drive"
@@ -69,7 +70,7 @@ rm -r /media/autiboy/Ventoy
 # Extract Applications.tar.xz
 echo "Extracting Applications.tar.xz"
 sleep 5
-tar -xf Applications.tar.xz
+tar -xf /home/autiboy/Applications.tar.xz
 chown -R autiboy:autiboy /home/autiboy/Applications
 
 # Add RPM Fusion Free and Non-Free repos
