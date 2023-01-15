@@ -78,6 +78,12 @@ echo "Adding RPM Fusion Free and Non-Free repos"
 sleep 5
 dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
+# Add RPM Sphere repo
+# https://rpmsphere.github.io/
+echo "Adding RPM Sphere repo"
+sleep 5
+dnf install https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-36-1.noarch.rpm -y
+
 # Install Flatpak
 # https://flatpak.org/setup/Fedora
 echo "Installing Flatpak"
@@ -160,12 +166,30 @@ echo "Installing Gparted"
 sleep 5
 dnf install gparted -y
 
+# Install Appeditor
+# https://src.fedoraproject.org/rpms/appeditor
+echo "Installing Appeditor"
+sleep 5
+dnf install appeditor -y
+
+# Install Tor Browser
+# https://www.linuxcapable.com/install-tor-browser-on-fedora-linux/
+echo "Installing Tor Browser"
+sleep 5
+dnf install torbrowser-launcher -y
+
 # Install Zellij
 # https://copr.fedorainfracloud.org/coprs/varlad/zellij/
 echo "Installing Zellij"
 sleep 5
 dnf copr enable varlad/zellij -y
 dnf install zellij -y
+
+# Install BlueJ
+# https://fedora.pkgs.org/35/rpm-sphere-noarch/bluej-3.1.6-4.1.noarch.rpm.html
+echo "Installing BlueJ"
+sleep 5
+dnf install bluej -y
 
 # Install VLC Media PLayer
 echo "Installing VLC Media PLayer"
@@ -226,5 +250,5 @@ chmod +x /home/autiboy/f37gnome-install.sh
 chown autiboy:autiboy /home/autiboy/f37gnome-install.sh
 
 # Please Reboot Your Computer
-echo "Please Reboot Your Computer Now"
+echo "Please Reboot Your Computer Now"https://fedora.pkgs.org/35/rpm-sphere-noarch/bluej-3.1.6-4.1.noarch.rpm.html
 sleep 5
