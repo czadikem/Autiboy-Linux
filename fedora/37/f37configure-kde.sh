@@ -10,18 +10,9 @@ flatpak install flathub org.onlyoffice.desktopeditors -y
 echo "Installing Thunderbird"
 sleep 5
 flatpak install flathub org.mozilla.Thunderbird -y
-echo "Installing appeditor"
-sleep 5
-flatpak install flathub com.github.donadigo.appeditor -y
-echo "Installing Tor Browser"
-sleep 5
-flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 echo "Installing Extension Manager"
 sleep 5
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-echo "Installing BlueJ"
-sleep 5
-flatpak install flathub org.bluej.BlueJ -y
 echo "Installing Prism Launcher"
 sleep 5
 flatpak install flathub org.prismlauncher.PrismLauncher -y
