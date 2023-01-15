@@ -84,7 +84,7 @@ mount /dev/sdb1 /media/autiboy/Ventoy
 # Copy the Applications Folder
 echo "Copying Applications.tar.xz from Ventoy to your home directory"
 sleep 5
-cp /media/autiboy/Ventoy/Applications.tar.gz /home/autiboy/
+cp /media/autiboy/Ventoy/Applications.tar.xz /home/autiboy/
 chown autiboy:autiboy /home/autiboy/Applications.tar.xz
 
 # Unmount USB Drive
