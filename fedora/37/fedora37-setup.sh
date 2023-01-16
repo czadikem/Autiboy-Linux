@@ -251,5 +251,5 @@ chmod +x /home/autiboy/f37gnome-install.sh
 chown autiboy:autiboy /home/autiboy/f37gnome-install.sh
 
 # Please Reboot Your Computer
-echo "Please Reboot Your Computer Now"https://fedora.pkgs.org/35/rpm-sphere-noarch/bluej-3.1.6-4.1.noarch.rpm.html
+echo "Please Reboot Your Computer Now"
 sleep 5
