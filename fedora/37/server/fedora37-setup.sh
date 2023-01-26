@@ -58,11 +58,11 @@ echo "Installing Switchdesk"
 sleep 5
 dnf install switchdesk -y
 
-# Install and Setup Cockpit Cockpit-Selinux Cockpit-Machines and Cockpit-Navigator
+# Install and Setup Cockpit Cockpit-Selinux Cockpit-Machines Cockpit-Storaged and Cockpit-Navigator
 # https://cockpit-project.org/running.html#fedora
 # https://cockpit-project.org/applications.html
 # https://github.com/45Drives/cockpit-navigator
-echo "Installing  and Setting up Cockpit Cockpit-Selinux Cockpit-Machines and Cockpit-Navigator"
+echo "Installing  and Setting up Cockpit Cockpit-Selinux Cockpit-Machines Cockpit-Storaged and Cockpit-Navigator"
 sleep 5
 dnf install cockpit cockpit-selinux cockpit-machines cockpit-navigator -y
 systemctl enable --now cockpit.socket
