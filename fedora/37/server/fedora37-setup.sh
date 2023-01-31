@@ -85,3 +85,7 @@ echo "Setting up Cockpit-ZFS-Manager"
 git clone https://github.com/45drives/cockpit-zfs-manager.git
 chown -R autiboy:autiboy cockpit-zfs-manager
 cp -r cockpit-zfs-manager/zfs /usr/share/cockpit
+
+# Please Reboot Your Computer
+echo "Please Reboot Your Computer Now"
+sleep 5
