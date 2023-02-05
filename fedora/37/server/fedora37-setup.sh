@@ -58,6 +58,12 @@ echo "Installing Switchdesk"
 sleep 5
 dnf install switchdesk -y
 
+# Install Glances for use with https://gethomepage.dev/en/widgets/glances/
+# https://github.com/nicolargo/glances
+echo "Installing Glances"
+sleep 5
+dnf install glances -y
+
 # Install and Setup Cockpit Cockpit-Selinux and Cockpit-Navigator
 # https://cockpit-project.org/running.html#fedora
 # https://cockpit-project.org/applications.html
