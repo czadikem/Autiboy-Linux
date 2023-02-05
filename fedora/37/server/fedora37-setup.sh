@@ -59,6 +59,7 @@ sleep 5
 dnf install switchdesk -y
 
 # Install Glances for use with https://gethomepage.dev/en/widgets/glances/
+# https://nicolargo.github.io/glances/
 # https://github.com/nicolargo/glances
 echo "Installing Glances"
 sleep 5
