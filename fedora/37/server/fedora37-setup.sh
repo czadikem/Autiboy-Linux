@@ -69,22 +69,22 @@ systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
 
-# Install Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager
-# https://github.com/45Drives/cockpit-zfs-manager
-# https://openzfs.github.io/openzfs-docs/Getting%20Started/Fedora/index.html
-# https://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work/84899#84899
-echo "Installing Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager"
-sleep 5
-dnf install nfs-utils samba -y
-dnf install https://zfsonlinux.org/fedora/zfs-release-2-2$(rpm --eval "%{dist}").noarch.rpm -y
-dnf install kernel-devel -y
-dnf install zfs -y
-modprobe zfs
-sh -c "echo zfs > /etc/modules-load.d/zfs.conf"
-echo "Setting up Cockpit-ZFS-Manager"
-git clone https://github.com/45drives/cockpit-zfs-manager.git
-chown -R autiboy:autiboy cockpit-zfs-manager
-cp -r cockpit-zfs-manager/zfs /usr/share/cockpit
+## Install Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager
+## https://github.com/45Drives/cockpit-zfs-manager
+## https://openzfs.github.io/openzfs-docs/Getting%20Started/Fedora/index.html
+## https://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work/84899#84899
+#echo "Installing Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager"
+#sleep 5
+dnf install nfs-utils samba stratisd -y
+#dnf install https://zfsonlinux.org/fedora/zfs-release-2-2$(rpm --eval "%{dist}").noarch.rpm -y
+#dnf install kernel-devel -y
+#dnf install zfs -y
+#modprobe zfs
+#sh -c "echo zfs > /etc/modules-load.d/zfs.conf"
+#echo "Setting up Cockpit-ZFS-Manager"
+#git clone https://github.com/45drives/cockpit-zfs-manager.git
+#chown -R autiboy:autiboy cockpit-zfs-manager
+#cp -r cockpit-zfs-manager/zfs /usr/share/cockpit
 
 # Please Reboot Your Computer
 echo "Please Reboot Your Computer Now"
