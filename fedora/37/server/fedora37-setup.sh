@@ -58,33 +58,47 @@ echo "Installing Switchdesk"
 sleep 5
 dnf install switchdesk -y
 
-# Install and Setup Cockpit Cockpit-Selinux Cockpit-Machines Cockpit-Storaged and Cockpit-Navigator
+# Install and Setup Cockpit Cockpit-Selinux and Cockpit-Navigator
 # https://cockpit-project.org/running.html#fedora
 # https://cockpit-project.org/applications.html
 # https://github.com/45Drives/cockpit-navigator
-echo "Installing  and Setting up Cockpit Cockpit-Selinux Cockpit-Machines Cockpit-Storaged and Cockpit-Navigator"
+echo "Installing  and Setting up Cockpit Cockpit-Selinux and Cockpit-Navigator"
 sleep 5
-dnf install cockpit cockpit-selinux cockpit-machines cockpit-navigator -y
+dnf install cockpit cockpit-selinux cockpit-navigator -y
 systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
 
-## Install Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager
-## https://github.com/45Drives/cockpit-zfs-manager
-## https://openzfs.github.io/openzfs-docs/Getting%20Started/Fedora/index.html
-## https://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work/84899#84899
-#echo "Installing Nfs-Utils Samba Zfs and Cockpit-ZFS-Manager"
-#sleep 5
+# Install Nfs-Utils Samba Zfs and Stratisd
+echo "Installing Nfs-Utils Samba Stratisd"
+sleep 5
 dnf install nfs-utils samba stratisd -y
-#dnf install https://zfsonlinux.org/fedora/zfs-release-2-2$(rpm --eval "%{dist}").noarch.rpm -y
-#dnf install kernel-devel -y
-#dnf install zfs -y
-#modprobe zfs
-#sh -c "echo zfs > /etc/modules-load.d/zfs.conf"
-#echo "Setting up Cockpit-ZFS-Manager"
-#git clone https://github.com/45drives/cockpit-zfs-manager.git
-#chown -R autiboy:autiboy cockpit-zfs-manager
-#cp -r cockpit-zfs-manager/zfs /usr/share/cockpit
+
+# Install KVM Virtualizaion Software
+# https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
+echo "Installing KVM Virtualizaion Software"
+sleep 5
+dnf dnf group install --with-optional virtualization -y
+systemctl start libvirtd
+systemctl enable libvirtd
+
+# Install Docker Docker-Compose and Portainer
+# https://docs.docker.com/engine/install/fedora/
+# https://docs.docker.com/engine/install/linux-postinstall/
+# https://docs.portainer.io/start/install/server/docker/linux
+echo "Installing Docker Docker-Compose and Portainer"
+sleep 5
+dnf install dnf-plugins-core -y
+dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+systemctl start docker
+systemctl enable docker
+groupadd docker
+usermod -aG docker autiboy
+# Now Installing Portainer
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 
 # Please Reboot Your Computer
 echo "Please Reboot Your Computer Now"
