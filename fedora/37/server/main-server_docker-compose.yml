@@ -17,6 +17,33 @@ services:
     restart: unless-stopped
 
 
+  # Homepage
+  # http://ghcr.io/benphelps/homepage
+  # https://github.com/benphelps/homepage
+  # https://gethomepage.dev
+  # https://gethomepage.dev/en/configs/docker/
+  dockerproxy:
+    image: ghcr.io/tecnativa/docker-socket-proxy:latest
+    container_name: dockerproxy
+    environment:
+        - CONTAINERS=1 # Allow access to viewing containers
+        - POST=0 # Disallow any POST operations (effectively read-only)
+    ports:
+        - 2375:2375
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro # Mounted as read-only
+    restart: unless-stopped
+
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    volumes:
+        - /path/to/config:/app/config
+    ports:
+        - 3000:3000
+    restart: unless-stopped
+  
+  
   # Docker virt-manager
   # https://hub.docker.com/r/mber5/virt-manager
   # https://github.com/m-bers/docker-virt-manager
