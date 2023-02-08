@@ -107,6 +107,13 @@ usermod -aG docker autiboy
 # Now Installing Portainer
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 
+# Make Homepage Directory
+echo "Makeing Homepage Directory"
+sleep 5
+mkdir /home/autiboy/homepage
+mkdir /home/autiboy/homepage/config
+chown -R autiboy:autiboy /home/autiboy/homepage
+
 # Please Reboot Your Computer
 echo "Please Reboot Your Computer Now"
 sleep 5
