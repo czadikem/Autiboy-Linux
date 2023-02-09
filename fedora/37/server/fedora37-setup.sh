@@ -107,6 +107,14 @@ usermod -aG docker autiboy
 # Now Installing Portainer
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 
+# Pull Docker Images
+echo "Pulling Docker Images"
+sleep 5
+docker pull containrrr/watchtower:latest
+docker pull ghcr.io/tecnativa/docker-socket-proxy:latest
+docker pull ghcr.io/benphelps/homepage:latest
+docker pull mber5/virt-manager:latest
+
 # Make Homepage Directory
 echo "Makeing Homepage Directory"
 sleep 5
