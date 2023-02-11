@@ -65,13 +65,13 @@ echo "Installing Glances"
 sleep 5
 dnf install glances -y
 
-# Install and Setup Cockpit Cockpit-Selinux and Cockpit-Navigator
+# Install and Setup Cockpit Cockpit-Selinux Cockpit-Machines and Cockpit-Navigator
 # https://cockpit-project.org/running.html#fedora
 # https://cockpit-project.org/applications.html
 # https://github.com/45Drives/cockpit-navigator
-echo "Installing  and Setting up Cockpit Cockpit-Selinux and Cockpit-Navigator"
+echo "Installing  and Setting up Cockpit Cockpit-Selinux Cockpit-Machines and Cockpit-Navigator"
 sleep 5
-dnf install cockpit cockpit-selinux cockpit-navigator -y
+dnf install cockpit cockpit-selinux cockpit-machines cockpit-navigator -y
 systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
@@ -80,14 +80,6 @@ firewall-cmd --add-service=cockpit --permanent
 echo "Installing Nfs-Utils Samba Stratisd"
 sleep 5
 dnf install nfs-utils samba stratisd -y
-
-# Install KVM Virtualizaion Software
-# https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
-echo "Installing KVM Virtualizaion Software"
-sleep 5
-dnf dnf group install --with-optional virtualization -y
-systemctl start libvirtd
-systemctl enable libvirtd
 
 # Install Docker Docker-Compose and Portainer
 # https://docs.docker.com/engine/install/fedora/
