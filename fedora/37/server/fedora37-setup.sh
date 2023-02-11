@@ -105,7 +105,6 @@ sleep 5
 docker pull containrrr/watchtower:latest
 docker pull ghcr.io/tecnativa/docker-socket-proxy:latest
 docker pull ghcr.io/benphelps/homepage:latest
-docker pull mber5/virt-manager:latest
 
 # Make Homepage Directory
 echo "Makeing Homepage Directory"
