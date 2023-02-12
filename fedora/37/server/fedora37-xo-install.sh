@@ -7,6 +7,7 @@ xo_server="https://github.com/vatesfr/xen-orchestra"
 n_repo="https://raw.githubusercontent.com/tj/n/master/bin/n"
 n_location="/usr/local/bin/n"
 xo_server_dir="/opt/xen-orchestra"
+dest="/usr/local/lib/node_modules/"
 systemd_service_dir="/lib/systemd/system"
 xo_service="xo-server.service"
 
