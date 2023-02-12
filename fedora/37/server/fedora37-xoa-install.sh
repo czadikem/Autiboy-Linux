@@ -5,6 +5,18 @@ echo "Running dnf upgrade -y"
 sleep 5
 dnf upgrade -y
 
+# Add RPM Fusion Free and Non-Free repos
+# https://rpmfusion.org
+echo "Adding RPM Fusion Free and Non-Free repos"
+sleep 5
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+
+# Add RPM Sphere repo
+# https://rpmsphere.github.io/
+echo "Adding RPM Sphere repo"
+sleep 5
+dnf install https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-36-1.noarch.rpm -y
+
 # Install git curl and nano
 echo "Installing Git Curl and Nano"
 sleep 5
@@ -25,9 +37,10 @@ dnf install yarnpkg -y
 
 # Install Xen Orchestra Dependecies Packages
 # https://xen-orchestra.com/docs/installation.html#packages
+# no longer libvhdi-utils so use libvhdi-tools from RPM-Sphere
 echo "Installing Xen Orchestra Dependecies Packages"
 sleep 5
-dnf install redis libpng-devel git libvhdi-utils lvm2 cifs-utils make automake gcc gcc-c++ -y
+dnf install redis libpng-devel git libvhdi-tools lvm2 cifs-utils make automake gcc gcc-c++ -y
 
 # Download Xen Orchestra
 # https://xen-orchestra.com/docs/installation.html#fetching-the-code
