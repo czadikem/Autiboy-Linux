@@ -5,6 +5,11 @@ echo "Running dnf upgrade -y"
 sleep 5
 dnf upgrade -y
 
+# Install git curl and nano
+echo "Installing Git Curl and Nano"
+sleep 5
+dnf install git curl nano -y
+
 # Install Node JS 18
 # https://xen-orchestra.com/docs/installation.html#nodejs
 # https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux
