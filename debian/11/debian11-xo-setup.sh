@@ -30,5 +30,4 @@ nala update && nala upgrade -y
 # Install Xen Orchestra
 # https://github.com/Jarli01/xenorchestra_installer
 echo "Installing Xen Orchestra"
-sudo bash
 bash -c "$(curl https://raw.githubusercontent.com/Jarli01/xenorchestra_installer/master/xo_install.sh)"
