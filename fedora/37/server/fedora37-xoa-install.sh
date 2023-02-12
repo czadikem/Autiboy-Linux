@@ -53,7 +53,7 @@ sleep 5
 yarn global add forever
 yarn global add forever-service
 # Be sure to edit the path below to where your install is located!
-cd /home/username/xen-orchestra/packages/xo-server/
+cd /home/autiboyxo/xen-orchestra/packages/xo-server/
 # Change the username below to the user owning XO # autiboyxo
 forever-service install orchestra -r autiboyxo -s dist/cli.mjs
 
