@@ -31,6 +31,7 @@ dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(r
 echo "Adding RPM Sphere repo"
 sleep 5
 dnf install https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-36-1.noarch.rpm -y
+
 # Install plugins for playing movies and music
 # https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
 echo "Install plugins for playing movies and music"
