@@ -27,6 +27,12 @@ echo "Running nala update and nala upgrade -y"
 sleep 5
 nala update && nala upgrade -y
 
+
+# Install git and curl
+echo "Installing git and curl"
+sleep 5
+nala install git curl -y
+
 # Install Xen Orchestra
 # https://github.com/Jarli01/xenorchestra_installer
 echo "Installing Xen Orchestra"
