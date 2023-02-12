@@ -1,5 +1,13 @@
 #!/bin/bash
 
+xo_branch="master"
+xo_server="https://github.com/vatesfr/xen-orchestra"
+n_repo="https://raw.githubusercontent.com/tj/n/master/bin/n"
+n_location="/usr/local/bin/n"
+xo_server_dir="/opt/xen-orchestra"
+systemd_service_dir="/lib/systemd/system"
+xo_service="xo-server.service"
+
 # Install Updates and Upgrade
 echo "Running dnf upgrade -y"
 sleep 5
@@ -22,18 +30,21 @@ echo "Installing Git Curl and Nano"
 sleep 5
 dnf install git curl nano -y
 
-# Install Node JS 18
-# https://xen-orchestra.com/docs/installation.html#nodejs
-# https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux
-echo "Installing Node JS 18"
-sleep 5
-dnf module install nodejs:18/common -y
-
 # Install Yarn
 # https://xen-orchestra.com/docs/installation.html#yarn
 echo "Installing Yarn"
 sleep 5
 dnf install yarnpkg -y
+
+# Install n
+/usr/bin/curl -o $n_location $n_repo
+/bin/chmod +x $n_location
+
+# Install node via n
+n lts
+
+# Symlink node directories
+ln -s /usr/bin/node /usr/local/bin/node
 
 # Install Xen Orchestra Dependecies Packages
 # https://xen-orchestra.com/docs/installation.html#packages
@@ -46,13 +57,14 @@ dnf install redis libpng-devel git libvhdi-tools lvm2 cifs-utils make automake g
 # https://xen-orchestra.com/docs/installation.html#fetching-the-code
 echo "Downloading Xen Orchestra"
 sleep 5
-git clone -b master https://github.com/vatesfr/xen-orchestra
+cd /opt
+git clone -b $xo_branch $xo_server
 
 # Install Xen Orchestra Dependecies
 # https://xen-orchestra.com/docs/installation.html#installing-dependencies
 echo "Installing Xen Orchestra Dependecies"
 sleep 5
-cd xen-orchestra
+cd $xo_server_dir
 yarn
 yarn build
 
@@ -61,22 +73,45 @@ yarn build
 echo "Creating Xen Orchestra Server Config"
 sleep 5
 cd packages/xo-server
-mkdir -p ~/.config/xo-server
-cp sample.config.toml ~/.config/xo-server/config.toml
+cp sample.config.toml .xo-server.toml
+# Create node_modules directory if doesn't exist
+mkdir -p $dest
 
-# Set Xen Orchestra as forever-service
-# https://xen-orchestra.com/docs/installation.html#always-running
-echo "Setting Xen Orchestra as forever-service"
-sleep 5
-yarn global add forever
-yarn global add forever-service
-# Be sure to edit the path below to where your install is located!
-cd /home/autiboyxo/xen-orchestra/packages/xo-server/
-# Change the username below to the user owning XO # autiboyxo
-forever-service install orchestra -r autiboyxo -s dist/cli.mjs
+# Plugins to ignore
+ignoreplugins=("xo-server-test")
 
-# Start Xen Orchestra
-# https://xen-orchestra.com/docs/installation.html#always-running
-echo "Starting Xen Orchestra"
-sleep 5
-service orchestra start
+# Symlink all plugins
+for source in $(ls -d /opt/xen-orchestra/packages/xo-server-*); do
+  plugin=$(basename $source)
+  if [[ "${ignoreplugins[@]}" =~ $plugin ]]; then
+      echo "Ignoring $plugin plugin"
+  else
+      ln -s "$source" "$dest"
+    fi
+done
+
+if [[ -e $systemd_service_dir/$xo_service ]] ; then
+  rm $systemd_service_dir/$xo_service
+fi
+
+/bin/cat << EOF >> $systemd_service_dir/$xo_service
+# Systemd service for XO-Server.
+[Unit]
+Description= XO Server
+After=network-online.target
+[Service]
+WorkingDirectory=/opt/xen-orchestra/packages/xo-server/
+ExecStart=/usr/local/bin/node ./dist/cli.mjs
+Restart=always
+SyslogIdentifier=xo-server
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable $xo_service
+systemctl start $xo_service
+
+echo ""
+echo ""
+echo "Installation complete, open a browser to:" && hostname -I && echo "" && echo "Default Login:"admin@admin.net" Password:"admin"" && echo "" && echo "Don't forget to change your password!"
