@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Part of code from https://github.com/Jarli01/xenorchestra_installer/blob/master/xo_install.sh
+# Also N source Code https://github.com/tj/n#installation
 xo_branch="master"
 xo_server="https://github.com/vatesfr/xen-orchestra"
 n_repo="https://raw.githubusercontent.com/tj/n/master/bin/n"
