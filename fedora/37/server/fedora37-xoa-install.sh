@@ -56,3 +56,9 @@ yarn global add forever-service
 cd /home/username/xen-orchestra/packages/xo-server/
 # Change the username below to the user owning XO # autiboyxo
 forever-service install orchestra -r autiboyxo -s dist/cli.mjs
+
+# Start Xen Orchestra
+# https://xen-orchestra.com/docs/installation.html#always-running
+echo "Starting Xen Orchestra"
+sleep 5
+service orchestra start
