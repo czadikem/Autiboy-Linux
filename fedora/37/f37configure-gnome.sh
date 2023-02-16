@@ -24,9 +24,9 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 echo "Installing KeePassXC"
 sleep 5
 flatpak install flathub org.keepassxc.KeePassXC -y
-echo "Installing OnlyOffice"
-sleep 5
-flatpak install flathub org.onlyoffice.desktopeditors -y
+#echo "Installing OnlyOffice"
+#sleep 5
+#flatpak install flathub org.onlyoffice.desktopeditors -y
 echo "Installing Thunderbird"
 sleep 5
 flatpak install flathub org.mozilla.Thunderbird -y
