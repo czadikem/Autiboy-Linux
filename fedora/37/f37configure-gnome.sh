@@ -62,12 +62,17 @@ codium --install-extension vscjava.vscode-java-pack
 # https://github.com/pycom/pymakr-vsc/blob/HEAD/GET_STARTED.md
 echo "Installing Pymakr"
 codium --install-extension pycom.Pymakr
+echo "Installing GitHub Pull Requests and Issues"
+codium --install-extension GitHub.vscode-pull-request-github
+echo "Installing GitHub Repositories"
+codium --install-extension GitHub.remotehub
 
-# Setup VSCodium Git
-echo "Setting up VSCodium Git"
-sleep 5
-git config --global user.name "Autiboy"
-git config --global user.email czadikem@readytodream.com
+
+## Setup VSCodium Git
+#echo "Setting up VSCodium Git"
+#sleep 5
+#git config --global user.name "Autiboy"
+#git config --global user.email czadikem@readytodream.com
 
 #  Launch Blender
 blender &
