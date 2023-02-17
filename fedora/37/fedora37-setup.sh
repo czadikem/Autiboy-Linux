@@ -98,12 +98,6 @@ echo "Installing Flatpak"
 sleep 5
 dnf install flatpak -y
 
-# Add Flathub repo to Flatpak
-# https://stackoverflow.com/a/26239105
-echo "Adding Flathub repo"
-sleep 5
-su - autiboy -c "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo"
-
 # Install plugins for playing movies and music
 # https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
 echo "Install plugins for playing movies and music"
