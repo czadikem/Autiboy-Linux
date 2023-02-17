@@ -124,6 +124,12 @@ echo "Installing Switchdesk"
 sleep 5
 dnf install switchdesk -y
 
+Install Virt-Manager and Askpass
+# https://anukulverma.wordpress.com/2016/07/22/resolving-virt-manager-you-need-to-install-openssh-askpass-or-similar-to-connect-to-this-host/
+echo "Installing Virt-Manager and Askpass"
+sleep 5
+dnf install virt-manager openssh-askpass -y
+
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
