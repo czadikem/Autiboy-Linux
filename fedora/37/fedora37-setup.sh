@@ -25,11 +25,11 @@ sleep 5
 dnf install nodejs -y
 
 # Install Yarn
-# https://classic.yarnpkg.com/lang/en/docs/install
-# # https://stackoverflow.com/a/26239105
+# https://classic.yarnpkg.com/lang/en/docs/install/#centos-stable
 echo "Installing Yarn"
 sleep 5
-su - autiboy -c "npm install --global yarn"
+curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo
+dnf install yarn -y
 
 # Add user Autiboy to dialout group
 echo "Adding user Autiboy to dialout group"
