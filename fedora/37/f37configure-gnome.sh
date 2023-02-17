@@ -10,11 +10,6 @@ gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
-# Add Flathub repo to Flatpak
-echo "Adding Flathub repo"
-sleep 5
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # Setup Nautilus for Terminator
 # https://pypi.org/project/nautilus-open-any-terminal/#description
 echo "Setting up Nautilus for Terminator"
