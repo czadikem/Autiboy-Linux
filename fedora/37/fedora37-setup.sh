@@ -24,6 +24,13 @@ echo "Installing Node JS"
 sleep 5
 dnf install nodejs -y
 
+# Install Yarn
+# https://classic.yarnpkg.com/lang/en/docs/install
+# # https://stackoverflow.com/a/26239105
+echo "Installing Yarn"
+sleep 5
+su - autiboy -c "npm install --global yarn"
+
 # Add user Autiboy to dialout group
 echo "Adding user Autiboy to dialout group"
 sleep 5
