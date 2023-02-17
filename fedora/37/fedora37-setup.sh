@@ -124,6 +124,13 @@ echo "Installing Switchdesk"
 sleep 5
 dnf install switchdesk -y
 
+# Install Glances for use with https://gethomepage.dev/en/widgets/glances/
+# https://nicolargo.github.io/glances/
+# https://github.com/nicolargo/glances
+echo "Installing Glances"
+sleep 5
+dnf install glances -y
+
 Install Virt-Manager and Askpass
 # https://anukulverma.wordpress.com/2016/07/22/resolving-virt-manager-you-need-to-install-openssh-askpass-or-similar-to-connect-to-this-host/
 echo "Installing Virt-Manager and Askpass"
