@@ -110,9 +110,9 @@ docker pull ghcr.io/benphelps/homepage:latest
 # Make Homepage Directory
 echo "Makeing Homepage Directory"
 sleep 5
-mkdir /home/autiboy/homepage
-mkdir /home/autiboy/homepage/config
-chown -R autiboy:autiboy /home/autiboy/homepage
+mkdir /home/mautiservers/homepage
+mkdir /home/mautiservers/homepage/config
+chown -R autiboy:autiboy /home/mautiservers/homepage
 
 # Please Reboot Your Computer
 echo "Please Reboot Your Computer Now"
