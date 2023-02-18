@@ -107,9 +107,10 @@ flatpak remote-modify --enable flathub
 
 # Install plugins for playing movies and music
 # https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
+# change gstreamer1-libav to gstreamer1-plugin-libav
 echo "Install plugins for playing movies and music"
 sleep 5
-dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-plugin-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 dnf install lame\* --exclude=lame-devel -y
 dnf group upgrade --with-optional Multimedia --allowerasing -y
 
@@ -139,7 +140,7 @@ echo "Installing Glances"
 sleep 5
 dnf install glances -y
 
-Install Virt-Manager and Askpass
+# Install Virt-Manager and Askpass
 # https://anukulverma.wordpress.com/2016/07/22/resolving-virt-manager-you-need-to-install-openssh-askpass-or-similar-to-connect-to-this-host/
 echo "Installing Virt-Manager and Askpass"
 sleep 5
