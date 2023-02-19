@@ -96,7 +96,7 @@ dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 systemctl start docker
 systemctl enable docker
 groupadd docker
-usermod -aG docker autiboy
+usermod -aG docker mautiservers
 # Now Installing Portainer
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 
@@ -112,7 +112,7 @@ echo "Makeing Homepage Directory"
 sleep 5
 mkdir /home/mautiservers/homepage
 mkdir /home/mautiservers/homepage/config
-chown -R autiboy:autiboy /home/mautiservers/homepage
+chown -R mautiservers:mautiservers /home/mautiservers/homepage
 
 # Please Reboot Your Computer
 echo "Please Reboot Your Computer Now"
