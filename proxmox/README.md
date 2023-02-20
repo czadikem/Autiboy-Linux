@@ -140,3 +140,15 @@ args: -cpu 'host,+kvm_pv_unhalt,+kvm_pv_eoi,hv_vendor_id=NV43FIX,kvm=off'
 ```
 
 then make sure you set your gpu as primary after the OS installed
+
+### Add disks to Truenas VM 101
+[Passthrough Physical Disk to Virtual Machine (VM)](https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_(VM))
+
+```apt install lshw -y```
+
+```lshw -class disk -class storage```
+
+```
+qm set 101 -scsi2 /dev/disk/by-id/ata-ST8000DM004-2U9188_ZR124ZR3
+qm set 101 -scsi1 /dev/disk/by-id/ata-ST8000DM004-2CX188_ZCT2QHGW
+```
