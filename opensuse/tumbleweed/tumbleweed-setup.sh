@@ -94,10 +94,11 @@ flatpak remote-modify --enable flathub
 
 # Install Microsoft fonts
 # https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
+# https://en.opensuse.org/SDB:Zypper_manual_(plain)
 echo "Installing Microsoft fonts"
 sleep 5
 wget https://sourceforge.net/projects/mscorefonts2/files/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm/download -O msttcore-fonts-installer-2.6-1.noarch.rpm
-zypper --non-interactive in msttcore-fonts-installer-2.6-1.noarch.rpm
+zypper --non-interactive --no-gpg-checks in msttcore-fonts-installer-2.6-1.noarch.rpm
 
 # Install Glances for use with https://gethomepage.dev/en/widgets/glances/
 # https://nicolargo.github.io/glances/
@@ -114,21 +115,21 @@ zypper --non-interactive in virt-manager openssh-askpass-gnome
 
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
-# https://forums.opensuse.org/t/zypper-ignoring-the-allow-unsigned-rpm-option/137056/9
+# https://en.opensuse.org/SDB:Zypper_manual_(plain)
 echo "Installing AngryIP Scanner"
 sleep 5
 wget https://github.com/angryip/ipscan/releases/download/3.9.1/ipscan-3.9.1-1.x86_64.rpm -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/ipscan-3.9.1-1.x86_64.rpm
-zypper --non-interactive --allow-unsigned-rpm in /home/autiboy/ipscan-3.9.1-1.x86_64.rpm
+zypper --non-interactive --no-gpg-checks in /home/autiboy/ipscan-3.9.1-1.x86_64.rpm
 
 # Install AppImageLauncher
 # https://github.com/TheAssassin/AppImageLauncher
-# https://forums.opensuse.org/t/zypper-ignoring-the-allow-unsigned-rpm-option/137056/9
+# https://en.opensuse.org/SDB:Zypper_manual_(plain)
 echo "Installing AppImageLauncher"
 sleep 5
 wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm -P /home/autiboy/
 chown autiboy:autiboy /home/autiboy/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
-zypper --non-interactive --allow-unsigned-rpm in /home/autiboy/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+zypper --non-interactive --no-gpg-checks in /home/autiboy/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 
 # Install Chromium Web browser
 # https://www.chromium.org/getting-involved/download-chromium/
