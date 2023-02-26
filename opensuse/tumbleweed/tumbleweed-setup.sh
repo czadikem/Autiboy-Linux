@@ -93,12 +93,10 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak remote-modify --enable flathub
 
 # Install Microsoft fonts
-# https://www.addictivetips.com/ubuntu-linux-tips/how-to-get-microsoft-core-fonts-on-linux/
-# https://en.opensuse.org/SDB:Zypper_manual_(plain)
+# https://software.opensuse.org/package/fetchmsttfonts
 echo "Installing Microsoft fonts"
 sleep 5
-wget https://sourceforge.net/projects/mscorefonts2/files/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm/download -O msttcore-fonts-installer-2.6-1.noarch.rpm
-zypper --non-interactive --no-gpg-checks in msttcore-fonts-installer-2.6-1.noarch.rpm
+zypper --non-interactive in fetchmsttfonts
 
 # Install Glances for use with https://gethomepage.dev/en/widgets/glances/
 # https://nicolargo.github.io/glances/
