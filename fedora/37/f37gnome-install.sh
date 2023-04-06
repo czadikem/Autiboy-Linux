@@ -23,12 +23,6 @@ echo "Installing Terminator"
 sleep 5
 dnf install terminator -y
 
-# Setup Nautilus for Terminator
-# https://pypi.org/project/nautilus-open-any-terminal/#description
-echo "Setting up Nautilus for Terminator"
-sleep 5
-dnf autoremove gnome-terminal-nautilus -y
-
 # Set default to Graphical Boot
 # https://linuxconfig.org/how-to-install-kde-plasma-desktop-on-fedora-linux
 echo "Setting default to Graphical Boot"
