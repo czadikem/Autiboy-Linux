@@ -146,6 +146,23 @@ echo "Installing Virt-Manager and Askpass"
 sleep 5
 dnf install virt-manager openssh-askpass -y
 
+# Install TigerVNC
+# https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/infrastructure-services/TigerVNC/#s1-vnc-server
+echo "Installing TigerVNC"
+sleep 5
+dnf install tigervnc-server -y
+
+# Setup TigerVNC Server
+# https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/infrastructure-services/TigerVNC/#s1-vnc-server
+# Caleb Zadikem
+echo "Setting Up TigerVNC Server"
+sleep 5
+cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@.service
+echo ':1=autiboycomputers' | tee -a /etc/tigervnc/vncserver.users
+systemctl daemon-reload
+systemctl start vncserver@:1.service
+systemctl enable vncserver@:1.service
+
 # Install AngryIP Scanner
 # https://angryip.org/download/#linux
 echo "Installing AngryIP Scanner"
@@ -201,19 +218,6 @@ dnf install appeditor -y
 echo "Installing Tor Browser"
 sleep 5
 dnf install torbrowser-launcher -y
-
-# Install Zellij
-# https://copr.fedorainfracloud.org/coprs/varlad/zellij/
-echo "Installing Zellij"
-sleep 5
-dnf copr enable varlad/zellij -y
-dnf install zellij -y
-
-# Install BlueJ
-# https://fedora.pkgs.org/35/rpm-sphere-noarch/bluej-3.1.6-4.1.noarch.rpm.html
-echo "Installing BlueJ"
-sleep 5
-dnf install bluej -y
 
 # Install VLC Media PLayer
 echo "Installing VLC Media PLayer"
