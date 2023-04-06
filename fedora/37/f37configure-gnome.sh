@@ -10,16 +10,6 @@ gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
-# Setup Nautilus for Terminator
-# https://pypi.org/project/nautilus-open-any-terminal/#description
-echo "Setting up Nautilus for Terminator"
-sleep 5
-pip3 install nautilus-open-any-terminal
-glib-compile-schemas ~/.local/share/glib-2.0/schemas/
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal terminator
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-
 # Install Flatpaks
 echo "Installing KeePassXC"
 sleep 5
