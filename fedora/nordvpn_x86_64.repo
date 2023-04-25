@@ -1,0 +1,4 @@
+[nordvp_x86_64_repo]
+name=nordvpn x86_64 repo
+baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
+enabled=1
