@@ -2,3 +2,5 @@
 name=nordvpn x86_64 repo
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 enabled=1
+gpgkey=https://repo.nordvpn.com/gpg/nordvpn_public.asc
+gpgcheck=1
