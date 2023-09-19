@@ -99,7 +99,7 @@ $PYTHON3 -m pip uninstall -y gevent-socketio gevent-socketio-hartwork
 msg ":: Installing Ajenti"
 
 # $PYTHON3 -m pip install ajenti-panel ajenti.plugin.core ajenti.plugin.dashboard ajenti.plugin.settings ajenti.plugin.plugins ajenti.plugin.notepad ajenti.plugin.terminal ajenti.plugin.filemanager ajenti.plugin.packages ajenti.plugin.services || exit 1
-$PYTHON3 -m pip install ajenti-panel ajenti.plugin.core ajenti.plugin.dashboard  ajenti.plugin.settings ajenti.plugin.plugins ajenti.plugin.notepad ajenti.plugin.terminal ajenti.plugin.filemanager ajenti.plugin.packages ajenti.plugin.services ajenti.plugin.ace ajenti.plugin.augeas ajenti.plugin.auth-users ajenti.plugin.datetime ajenti.plugin.filesystem ajenti.plugin.network ajenti.plugin.passwd ajenti.plugin.power || exit 1
+$PYTHON3 -m pip install ajenti-panel ajenti.plugin.core ajenti.plugin.dashboard  ajenti.plugin.settings ajenti.plugin.plugins ajenti.plugin.notepad ajenti.plugin.terminal ajenti.plugin.filemanager ajenti.plugin.packages ajenti.plugin.services ajenti.plugin.ace ajenti.plugin.augeas ajenti.plugin.auth-users ajenti.plugin.datetime ajenti.plugin.filesystem ajenti.plugin.network ajenti.plugin.passwd ajenti.plugin.power ajenti.plugin.docker ajenti.plugin.traffic || exit 1
 
 # ----------------
 
