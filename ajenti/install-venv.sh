@@ -1,4 +1,4 @@
-# Autiboystech line 102 has all extesnions to install 
+# Autiboystech line 102 has all extensions set to install 
 #!/bin/bash
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root" 1>&2
