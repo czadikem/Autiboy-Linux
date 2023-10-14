@@ -1,0 +1,5 @@
+# https://jbb.ghsq.de/debian-pm/
+# Faster mirror
+deb https://debpm.kryptons.eu/debpm testing main
+# Upstream repository
+deb https://jbb.ghsq.de/debpm testing main 
