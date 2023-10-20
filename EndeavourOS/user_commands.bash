@@ -73,9 +73,10 @@
 # https://wiki.archlinux.org/title/REFInd#Using_Machine_Owner_Key
 # https://discovery.endeavouros.com/installation/customizing-the-endeavouros-install-process/2022/03/
 # https://askubuntu.com/questions/805067/is-there-a-way-to-force-yes-to-any-prompts-when-installing-from-apt-get-from/805324#805324
+# https://www.reddit.com/r/archlinux/comments/13d7rec/setting_up_secure_boot_while_dual_booting_windows/jjj58t9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
 # https://github.com/Venom1991/refind-btrfs
 echo "Installing REFInd"
-pacman -S --noconfirm --needed refind sbsigntools libreoffice-fresh timeshift
+pacman -S --noconfirm --needed refind sbsigntools libreoffice-fresh timeshift mokutil
 sudo -S su - calebcomputers -c "yay -S --noconfirm --needed shim-signed refind-btrfs"
 yes | refind-install --shim /usr/share/shim-signed/shimx64.efi --localkeys
 systemctl start refind-btrfs
