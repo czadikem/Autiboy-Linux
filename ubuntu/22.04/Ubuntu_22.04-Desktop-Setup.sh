@@ -261,6 +261,15 @@ sleep 5
 nala install lutris steam steam-devices retroarch playonlinux -y
 
 
+# Install Webots
+# https://cyberbotics.com/#cyberbotics
+echo "Installing Webots"
+sleep 5
+wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb -P /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/webots_2023b_amd64.deb
+nala install /home/calebcomputers/webots_2023b_amd64.deb -y
+
+
 # Install MullVad VPN
 # https://mullvad.net/en/download/vpn/linux
 # https://github.com/mullvad/mullvadvpn-app
