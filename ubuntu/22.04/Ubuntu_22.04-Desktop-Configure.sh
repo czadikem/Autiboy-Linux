@@ -193,6 +193,48 @@ echo "Installing Sticky Notes"
 sleep 5
 flatpak install flathub com.vixalien.sticky -y
 
+echo "Installing Curtail"
+# https://apps.gnome.org/Curtail/
+# https://flathub.org/apps/com.github.huluti.Curtail
+sleep 5
+flatpak install flathub com.github.huluti.Curtail -y
+
+echo "Installing Fragments"
+# https://apps.gnome.org/Fragments/
+# https://flathub.org/apps/de.haeckerfelix.Fragments
+sleep 5
+flatpak install flathub de.haeckerfelix.Fragments -y
+
+echo "Installing Bitwarden"
+# https://bitwarden.com/
+# https://flathub.org/apps/com.bitwarden.desktop
+sleep 5
+flatpak install flathub com.bitwarden.desktop -y
+
+echo "Installing Ryuinx"
+# https://ryujinx.org/
+# https://flathub.org/apps/org.ryujinx.Ryujinx
+sleep 5
+flatpak install flathub org.ryujinx.Ryujinx -y
+
+echo "Installing RPCS3"
+# https://rpcs3.net/
+# https://flathub.org/apps/net.rpcs3.RPCS3
+sleep 5
+flatpak install flathub net.rpcs3.RPCS3 -y
+
+echo "Installing Element"
+# https://element.io/
+# https://flathub.org/apps/im.riot.Riot
+sleep 5
+flatpak install flathub im.riot.Riot -y
+
+echo "Installing Heroic Games Launcher"
+# https://heroicgameslauncher.com/
+# https://flathub.org/apps/com.heroicgameslauncher.hgl
+sleep 5
+flatpak install flathub com.heroicgameslauncher.hgl -y
+
 
 # Launch VSCodium
 codium &
