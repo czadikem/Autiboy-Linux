@@ -19,14 +19,24 @@ sleep 5
 apt update
 
 
+# Install git wget neofetch and curl
+echo "Installing git wget neofetch and curl"
+sleep 5
+apt install git wget neofetch curl -y
+
+
 # Install Nala
 # https://gitlab.com/volian/nala/
 # https://christitus.com/stop-using-apt/
 # https://gitlab.com/volian/nala/-/wikis/Installation#volian-scar
-# https://gitlab.com/volian/nala/-/wikis/Installation#ubuntu-2104-debian-stable
 echo "Installing Nala"
 sleep 5
-echo "deb http://deb.volian.org/volian/ scar main" | tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
+wget https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb -P /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/volian-archive-keyring_0.1.0_all.deb
+apt install /home/calebcomputers/volian-archive-keyring_0.1.0_all.deb -y
+wget https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb -P /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/volian-archive-nala_0.1.0_all.deb
+apt install /home/calebcomputers/volian-archive-nala_0.1.0_all.deb -y
 apt update && apt install nala -y
 
 
@@ -34,12 +44,6 @@ apt update && apt install nala -y
 echo "Running nala update and nala upgrade -y"
 sleep 5
 nala update && nala upgrade -y
-
-
-# Install git wget neofetch and curl
-echo "Installing git wget neofetch and curl"
-sleep 5
-nala install git wget neofetch curl -y
 
 
 # Install Java SDK LTS
