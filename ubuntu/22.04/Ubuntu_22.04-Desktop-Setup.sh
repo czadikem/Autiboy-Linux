@@ -298,9 +298,9 @@ sysctl --load=/etc/sysctl.d/99-sysctl.conf
 # Copy the Configure Script
 echo "Copying the Configure Script from Installer USB Drive to your home directory"
 sleep 5
-cp /media/ubuntu/Ventoy/Ubuntu/Desktop/GNOME/calebcomputers/Debian12_KDE-Desktop-Configure.sh /home/calebcomputers/
-chown calebcomputers:calebcomputers /home/calebcomputers/Debian12_KDE-Desktop-Configure.sh
-chmod +x /home/calebcomputers/Debian12_KDE-Desktop-Configure.sh
+cp /media/ubuntu/Ventoy/Ubuntu/Desktop/GNOME/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh
+chmod +x /home/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh
 
 
 # Copy Laptop-Files to Computer
