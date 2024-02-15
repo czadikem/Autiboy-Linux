@@ -10,19 +10,20 @@ sleep 20
 echo "Disabling DVD Repo"
 sleep 5
 rm -r /etc/apt/sources.list
-cp /media/calebcomputers/Ventoy/Debian/12/Desktop/sources.list -P /etc/apt/
+cp /media/ubuntu/Ventoy/Ubuntu/Desktop/sources.list -P /etc/apt/
 
 
-# Install Updates
-echo "Running apt update"
+# Install Updates and Enable Ubuntu Universe Repo
+echo "Running apt update and Enabling Ubuntu Universe Repo"
 sleep 5
 apt update
 
 
-# Install git wget neofetch and curl
+# Install git wget neofetch gufw and curl
+# https://manpages.ubuntu.com/manpages/xenial/man8/gufw.8.html
 echo "Installing git wget neofetch and curl"
 sleep 5
-apt install git wget neofetch curl -y
+apt install git wget neofetch gufw curl -y
 
 
 # Install Nala
@@ -83,74 +84,12 @@ sleep 5
 nala install dosfstools mtools -y
 
 
-## Copy the Applications Folder
-#echo "Copying Applications.tar.xz from Ventoy to your home directory"
-#sleep 5
-#cp /media/calebcomputers/Ventoy/Applications.tar.xz /home/calebcomputers/
-#chown calebcomputers:calebcomputers /home/calebcomputers/tabby-1.0.177-linux-x64.deb
-
-
-# Uninstall Apps
-echo "Uninstalling libreoffice"
-sleep 5
-#nala autoremove firefox-esr -y
-nala remove --purge libreoffice* -y
-nala clean
-nala autoremove -y
-
-
 # Install Flatpak
-# https://flatpak.org/setup/Debian
+# https://flatpak.org/setup/Ubuntu
 echo "Installing Flatpak"
 sleep 5
-nala install flatpak -y
+nala install flatpak gnome-software-plugin-flatpak -y
 flatpak remote-delete --system flathub
-
-
-# Install KDE Apps
-echo "Installing KDE Apps"
-# https://apps.kde.org/kget/
-# https://apps.kde.org/kgpg/
-# https://apps.kde.org/sweeper/
-# https://apps.kde.org/ktorrent/
-# https://apps.kde.org/kbackup/
-# https://apps.kde.org/smb4k/
-# https://apps.kde.org/k3b/
-# https://apps.kde.org/krdc/
-# https://apps.kde.org/krfb/
-# https://apps.kde.org/kid3/
-# https://apps.kde.org/kdf/
-# https://launchpad.net/qr-tools
-# https://apps.kde.org/kmousetool/
-# https://apps.kde.org/rsibreak/
-# https://apps.kde.org/kronometer/
-# https://apps.kde.org/kalarm/
-# https://apps.kde.org/ktimer/
-# https://apps.kde.org/knotes/
-# https://apps.kde.org/zanshin/
-# https://apps.kde.org/kalgebra/
-# https://apps.kde.org/kalzium/
-# https://apps.kde.org/elisa/
-# https://apps.kde.org/krita/
-# https://apps.kde.org/kdenlive/
-# https://apps.kde.org/kompare/
-# https://apps.kde.org/kdiff3/
-# https://apps.kde.org/kolourpaint/
-# https://apps.kde.org/skrooge/
-# https://apps.kde.org/kbibtex/
-# https://apps.kde.org/akregator/
-# https://apps.kde.org/skanlite/
-# https://apps.kde.org/kontrast/
-# https://apps.kde.org/kmouth/
-sleep 5
-nala install kget kgpg sweeper ktorrent kbackup smb4k k3b krdc krfb kid3 kdf qtqr kmousetool rsibreak kronometer kalarm ktimer knotes kalgebra kalzium zanshin elisa krita kdenlive kompare kdiff3 kolourpaint skrooge kbibtex akregator skanlite kontrast kmouth -y
-
-
-# Install KMouth Packages
-# https://wiki.archlinux.org/title/Speech_dispatcher
-echo "Installing KMouth Packages"
-sleep 5
-nala install speech-dispatcher espeak-ng -y
 
 
 # Install AppImageLauncher
@@ -162,6 +101,30 @@ chown calebcomputers:calebcomputers /home/calebcomputers/appimagelauncher_2.2.0-
 nala install /home/calebcomputers/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb -y
 
 
+# Install GNOME Apps
+echo "Installing GNOME Apps"
+# https://apps.gnome.org/Maps/
+# https://apps.gnome.org/Logs/
+# https://apps.gnome.org/DejaDup/
+# https://apps.gnome.org/DconfEditor/
+sleep 5
+nala install gnome-maps gnome-logs deja-dup dconf-editor gnome-shell-extension-appindicator -y
+
+
+# Install Chromium Web browser
+# https://www.chromium.org/getting-involved/download-chromium/
+echo "Installing Chromium Web Browser"
+sleep 5
+nala install chromium-browser -y
+
+
+# Install KeePassXC
+# https://keepassxc.org/
+echo "Installing KeePassXC"
+sleep 5
+pacman -S --noconfirm --needed keepassxc
+
+
 # Install Solaar
 # https://pwr.solaar.github.io/Solaar
 echo "Installing Solaar"
@@ -169,49 +132,22 @@ sleep 5
 nala install solaar -y
 
 
-# Install YubiKey Software
-# https://wiki.archlinux.org/title/YubiKey
-echo "Installing YubiKey Software"
+# Install systray-x and Thunderbird
+# https://github.com/Ximi1970/systray-x#2204-lts
+# https://www.thunderbird.net/en-US/
+echo "Installing systray-x and Thunderbird"
 sleep 5
-nala install yubikey-manager-qt yubikey-personalization -y
-
-
-# Install RustDesk
-# https://rustdesk.com/
-# https://github.com/rustdesk/rustdesk/
-echo "Installing RustDesk"
-sleep 5
-wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb -P /home/calebcomputers/
-chown calebcomputers:calebcomputers /home/calebcomputers/rustdesk-1.2.3-x86_64.deb
-nala install /home/calebcomputers/rustdesk-1.2.3-x86_64.deb -y
-
-
-# Install AngryIP Scanner
-# https://angryip.org/download/#linux
-echo "Installing AngryIP Scanner"
-sleep 5
-wget https://github.com/angryip/ipscan/releases/download/3.9.1/ipscan_3.9.1_amd64.deb -P /home/calebcomputers/
-chown calebcomputers:calebcomputers /home/calebcomputers/ipscan_3.9.1_amd64.deb
-nala install /home/calebcomputers/ipscan_3.9.1_amd64.deb -y
-
-
-# Install Chromium Web browser
-# https://www.chromium.org/getting-involved/download-chromium/
-echo "Installing Chromium Web Browser"
-sleep 5
-nala install chromium -y
-
-
-# Install Thunderbird and systray-x
-# https://github.com/Ximi1970/systray-x/#12
-echo "Installing Thunderbird and systray-x"
-sleep 5
-wget -q https://download.opensuse.org/repositories/home:/Ximi1970:/Mozilla:/Add-ons/Debian_12/Release.key
-cp -f Release.key /etc/apt/trusted.gpg.d/SysTray-X.asc
-bash -c 'echo "deb https://download.opensuse.org/repositories/home:/Ximi1970:/Mozilla:/Add-ons/Debian_12 ./" > /etc/apt/sources.list.d/systray-x.list'
+wget -q https://download.opensuse.org/repositories/home:/Ximi1970/xUbuntu_22.04/Release.key
+mv -f  Release.key  /etc/apt/trusted.gpg.d/Systray-x.Ximi1970.asc
+bash -c 'echo "deb https://download.opensuse.org/repositories/home:/Ximi1970:/Mozilla:/Add-ons/xUbuntu_22.04 ./" > /etc/apt/sources.list.d/systray-x.list'
 nala update
-nala install systray-x -y
-rm /home/calebcomputers/Release.key
+nala install systray-x-common thunderbird -y
+
+
+# Install VLC
+echo "Installing VLC"
+sleep 5
+nala install vlc -y
 
 
 # Install VSCodium
@@ -246,10 +182,30 @@ cp /media/calebcomputers/Ventoy/Debian/Desktop/12/VSCodium-product.json -P /home
 chown calebcomputers:calebcomputers /home/calebcomputers/.config/VSCodium/product.json
 
 
-# Install VLC
-echo "Installing VLC"
+# Install YubiKey Software
+# https://www.yubico.com/support/download/?gad_source=1&gclid=EAIaIQobChMI0ceUvLSuhAMV521_AB0BPgPNEAAYASAAEgJkNPD_BwE
+echo "Installing YubiKey Software"
 sleep 5
-nala install vlc -y
+nala install yubikey-manager-qt yubikey-personalization yubikey-personalization-gui libfido2 -y
+
+
+# Install RustDesk
+# https://rustdesk.com/
+# https://github.com/rustdesk/rustdesk/
+echo "Installing RustDesk"
+sleep 5
+wget https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb -P /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/rustdesk-1.2.3-x86_64.deb
+nala install /home/calebcomputers/rustdesk-1.2.3-x86_64.deb -y
+
+
+# Install AngryIP Scanner
+# https://angryip.org/download/#linux
+echo "Installing AngryIP Scanner"
+sleep 5
+wget https://github.com/angryip/ipscan/releases/download/3.9.1/ipscan_3.9.1_amd64.deb -P /home/calebcomputers/
+chown calebcomputers:calebcomputers /home/calebcomputers/ipscan_3.9.1_amd64.deb
+nala install /home/calebcomputers/ipscan_3.9.1_amd64.deb -y
 
 
 # Install Virt-Manager
@@ -291,19 +247,41 @@ pipx install git+https://github.com/joaorb64/joycond-cemuhook
 pipx ensurepath
 
 
+# Install Arduino IDE
+echo "Installing Arduino IDE"
+# https://www.arduino.cc/en/software
+wget https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.1_Linux_64bit.AppImage -P /home/calebcomputers/Applications/
+chown calebcomputers:calebcomputers /home/calebcomputers/Applications/arduino-ide_2.3.1_Linux_64bit.AppImage
+
+
+
+# Install Gaming and Communication Appss
+echo "Installing Gaming and Communication Apps"
+# https://wiki.archlinux.org/title/Gaming
+# https://lutris.net/
+# https://steampowered.com/
+# https://wiki.archlinux.org/title/RetroArch
+# https://www.retroarch.com/
+# https://www.playonlinux.com/en/
+sleep 5
+nala install lutris steam steam-devices retroarch playonlinux -y
+
+
 # Install MullVad VPN
+# https://mullvad.net/en/download/vpn/linux
 # https://github.com/mullvad/mullvadvpn-app
 echo "Installing MullVad VPN"
 sleep 5
-wget https://github.com/mullvad/mullvadvpn-app/releases/download/2023.6/MullvadVPN-2023.6_amd64.deb -P /home/calebcomputers/
-chown calebcomputers:calebcomputers /home/calebcomputers/MullvadVPN-2023.6_amd64.deb
-nala install /home/calebcomputers/MullvadVPN-2023.6_amd64.deb -y
+curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
+echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/mullvad.list
+nala update
+nala install mullvad-vpn -y
 
 
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
 sleep 5
-cp /media/calebcomputers/Ventoy/Debian/12/Desktop/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
+cp /media/ubuntu/Ventoy/Ubuntu/Desktop/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
 
 # Fix Ryuinx Max Memory Error
@@ -317,16 +295,16 @@ sysctl --load=/etc/sysctl.d/99-sysctl.conf
 
 ## Copy AppImages
 #echo "Copying AppImages to Applications directory"
-#cp /media/calebcomputers/Ventoy/Debian/12/Desktop/appimages/balenaEtcher-1.18.11-x64.AppImage -P /home/calebcomputers/Applications/
-#cp /media/calebcomputers/Ventoy/Debian/12/Desktop/appimages/firefox-120.0.r20231129155202-x86_64_03ebdce6ab803926f1683dffb1fe43b2.AppImage -P /home/calebcomputers/Applications/
-#cp /media/calebcomputers/Ventoy/Debian/12/Desktop/appimages/KeePassXC-2.7.6-x86_64_bc43de77d75aad0582a4ea3bc897e00e.AppImage -P /home/calebcomputers/Applications/
+#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/balenaEtcher-1.18.11-x64.AppImage -P /home/calebcomputers/Applications/
+#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/firefox-120.0.r20231129155202-x86_64_03ebdce6ab803926f1683dffb1fe43b2.AppImage -P /home/calebcomputers/Applications/
+#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/KeePassXC-2.7.6-x86_64_bc43de77d75aad0582a4ea3bc897e00e.AppImage -P /home/calebcomputers/Applications/
 #chown -R calebcomputers:calebcomputers /home/calebcomputers/Applications
 
 
 # Copy the Configure Script
 echo "Copying the Configure Script from Installer USB Drive to your home directory"
 sleep 5
-cp /media/calebcomputers/Ventoy/Debian/12/Desktop/KDE/Debian12_KDE-Desktop-Configure.sh /home/calebcomputers/
+cp /media/ubuntu/Ventoy/Ubuntu/Desktop/GNOME/calebcomputers/Debian12_KDE-Desktop-Configure.sh /home/calebcomputers/
 chown calebcomputers:calebcomputers /home/calebcomputers/Debian12_KDE-Desktop-Configure.sh
 chmod +x /home/calebcomputers/Debian12_KDE-Desktop-Configure.sh
 
