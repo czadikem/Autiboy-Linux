@@ -29,6 +29,7 @@ apt install git wget neofetch curl -y
 # https://gitlab.com/volian/nala/
 # https://christitus.com/stop-using-apt/
 # https://gitlab.com/volian/nala/-/wikis/Installation#volian-scar
+# https://gitlab.com/volian/volian-archive/-/releases
 echo "Installing Nala"
 sleep 5
 wget https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb -P /home/calebcomputers/
