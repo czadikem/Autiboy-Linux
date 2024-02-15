@@ -10,6 +10,7 @@ sleep 20
 echo "Running apt update and Enabling Ubuntu Universe Repo"
 sleep 5
 apt update
+add-apt-repository universe
 
 
 # Install git wget neofetch gufw and curl
