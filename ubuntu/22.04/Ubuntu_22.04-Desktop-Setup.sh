@@ -6,13 +6,6 @@ echo "Please insert the Installation USB Drive you used to Install"
 sleep 20
 
 
-# Disable DVD Repo
-echo "Disabling DVD Repo"
-sleep 5
-rm -r /etc/apt/sources.list
-cp /media/ubuntu/Ventoy/Ubuntu/Desktop/sources.list -P /etc/apt/
-
-
 # Install Updates and Enable Ubuntu Universe Repo
 echo "Running apt update and Enabling Ubuntu Universe Repo"
 sleep 5
