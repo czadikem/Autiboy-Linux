@@ -235,6 +235,18 @@ echo "Installing Heroic Games Launcher"
 sleep 5
 flatpak install flathub com.heroicgameslauncher.hgl -y
 
+echo "Installing Prism Launcher"
+# https://prismlauncher.org/
+# https://flathub.org/apps/org.prismlauncher.PrismLauncher
+sleep 5
+flatpak install flathub org.prismlauncher.PrismLauncher -y
+
+echo "Installing Minecraft Bedrock Launcher"
+# https://mcpelauncher.readthedocs.io/en/latest/
+# https://flathub.org/apps/io.mrarm.mcpelauncher
+sleep 5
+flatpak install flathub io.mrarm.mcpelauncher -y
+
 
 # Launch VSCodium
 codium &
@@ -275,6 +287,12 @@ echo "Deleting Install Scripts"
 sleep 5
 rm -r /home/calebcomputers/*.sh
 #rm -r /home/calebcomputers/Applications.tar.xz
+
+
+# Open Microtik Software to install
+echo "Opening Microtik Software to install"
+sleep 5
+firefox https://www.playonlinux.com/en/app-3190-The_Dude_client.html https://www.playonlinux.com/en/app-3035-Winbox.html
 
 
 # Reboot Computer
