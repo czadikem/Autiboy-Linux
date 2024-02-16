@@ -295,13 +295,9 @@ rm -r /home/calebcomputers/*.sh
 #rm -r /home/calebcomputers/Applications.tar.xz
 
 
-# Open Microtik Software to install
+# Open Microtik Software to install and Reboot COmputer
 # https://www.playonlinux.com/en/app-3190-The_Dude_client.html
 # https://www.playonlinux.com/en/app-3035-Winbox.html
 echo "Opening Microtik Software to install"
 sleep 5
-firefox https://www.playonlinux.com/en/app-3190-The_Dude_client.html https://www.playonlinux.com/en/app-3035-Winbox.html
-
-
-# Reboot Computer
-echo "Please Reboot your Computer Now"
+firefox https://www.playonlinux.com/en/app-3190-The_Dude_client.html https://www.playonlinux.com/en/app-3035-Winbox.html && echo "Please Reboot your Computer Now after setting up Firefox"
