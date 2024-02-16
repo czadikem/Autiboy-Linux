@@ -251,7 +251,6 @@ chown calebcomputers:calebcomputers /home/calebcomputers/Applications/arduino-id
 
 # Install Gaming and Communication Appss
 echo "Installing Gaming and Communication Apps"
-# https://wiki.archlinux.org/title/Gaming
 # https://lutris.net/
 # https://steampowered.com/
 # https://wiki.archlinux.org/title/RetroArch
@@ -296,14 +295,6 @@ echo 'vm.max_map_count=524288' | sudo tee /etc/sysctl.d/99-sysctl.conf
 sysctl --load=/etc/sysctl.d/99-sysctl.conf
 
 
-## Copy AppImages
-#echo "Copying AppImages to Applications directory"
-#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/balenaEtcher-1.18.11-x64.AppImage -P /home/calebcomputers/Applications/
-#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/firefox-120.0.r20231129155202-x86_64_03ebdce6ab803926f1683dffb1fe43b2.AppImage -P /home/calebcomputers/Applications/
-#cp /media/ubuntu/Ventoy/Ubuntu/Desktop/appimages/KeePassXC-2.7.6-x86_64_bc43de77d75aad0582a4ea3bc897e00e.AppImage -P /home/calebcomputers/Applications/
-#chown -R calebcomputers:calebcomputers /home/calebcomputers/Applications
-
-
 # Copy the Configure Script
 echo "Copying the Configure Script from Installer USB Drive to your home directory"
 sleep 5
@@ -317,6 +308,17 @@ echo "Copying Laptop-Files to your Computer"
 sleep 5
 cp -r /media/calebcomputers/Ventoy/Laptop-Files /home/calebcomputers/
 chown -R calebcomputers:calebcomputers /home/calebcomputers/Laptop-Files
+
+
+# Setup FrameWork Laptop
+# https://github.com/FrameworkComputer/linux-docs/blob/main/ubuntu-22.04-amd-fw13.md
+echo "Setting up Framework Laptop"
+sleep 5
+nala update && nala upgrade -y && snap refresh && nala install linux-oem-22.04d -y
+latest_oem_kernel=$(ls /boot/vmlinuz-* | grep '6.5.0-10..-oem' | sort -V | tail -n1 | awk -F'/' '{print $NF}' | sed 's/vmlinuz-//') && sudo sed -i.bak '/^GRUB_DEFAULT=/c\GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux '"$latest_oem_kernel"'"' /etc/default/grub && sudo update-grub && sudo apt install zenity && mkdir -p ~/.config/autostart && [ ! -f ~/.config/autostart/kernel_check.desktop ] && echo -e "[Desktop Entry]\nType=Application\nExec=bash -c \"latest_oem_kernel=\$(ls /boot/vmlinuz-* | grep '6.5.0-10..-oem' | sort -V | tail -n1 | awk -F'/' '{print \\\$NF}' | sed 's/vmlinuz-//') && current_grub_kernel=\$(grep '^GRUB_DEFAULT=' /etc/default/grub | sed -e 's/GRUB_DEFAULT=\\\"Advanced options for Ubuntu>Ubuntu, with Linux //g' -e 's/\\\"//g') && [ \\\"\\\${latest_oem_kernel}\\\" != \\\"\\\${current_grub_kernel}\\\" ] && zenity --text-info --html --width=300 --height=200 --title=\\\"Kernel Update Notification\\\" --filename=<(echo -e \\\"A newer OEM D kernel is available than what is set in GRUB. <a href='https://github.com/FrameworkComputer/linux-docs/blob/main/22.04-OEM-D.md'>Click here</a> to learn more.\\\")\"\nHidden=false\nNoDisplay=false\nX-GNOME-Autostart-enabled=true\nName[en_US]=Kernel check\nName=Kernel check\nComment[en_US]=\nComment=" > ~/.config/autostart/kernel_check.desktop
+add-apt-repository ppa:superm1/ppd
+nala update && nala upgrade -y
+sh -c '[ ! -f /etc/udev/rules.d/20-suspend-fixes.rules ] && echo "ACTION==\"add\", SUBSYSTEM==\"serio\", DRIVERS==\"atkbd\", ATTR{power/wakeup}=\"disabled\"" > /etc/udev/rules.d/20-suspend-fixes.rules'
 
 
 # Setup Framework Fingerprint
