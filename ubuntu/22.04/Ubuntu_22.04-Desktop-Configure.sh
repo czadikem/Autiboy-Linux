@@ -1,6 +1,17 @@
 #!/bin/bash
 
 
+# Disable Screen lock
+# https://stackoverflow.com/a/44358284
+# https://askubuntu.com/a/338321
+echo "Disabling Screen Lock"
+sleep 5
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+
+
 # Add Flatpak Repo
 echo "Adding Flatpak Repo"
 # https://flatpak.org/setup/Ubuntu
@@ -281,17 +292,43 @@ echo "Installing Git Extension Pack"
 codium --install-extension donjayamanne.git-extension-pack
 
 
-## Setup VSCodium Git
-#echo "Setting up VSCodium Git"
-#sleep 5
-#git config --global user.name "Autiboy"
-#git config --global user.email czadikem@readytodream.com
+# Setup VSCodium Git
+echo "Setting up VSCodium Git"
+sleep 5
+git config --global user.name "czadikem"
+git config --global user.email czadikem@gmail.com
+
+
+# Enable Screen Lock
+# https://stackoverflow.com/a/44358284
+# https://askubuntu.com/a/338321
+echo "Enabling Screen Lock"
+sleep 5
+gsettings set org.gnome.desktop.session idle-delay 300
+gsettings set org.gnome.desktop.screensaver lock-enabled 'true'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
+
+
+# Set time to 24HR for Gnome
+# https://askubuntu.com/a/1183891
+echo "Setting time to 24HR for Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface clock-format '24h'
+
+
+# Show battery percentage in Gnome
+# https://askubuntu.com/a/947875
+echo "Showing battery percentage in Gnome"
+sleep 5
+gsettings set org.gnome.desktop.interface show-battery-percentage true
 
 
 # Delete Install Scripts
 echo "Deleting Install Scripts"
 sleep 5
 rm -r /home/calebcomputers/*.sh
+rm -r /home/calebcomputers/*.apt
 #rm -r /home/calebcomputers/Applications.tar.xz
 
 
