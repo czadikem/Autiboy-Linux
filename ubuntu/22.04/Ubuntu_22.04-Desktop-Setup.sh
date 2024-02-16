@@ -179,7 +179,7 @@ chown calebcomputers:calebcomputers /home/calebcomputers/.config/VSCodium/produc
 # https://www.yubico.com/support/download/?gad_source=1&gclid=EAIaIQobChMI0ceUvLSuhAMV521_AB0BPgPNEAAYASAAEgJkNPD_BwE
 echo "Installing YubiKey Software"
 sleep 5
-nala install yubikey-manager-qt yubikey-personalization yubikey-personalization-gui libfido2 -y
+nala install yubikey-manager-qt yubikey-personalization yubikey-personalization-gui libfido2-1 -y
 
 
 # Install RustDesk
