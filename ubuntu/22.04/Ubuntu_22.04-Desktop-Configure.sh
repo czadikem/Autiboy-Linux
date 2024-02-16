@@ -290,6 +290,8 @@ rm -r /home/calebcomputers/*.sh
 
 
 # Open Microtik Software to install
+# https://www.playonlinux.com/en/app-3190-The_Dude_client.html
+# https://www.playonlinux.com/en/app-3035-Winbox.html
 echo "Opening Microtik Software to install"
 sleep 5
 firefox https://www.playonlinux.com/en/app-3190-The_Dude_client.html https://www.playonlinux.com/en/app-3035-Winbox.html
