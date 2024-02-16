@@ -62,13 +62,12 @@ nala install ttf-mscorefonts-installer -y
 
 
 # Install Codecs
-# https://wiki.debian.org/MultimediaCodecs
-# https://wiki.debian.org/CDDVD#Video_DVD
+# https://itsfoss.com/install-media-codecs-ubuntu/
 echo "Installing Codecs"
 sleep 5
-nala install libavcodec-extra -y
-nala install libdvd-pkg -y
-dpkg-reconfigure libdvd-pkg
+add-apt-repository multiverse
+nala update
+nala install ubuntu-restricted-extras -y
 
 
 # Install Disk Management Drivers
@@ -172,7 +171,7 @@ sleep 5
 mkdir /home/calebcomputers/.config
 mkdir /home/calebcomputers/.config/VSCodium
 chown -R calebcomputers:calebcomputers /home/calebcomputers/.config/VSCodium
-cp /media/calebcomputers/Ventoy/Debian/Desktop/12/VSCodium-product.json -P /home/calebcomputers/.config/VSCodium/product.json
+cp /media/calebcomputers/Ventoy/Ubuntu/Desktop/VSCodium-product.json -P /home/calebcomputers/.config/VSCodium/product.json
 chown calebcomputers:calebcomputers /home/calebcomputers/.config/VSCodium/product.json
 
 
@@ -283,7 +282,7 @@ nala install mullvad-vpn -y
 # Install NumWorks Calc Driver
 echo "Installing NumWorks Calc Driver"
 sleep 5
-cp /media/ubuntu/Ventoy/Ubuntu/Desktop/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
+cp /media/calebcomputers/Ventoy/Ubuntu/Desktop/50-numworks-calculator-f2be8a48f68f1ee4d88c997c35194960.rules -P /etc/udev/rules.d/
 
 
 # Fix Ryuinx Max Memory Error
@@ -298,7 +297,7 @@ sysctl --load=/etc/sysctl.d/99-sysctl.conf
 # Copy the Configure Script
 echo "Copying the Configure Script from Installer USB Drive to your home directory"
 sleep 5
-cp /media/ubuntu/Ventoy/Ubuntu/Desktop/GNOME/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh /home/calebcomputers/
+cp /media/calebcomputers/Ventoy/Ubuntu/Desktop/GNOME/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh /home/calebcomputers/
 chown calebcomputers:calebcomputers /home/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh
 chmod +x /home/calebcomputers/Ubuntu_22.04-Desktop-Configure.sh
 
