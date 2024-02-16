@@ -247,6 +247,12 @@ echo "Installing Minecraft Bedrock Launcher"
 sleep 5
 flatpak install flathub io.mrarm.mcpelauncher -y
 
+echo "Installing JellyFin Media Player"
+# https://github.com/iwalton3/jellyfin-media-player
+# https://flathub.org/apps/com.github.iwalton3.jellyfin-media-player
+sleep 5
+flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
+
 
 # Launch VSCodium
 codium &
