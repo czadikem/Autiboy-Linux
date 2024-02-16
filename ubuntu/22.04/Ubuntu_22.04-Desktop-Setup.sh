@@ -6,11 +6,14 @@ echo "Please insert the Installation USB Drive you used to Install"
 sleep 20
 
 
-# Install Updates and Enable Ubuntu Universe Repo
-echo "Running apt update and Enabling Ubuntu Universe Repo"
+# Install Updates and Enable Ubuntu Universe Repo and other Repos
+echo "Running apt update and Enabling Ubuntu Universe Repo and other Repos"
 sleep 5
 apt update
 add-apt-repository universe
+add-apt-repository ppa:superm1/ppd
+add-apt-repository multiverse
+apt update
 
 
 # Install git wget neofetch gufw and curl
@@ -65,8 +68,6 @@ nala install ttf-mscorefonts-installer -y
 # https://itsfoss.com/install-media-codecs-ubuntu/
 echo "Installing Codecs"
 sleep 5
-add-apt-repository multiverse
-nala update
 nala install ubuntu-restricted-extras -y
 
 
@@ -315,7 +316,6 @@ echo "Setting up Framework Laptop"
 sleep 5
 nala update && nala upgrade -y && snap refresh && nala install linux-oem-22.04d -y
 latest_oem_kernel=$(ls /boot/vmlinuz-* | grep '6.5.0-10..-oem' | sort -V | tail -n1 | awk -F'/' '{print $NF}' | sed 's/vmlinuz-//') && sudo sed -i.bak '/^GRUB_DEFAULT=/c\GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux '"$latest_oem_kernel"'"' /etc/default/grub && sudo update-grub && sudo apt install zenity && mkdir -p ~/.config/autostart && [ ! -f ~/.config/autostart/kernel_check.desktop ] && echo -e "[Desktop Entry]\nType=Application\nExec=bash -c \"latest_oem_kernel=\$(ls /boot/vmlinuz-* | grep '6.5.0-10..-oem' | sort -V | tail -n1 | awk -F'/' '{print \\\$NF}' | sed 's/vmlinuz-//') && current_grub_kernel=\$(grep '^GRUB_DEFAULT=' /etc/default/grub | sed -e 's/GRUB_DEFAULT=\\\"Advanced options for Ubuntu>Ubuntu, with Linux //g' -e 's/\\\"//g') && [ \\\"\\\${latest_oem_kernel}\\\" != \\\"\\\${current_grub_kernel}\\\" ] && zenity --text-info --html --width=300 --height=200 --title=\\\"Kernel Update Notification\\\" --filename=<(echo -e \\\"A newer OEM D kernel is available than what is set in GRUB. <a href='https://github.com/FrameworkComputer/linux-docs/blob/main/22.04-OEM-D.md'>Click here</a> to learn more.\\\")\"\nHidden=false\nNoDisplay=false\nX-GNOME-Autostart-enabled=true\nName[en_US]=Kernel check\nName=Kernel check\nComment[en_US]=\nComment=" > ~/.config/autostart/kernel_check.desktop
-add-apt-repository ppa:superm1/ppd
 nala update && nala upgrade -y
 sh -c '[ ! -f /etc/udev/rules.d/20-suspend-fixes.rules ] && echo "ACTION==\"add\", SUBSYSTEM==\"serio\", DRIVERS==\"atkbd\", ATTR{power/wakeup}=\"disabled\"" > /etc/udev/rules.d/20-suspend-fixes.rules'
 
