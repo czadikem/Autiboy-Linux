@@ -114,6 +114,11 @@ Doing this should output your GPU card's Vendor IDs, usually one ID for the GPU 
 What we want to keep, are these vendor id codes: 10de:1b81 and 10de:10f0.
 
 ### Now we add the GPU's vendor id's to the VFIO (remember to replace the id's with your own!):
+GTX 1060 = 0b:00.0
+
+lspci -n -s 0b:00 -v
+
+10de:1c02,10de:10f1
 
 ```echo "options vfio-pci ids=10de:1c02,10de:10f1 disable_vga=1"> /etc/modprobe.d/vfio.conf```
 
