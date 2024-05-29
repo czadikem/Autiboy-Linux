@@ -115,7 +115,7 @@ What we want to keep, are these vendor id codes: 10de:1b81 and 10de:10f0.
 
 ### Now we add the GPU's vendor id's to the VFIO (remember to replace the id's with your own!):
 
-```echo "options vfio-pci ids=10de:1b81,10de:10f0 disable_vga=1"> /etc/modprobe.d/vfio.conf```
+```echo "options vfio-pci ids=10de:1c02,10de:10f1 disable_vga=1"> /etc/modprobe.d/vfio.conf```
 
 ### Update the files
 
